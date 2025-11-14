@@ -112,7 +112,7 @@ body::before {
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: 600;
     color: var(--accent-color);
     text-shadow: 0 0 10px rgba(255, 182, 193, 0.5);
@@ -216,7 +216,7 @@ body::before {
 
 /* Hero Section */
 .hero {
-    min-height: 90vh;
+    min-height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -282,11 +282,12 @@ body::before {
     text-shadow: 0 0 10px rgba(255, 182, 193, 0.5);
 }
 
-.hero-buttons {
+.hero-content {
     display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
+    align-items: center;  /* vertically aligns text and buttons */
+    gap: 20px;            /* spacing between text and buttons */
+    flex-wrap: wrap;      /* keeps layout responsive on smaller screens */
+  }
 
 .download-btn {
     background: transparent;
