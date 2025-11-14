@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheena Chugh - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        // Initialize theme immediately to prevent flash of unstyled content
+        (function() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Sheena Chugh</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon sun-icon">☀️</span>
+                    <span class="theme-icon moon-icon">🌙</span>
+                </button>
+                <button class="menu-toggle" id="menuToggle">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-image">
+                <img src="shared%20image.jpeg" alt="Sheena Chugh">
+            </div>
+            <div class="hero-text">
+                <h1>Sheena Chugh</h1>
+                <p class="subtitle">Project & Program Manager</p>
+                <p class="hero-description">9+ years of progressive experience in Project and Program Management across technology and business domains. Expert in Agile execution, end-to-end delivery, and stakeholder management to achieve measurable business outcomes.</p>
+                <div class="hero-buttons">
+                    <button class="cta-button" id="contactBtn">Get In Touch</button>
+                    <button class="cta-button download-btn" id="downloadResumeBtn">📥 Download Resume</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a results-driven Project and Program Manager with 9+ years of experience leading strategic initiatives across technology and business domains. My expertise lies in Agile execution, end-to-end delivery, and stakeholder management to achieve measurable business outcomes.</p>
+                    <p>I have a proven ability to streamline operations, optimize resources, and improve cross-functional collaboration. Skilled in KPI tracking, budget management, and risk mitigation, I ensure project success and sustainability while aligning executive priorities with operational execution.</p>
+                    <div class="education-section">
+                        <h3>Education</h3>
+                        <p><strong>Master of Computer Applications (MCA)</strong><br>Indira Gandhi National Open University (2017–2021)</p>
+                        <p><strong>Bachelor of Science (BS), Computer Science</strong><br>Kurukshetra University (2013–2016)</p>
+                        <h3>Certifications</h3>
+                        <p>ISTQB Certified Tester – Advanced Level Test Management | Business Analyst Certification</p>
+                    </div>
+                </div>
+                <div class="skills">
+                    <h3>Core Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">Agile/Scrum</div>
+                        <div class="skill-item">Project Management</div>
+                        <div class="skill-item">Stakeholder Management</div>
+                        <div class="skill-item">Risk Management</div>
+                        <div class="skill-item">Budget Control</div>
+                        <div class="skill-item">Jira</div>
+                        <div class="skill-item">Confluence</div>
+                        <div class="skill-item">MS Project</div>
+                        <div class="skill-item">Power BI</div>
+                        <div class="skill-item">SDLC</div>
+                        <div class="skill-item">KPI Tracking</div>
+                        <div class="skill-item">Process Optimization</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&auto=format&q=80" alt="Technology Analytics Dashboard">
+                    </div>
+                    <div class="project-content">
+                        <h3>Technology Operations Optimization</h3>
+                        <p class="project-description">Led strategic programs across technology operations at Idealogical Group, ensuring alignment with corporate objectives. Developed analytics dashboards for real-time visibility into progress, risks, and KPIs, enabling data-driven decisions.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Agile</span>
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">KPI Tracking</span>
+                        </div>
+                        <button class="project-button" data-project="1">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop&auto=format&q=80" alt="Project Management Teamwork">
+                    </div>
+                    <div class="project-content">
+                        <h3>Enterprise Project Portfolio Management</h3>
+                        <p class="project-description">Managed delivery of 15+ enterprise projects at TestingXperts with 98% on-time completion. Implemented project governance models and reporting frameworks, enhanced stakeholder communication, and reduced rework by 30%.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Scrum</span>
+                            <span class="tech-tag">Jira</span>
+                            <span class="tech-tag">Stakeholder Management</span>
+                        </div>
+                        <button class="project-button" data-project="2">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=600&fit=crop&auto=format&q=80" alt="Healthcare Finance">
+                    </div>
+                    <div class="project-content">
+                        <h3>Healthcare & Finance Program Delivery</h3>
+                        <p class="project-description">Coordinated large-scale healthcare and finance programs at Seasia Infotech, ensuring full compliance with SLAs and quality standards. Introduced reporting templates that increased visibility and reduced follow-up delays by 40%.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">SDLC</span>
+                            <span class="tech-tag">Process Optimization</span>
+                            <span class="tech-tag">Quality Assurance</span>
+                        </div>
+                        <button class="project-button" data-project="3">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p class="contact-intro">I'm always open to discussing new opportunities and interesting projects. Feel free to reach out!</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>Location:</strong> Brampton, Ontario, Canada
+                </div>
+                <div class="contact-item">
+                    <strong>Email:</strong> <span id="email">sheenachugh92@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <strong>Phone:</strong> <span id="phone">+1 (647) 236-0034</span>
+                </div>
+            </div>
+            <button class="cta-button" id="copyEmailBtn">Copy Email</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Sheena Chugh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal for Project Details -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Project Details</h2>
+            <div id="modalDescription" class="modal-description">Project description will appear here.</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
