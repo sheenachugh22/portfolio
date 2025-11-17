@@ -21,12 +21,27 @@ if (themeToggle) {
 const menuToggle = document.getElementById('menuToggle');
 const navMenu = document.querySelector('.nav-menu');
 
-menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-});
+function setMenuState(isOpen) {
+    if (navMenu) {
+        navMenu.classList.toggle('active', isOpen);
+    }
+    document.body.classList.toggle('menu-open', isOpen);
+    if (menuToggle) {
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+    }
+}
+
+if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', () => {
+        const isOpening = !navMenu.classList.contains('active');
+        setMenuState(isOpening);
+    });
+}
 
 // Smooth Scrolling for Navigation Links
-document.querySelectorAll('.nav-link').forEach(link => {
+const navLinks = document.querySelectorAll('.nav-link');
+
+navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
         const targetId = link.getAttribute('href');
@@ -39,9 +54,15 @@ document.querySelectorAll('.nav-link').forEach(link => {
             });
             
             // Close mobile menu if open
-            navMenu.classList.remove('active');
+            setMenuState(false);
         }
     });
+});
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        setMenuState(false);
+    }
 });
 
 // Contact Button Click Event
