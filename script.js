@@ -102,28 +102,39 @@ const projectDetails = {
     }
 };
 
+function openProjectModal(project) {
+    modalTitle.textContent = project.title;
+    modalDescription.innerHTML = project.description
+        .split('. ')
+        .map(sentence => sentence.trim() ? `<p>${sentence.trim()}${sentence.trim().endsWith('.') ? '' : '.'}</p>` : '')
+        .join('');
+    modal.classList.add('open');
+    document.body.classList.add('modal-open');
+}
+
+function closeProjectModal() {
+    modal.classList.remove('open');
+    document.body.classList.remove('modal-open');
+}
+
 projectButtons.forEach(button => {
     button.addEventListener('click', () => {
         const projectId = button.getAttribute('data-project');
         const project = projectDetails[projectId];
         
         if (project) {
-            modalTitle.textContent = project.title;
-            modalDescription.innerHTML = project.description.split('. ').map(sentence => sentence.trim() ? `<p>${sentence.trim()}${sentence.trim().endsWith('.') ? '' : '.'}</p>` : '').join('');
-            modal.style.display = 'block';
+            openProjectModal(project);
         }
     });
 });
 
 // Close Modal
-closeModal.addEventListener('click', () => {
-    modal.style.display = 'none';
-});
+closeModal.addEventListener('click', closeProjectModal);
 
 // Close Modal when clicking outside
 window.addEventListener('click', (e) => {
     if (e.target === modal) {
-        modal.style.display = 'none';
+        closeProjectModal();
     }
 });
 
