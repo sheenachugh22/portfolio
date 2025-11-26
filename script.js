@@ -232,8 +232,8 @@ function generateResumePDF() {
     const resumeContent = document.createElement('div');
     resumeContent.id = 'resume-pdf-content';
     
-    // Fixed width matching A4 at 72dpi (595px) with padding accounted for
-    resumeContent.style.cssText = 'position:fixed;top:0;left:0;width:595px;background:#fff;color:#000;font-family:Georgia,serif;font-size:9px;line-height:1.35;padding:40px 45px;box-sizing:border-box;z-index:99999;';
+    // Use absolute positioning but visible, with proper dimensions
+    resumeContent.style.cssText = 'position:absolute;top:0;left:0;width:595px;min-height:842px;background:#fff;color:#000;font-family:Georgia,serif;font-size:9px;line-height:1.35;padding:40px 45px;box-sizing:border-box;overflow:visible;';
     
     resumeContent.innerHTML = `
 <div style="text-align:center;border-bottom:2px solid #333;padding-bottom:10px;margin-bottom:12px;">
@@ -333,29 +333,41 @@ function generateResumePDF() {
     
     document.body.appendChild(resumeContent);
     
-    // Use simpler options for mobile compatibility
-    html2pdf()
-        .set({
+    // Force a reflow to ensure content is rendered
+    resumeContent.offsetHeight;
+    
+    // Wait a bit for mobile browsers to render
+    setTimeout(() => {
+        const opt = {
             margin: 0,
             filename: 'Sheena_Chugh_Resume.pdf',
             image: { type: 'jpeg', quality: 0.95 },
             html2canvas: { 
                 scale: 2,
+                useCORS: true,
+                logging: false,
+                backgroundColor: '#ffffff',
                 width: 595,
-                windowWidth: 595
+                height: resumeContent.scrollHeight,
+                windowWidth: 595,
+                windowHeight: resumeContent.scrollHeight
             },
             jsPDF: { unit: 'pt', format: 'a4', orientation: 'portrait' }
-        })
-        .from(resumeContent)
-        .save()
-        .then(() => {
-            document.body.removeChild(resumeContent);
-            showNotification('Resume downloaded successfully!');
-        })
-        .catch(err => {
-            document.body.removeChild(resumeContent);
-            console.error('Error generating PDF:', err);
-            showNotification('Error generating PDF. Please try again.');
-        });
+        };
+        
+        html2pdf()
+            .set(opt)
+            .from(resumeContent)
+            .save()
+            .then(() => {
+                document.body.removeChild(resumeContent);
+                showNotification('Resume downloaded successfully!');
+            })
+            .catch(err => {
+                document.body.removeChild(resumeContent);
+                console.error('Error generating PDF:', err);
+                showNotification('Error generating PDF. Please try again.');
+            });
+    }, 300);
 }
 
