@@ -419,6 +419,38 @@ body::before {
     transform: translateY(0);
 }
 
+/* Jira Badge */
+.jira-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, rgba(0, 82, 204, 0.2), rgba(0, 101, 255, 0.3));
+    border: 2px solid #0052CC;
+    border-radius: 50px;
+    padding: 0.6rem 1.2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 20px rgba(0, 82, 204, 0.3);
+}
+
+.badge-icon {
+    font-size: 1.2rem;
+}
+
+.badge-text {
+    font-weight: 600;
+    color: #0052CC;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+[data-theme="light"] .jira-badge {
+    background: linear-gradient(135deg, rgba(0, 82, 204, 0.1), rgba(0, 101, 255, 0.15));
+}
+
+[data-theme="light"] .badge-text {
+    color: #0052CC;
+}
+
 /* About Section */
 .about {
     padding: clamp(4rem, 8vw, 5rem) clamp(1rem, 5vw, 3rem);
@@ -540,6 +572,170 @@ body::before {
     transform: translateY(-3px);
     box-shadow: var(--shadow-hover);
     border-color: var(--accent-color);
+}
+
+.skill-item.skill-featured {
+    background: linear-gradient(135deg, rgba(0, 82, 204, 0.2), rgba(0, 101, 255, 0.3));
+    border: 2px solid #0052CC;
+    color: #0052CC;
+    font-weight: 600;
+}
+
+[data-theme="light"] .skill-item.skill-featured {
+    background: linear-gradient(135deg, rgba(0, 82, 204, 0.1), rgba(0, 101, 255, 0.2));
+    color: #0052CC;
+}
+
+.skill-item.skill-featured:hover {
+    background: #0052CC;
+    color: var(--white);
+    border-color: #0052CC;
+    box-shadow: 0 0 20px rgba(0, 82, 204, 0.5);
+}
+
+/* Automations Section */
+.automations {
+    padding: clamp(4rem, 8vw, 5rem) clamp(1rem, 5vw, 3rem);
+    background: var(--projects-bg);
+    position: relative;
+    z-index: 1;
+    border-bottom: var(--section-border);
+}
+
+.automations h2 {
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+    text-shadow: 0 0 15px rgba(255, 182, 193, 0.5);
+    font-weight: 600;
+}
+
+.section-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+}
+
+.automations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.automation-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+}
+
+.automation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border-color: #0052CC;
+}
+
+.automation-icon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    background: linear-gradient(135deg, rgba(0, 82, 204, 0.2), rgba(0, 101, 255, 0.3));
+    border: 2px solid #0052CC;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.automation-content h3 {
+    font-size: 1.1rem;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.automation-content p {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    opacity: 0.9;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+}
+
+.automation-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.auto-tag {
+    background: rgba(0, 82, 204, 0.15);
+    color: #0052CC;
+    padding: 0.25rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px solid rgba(0, 82, 204, 0.3);
+}
+
+[data-theme="light"] .auto-tag {
+    background: rgba(0, 82, 204, 0.1);
+    color: #0052CC;
+}
+
+.automation-impact {
+    background: linear-gradient(135deg, rgba(0, 82, 204, 0.1), rgba(177, 156, 217, 0.2));
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.automation-impact h3 {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.impact-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+}
+
+.impact-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.impact-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0052CC;
+    text-shadow: 0 0 10px rgba(0, 82, 204, 0.3);
+}
+
+.impact-label {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.9;
+    text-align: center;
 }
 
 /* Projects Section */
@@ -671,6 +867,26 @@ body::before {
     color: var(--primary-color);
     font-weight: 500;
     border: 1px solid var(--border-color);
+}
+
+.tech-tag.tech-jira {
+    background: rgba(0, 82, 204, 0.2);
+    color: #0052CC;
+    border-color: #0052CC;
+    font-weight: 600;
+}
+
+[data-theme="light"] .tech-tag.tech-jira {
+    background: rgba(0, 82, 204, 0.15);
+}
+
+.project-card.featured-card {
+    border: 2px solid #0052CC;
+    box-shadow: 0 0 20px rgba(0, 82, 204, 0.2);
+}
+
+.project-card.featured-card:hover {
+    box-shadow: 0 5px 30px rgba(0, 82, 204, 0.4);
 }
 
 .project-button {
@@ -899,11 +1115,36 @@ body::before {
         gap: 2rem;
     }
 
+    .jira-badge {
+        justify-content: center;
+    }
+
     .about-content {
         grid-template-columns: 1fr;
     }
 
     .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .automations-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .automation-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .automation-icon {
+        margin: 0 auto;
+    }
+
+    .automation-tags {
+        justify-content: center;
+    }
+
+    .impact-metrics {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -942,6 +1183,18 @@ body::before {
     .project-content,
     .contact-info {
         text-align: left;
+    }
+
+    .impact-metrics {
+        grid-template-columns: 1fr;
+    }
+
+    .impact-number {
+        font-size: 2rem;
+    }
+
+    .automation-impact {
+        padding: 1.5rem 1rem;
     }
 }
 

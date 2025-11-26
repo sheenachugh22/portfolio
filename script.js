@@ -85,20 +85,20 @@ const closeModal = document.querySelector('.close');
 // Project details based on resume experience
 const projectDetails = {
     1: {
-        title: 'Program & Release Lead — Idealogical Group',
-        description: 'Lead release cycles across multiple MSP software and infrastructure initiatives, keeping product, engineering, and operations streams aligned. Manage readiness checkpoints, risk/issue logs, dependencies, and stakeholder communications to keep launches predictable. Built Jira and Confluence visibility dashboards that reduced planning conflicts by 25% and automated workflows that removed 40% of manual coordination work. Partner closely with QA to attach regression milestones and ensure deployment readiness for every release.'
+        title: 'Program & Project Lead — Idealogical Group',
+        description: 'Lead strategic programs across MSP software and infrastructure initiatives, ensuring alignment with corporate objectives and measurable KPIs. Manage cross-functional project delivery with clear milestones, risks, dependencies, and stakeholder communications. Built Jira dashboards, portfolios, and timelines used by 50+ stakeholders for real-time project visibility. Designed 9+ Jira automations reducing manual coordination by 40% and improving planning accuracy by 25%. Implemented story point tracking for sprint velocity and forecasting. Manage Confluence spaces for documentation and cross-team collaboration.'
     },
     2: {
-        title: 'Release Coordinator & QA Lead — TestingXperts',
-        description: 'Coordinated 2+ major product releases per cycle across cloud, API, and web platforms. Served as the connective tissue between engineering, QA, and business stakeholders to keep readiness signals transparent and risks escalated early. Introduced metrics-driven reporting to improve predictability, authored UAT scenarios to secure feature signoff, and led defect triage/post-release reviews that eliminated repeat incidents.'
+        title: 'Project Manager / Coordinator — TestingXperts',
+        description: 'Managed delivery of 15+ enterprise projects with 98% on-time completion across cloud, API, and web platforms. Facilitated Agile ceremonies, sprint planning, and executive updates for global cross-functional teams. Implemented project governance models and reporting frameworks to track deliverables and risk indicators. Enhanced stakeholder communication and change control, reducing rework by 30%.'
     },
     3: {
-        title: 'QA Analyst & Automation Engineer — Seasia Infotech',
-        description: 'Automated more than 150 workflows to shorten release cycles and cut manual QA effort by 60%. Maintained weekly regression suites and coverage dashboards so product teams could ship confidently. Built API and functional test frameworks that hardened stability across healthcare and finance products.'
+        title: 'Associate Project Manager — Seasia Infotech',
+        description: 'Coordinated project planning and execution for large-scale healthcare and finance programs. Monitored schedules, deliverables, and budgets ensuring full compliance with SLAs and quality standards. Introduced reporting templates that increased visibility and reduced follow-up delays by 40%. Automated 150+ workflows reducing manual effort by 60%. Supported process improvement initiatives enhancing delivery predictability and client satisfaction.'
     },
     4: {
-        title: 'QA & Deployment Analyst — Tech Mahindra',
-        description: 'Supported 20+ monthly deployments for national utility platforms with zero downtime tolerances. Authored deployment playbooks, runbooks, and readiness documentation to improve rollout accuracy. Delivered automation scripts that reduced incident resolution time by 30% and drove RCA with engineering partners to prevent repeat release issues.'
+        title: 'Project Coordinator — Tech Mahindra',
+        description: 'Supported deployment programs for national utility and telecom projects ensuring zero downtime. Coordinated between onshore and offshore teams to maintain delivery timelines and stakeholder alignment. Created project reports and dashboards improving decision-making speed by 25%. Facilitated documentation, change management, and risk tracking. Built automation scripts reducing incident resolution time by 30%.'
     }
 };
 
@@ -211,6 +211,14 @@ document.querySelectorAll('.project-card').forEach(card => {
     observer.observe(card);
 });
 
+// Observe automation cards for animation
+document.querySelectorAll('.automation-card').forEach((card, index) => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(20px)';
+    card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+    observer.observe(card);
+});
+
 // Download Resume PDF
 const downloadResumeBtn = document.getElementById('downloadResumeBtn');
 
@@ -234,31 +242,42 @@ function generateResumePDF() {
     resumeContent.innerHTML = `
         <div style="text-align: center; margin-bottom: 30px; border-bottom: 2px solid #00d4ff; padding-bottom: 20px;">
             <h1 style="color: #0a192f; font-size: 32px; margin-bottom: 10px;">Sheena Chugh</h1>
-            <p style="color: #666; font-size: 14px; margin: 5px 0;">Program &amp; Product Release Lead</p>
+            <p style="color: #0052CC; font-size: 14px; margin: 5px 0; font-weight: bold;">Project Manager | Program Lead | Release Manager</p>
             <p style="color: #666; font-size: 14px; margin: 5px 0;">Brampton, Ontario, Canada · sheenachugh92@gmail.com · +1 (647) 236-0034</p>
         </div>
         
         <div style="margin-bottom: 25px;">
             <h2 style="color: #0a192f; font-size: 20px; border-bottom: 1px solid #00d4ff; padding-bottom: 5px; margin-bottom: 15px;">Career Summary</h2>
             <ul style="list-style: none; padding-left: 0;">
-                <li style="margin-bottom: 8px;">• Strategic Software Delivery &amp; Release Lead with 9+ years orchestrating enterprise-scale launches across cloud, infrastructure, and application portfolios.</li>
-                <li style="margin-bottom: 8px;">• Expert in release governance, readiness checkpoints, and cross-functional leadership that keeps multi-stream programs synchronized.</li>
-                <li style="margin-bottom: 8px;">• Skilled at building Jira/Confluence dashboards, metrics, and automation to bring data-backed visibility to planning, risk, and dependency calls.</li>
-                <li style="margin-bottom: 8px;">• Known for aligning QA/UAT milestones, risk mitigation, and stakeholder communications so every deployment is auditable and adoption-ready.</li>
+                <li style="margin-bottom: 8px;">• Strategic Project Manager with 9+ years delivering enterprise programs across technology and business domains.</li>
+                <li style="margin-bottom: 8px;">• Expert in Agile execution, end-to-end delivery, and stakeholder management to achieve measurable business outcomes.</li>
+                <li style="margin-bottom: 8px;">• Strong expertise in Jira administration and process automation, reducing manual effort by 40%.</li>
+                <li style="margin-bottom: 8px;">• Proven ability to streamline operations, optimize resources, and improve cross-functional collaboration.</li>
             </ul>
         </div>
         
         <div style="margin-bottom: 25px;">
             <h2 style="color: #0a192f; font-size: 20px; border-bottom: 1px solid #00d4ff; padding-bottom: 5px; margin-bottom: 15px;">Core Competencies</h2>
             <ul style="list-style: none; padding-left: 0; columns: 2; column-gap: 20px;">
-                <li style="margin-bottom: 6px;">• Release Management &amp; Readiness</li>
-                <li style="margin-bottom: 6px;">• Enterprise Program Delivery</li>
-                <li style="margin-bottom: 6px;">• Multi-Platform Delivery Coordination</li>
-                <li style="margin-bottom: 6px;">• Governance, Metrics &amp; Reporting</li>
+                <li style="margin-bottom: 6px;">• Project &amp; Program Management</li>
                 <li style="margin-bottom: 6px;">• Agile / Scrum / SDLC</li>
-                <li style="margin-bottom: 6px;">• Risk, Change &amp; Dependency Management</li>
+                <li style="margin-bottom: 6px;">• Stakeholder Management</li>
+                <li style="margin-bottom: 6px;">• Risk &amp; Issue Management</li>
+                <li style="margin-bottom: 6px;">• Release Management</li>
                 <li style="margin-bottom: 6px;">• Cross-Functional Leadership</li>
-                <li style="margin-bottom: 6px;">• Jira &amp; Confluence – Dashboards &amp; Automation</li>
+                <li style="margin-bottom: 6px;">• Process Improvement</li>
+                <li style="margin-bottom: 6px;">• Jira &amp; Confluence Administration</li>
+            </ul>
+        </div>
+
+        <div style="margin-bottom: 25px;">
+            <h2 style="color: #0a192f; font-size: 20px; border-bottom: 1px solid #00d4ff; padding-bottom: 5px; margin-bottom: 15px;">Jira &amp; Process Automation Skills</h2>
+            <ul style="list-style: none; padding-left: 0;">
+                <li style="margin-bottom: 5px;">• Built Jira dashboards, portfolios, and timelines for project visibility across 50+ stakeholders</li>
+                <li style="margin-bottom: 5px;">• Designed 9+ Jira automations for ticket workflows and deployment triggers</li>
+                <li style="margin-bottom: 5px;">• Implemented story point tracking improving forecasting accuracy by 25%</li>
+                <li style="margin-bottom: 5px;">• Manage Confluence spaces for documentation and collaboration</li>
+                <li style="margin-bottom: 5px;">• Created Excel macros for automated financial calculations</li>
             </ul>
         </div>
         
@@ -267,47 +286,41 @@ function generateResumePDF() {
             
             <div style="margin-bottom: 20px;">
                 <h3 style="color: #0a192f; font-size: 16px; margin-bottom: 5px;">Idealogical Group – Markham, ON</h3>
-                <p style="color: #666; font-size: 14px; margin-bottom: 10px;"><strong>Program &amp; Release Lead | May 2024 – Present</strong></p>
+                <p style="color: #666; font-size: 14px; margin-bottom: 10px;"><strong>Program &amp; Project Lead | May 2024 – Present</strong></p>
                 <ul style="list-style: none; padding-left: 0;">
-                    <li style="margin-bottom: 5px;">• Lead release cycles across multiple software and infrastructure initiatives ensuring cross-team alignment.</li>
-                    <li style="margin-bottom: 5px;">• Manage readiness checkpoints, risks, dependencies, and stakeholder communication across delivery streams.</li>
-                    <li style="margin-bottom: 5px;">• Built visibility dashboards using Jira/Confluence increasing transparency and reducing planning conflicts by 25%.</li>
-                    <li style="margin-bottom: 5px;">• Created Jira automations reducing manual coordination effort by 40%.</li>
-                    <li style="margin-bottom: 5px;">• Improved consistency across multi-stream releases through structured governance and tracking models.</li>
-                    <li style="margin-bottom: 5px;">• Direct QA alignment with release milestones ensuring defect closure, regression validation, and deployment readiness.</li>
+                    <li style="margin-bottom: 5px;">• Lead strategic programs ensuring alignment with corporate objectives and measurable KPIs</li>
+                    <li style="margin-bottom: 5px;">• Manage cross-functional delivery with clear milestones, risks, and stakeholder communications</li>
+                    <li style="margin-bottom: 5px;">• Built Jira dashboards, portfolios, and timelines used by 50+ stakeholders</li>
+                    <li style="margin-bottom: 5px;">• Designed 9+ Jira automations reducing manual coordination by 40%</li>
+                    <li style="margin-bottom: 5px;">• Improved forecasting accuracy by 25% with story point tracking</li>
                 </ul>
             </div>
             
             <div style="margin-bottom: 20px;">
                 <h3 style="color: #0a192f; font-size: 16px; margin-bottom: 5px;">TestingXperts – Remote (India)</h3>
-                <p style="color: #666; font-size: 14px; margin-bottom: 10px;"><strong>Release Coordinator &amp; QA Lead | Aug 2021 – Jan 2024</strong></p>
+                <p style="color: #666; font-size: 14px; margin-bottom: 10px;"><strong>Project Manager / Coordinator | Aug 2021 – Jan 2024</strong></p>
                 <ul style="list-style: none; padding-left: 0;">
-                    <li style="margin-bottom: 5px;">• Coordinated 2+ major product releases across cloud, API, and web platforms ensuring scope and timing alignment.</li>
-                    <li style="margin-bottom: 5px;">• Acted as bridge between engineering, QA, and business teams for readiness and risk communication.</li>
-                    <li style="margin-bottom: 5px;">• Introduced metrics-driven reporting improving predictability and early risk identification.</li>
-                    <li style="margin-bottom: 5px;">• Wrote UAT scenarios and ensured feature-level validation to support business signoff.</li>
-                    <li style="margin-bottom: 5px;">• Led defect triage and post-release reviews reducing repeat issues.</li>
+                    <li style="margin-bottom: 5px;">• Managed delivery of 15+ enterprise projects with 98% on-time completion</li>
+                    <li style="margin-bottom: 5px;">• Facilitated Agile ceremonies and sprint planning for global teams</li>
+                    <li style="margin-bottom: 5px;">• Implemented governance models reducing rework by 30%</li>
                 </ul>
             </div>
             
             <div style="margin-bottom: 20px;">
                 <h3 style="color: #0a192f; font-size: 16px; margin-bottom: 5px;">Seasia Infotech – India</h3>
-                <p style="color: #666; font-size: 14px; margin-bottom: 10px;"><strong>QA Analyst &amp; Automation Engineer | May 2019 – Aug 2021</strong></p>
+                <p style="color: #666; font-size: 14px; margin-bottom: 10px;"><strong>Associate Project Manager | May 2019 – Aug 2021</strong></p>
                 <ul style="list-style: none; padding-left: 0;">
-                    <li style="margin-bottom: 5px;">• Automated 150+ workflows improving release cycle efficiency and reducing manual QA load by 60%.</li>
-                    <li style="margin-bottom: 5px;">• Supported weekly release cycles by maintaining regression suites and coordinating test coverage.</li>
-                    <li style="margin-bottom: 5px;">• Developed API and functional test frameworks improving stability across product versions.</li>
+                    <li style="margin-bottom: 5px;">• Coordinated project planning for healthcare and finance programs</li>
+                    <li style="margin-bottom: 5px;">• Automated 150+ workflows reducing manual effort by 60%</li>
                 </ul>
             </div>
             
             <div style="margin-bottom: 20px;">
                 <h3 style="color: #0a192f; font-size: 16px; margin-bottom: 5px;">Tech Mahindra – India</h3>
-                <p style="color: #666; font-size: 14px; margin-bottom: 10px;"><strong>QA &amp; Deployment Analyst | Aug 2016 – Apr 2019</strong></p>
+                <p style="color: #666; font-size: 14px; margin-bottom: 10px;"><strong>Project Coordinator | Aug 2016 – Apr 2019</strong></p>
                 <ul style="list-style: none; padding-left: 0;">
-                    <li style="margin-bottom: 5px;">• Supported 20+ monthly deployments for critical utility platforms ensuring zero downtime.</li>
-                    <li style="margin-bottom: 5px;">• Prepared deployment playbooks and readiness documentation improving accuracy of rollouts.</li>
-                    <li style="margin-bottom: 5px;">• Implemented automation scripts reducing incident resolution time by 30%.</li>
-                    <li style="margin-bottom: 5px;">• Partnered with engineering teams to minimize release issues through structured RCA processes.</li>
+                    <li style="margin-bottom: 5px;">• Coordinated 20+ monthly deployments with playbooks and readiness packs</li>
+                    <li style="margin-bottom: 5px;">• Created automation scripts reducing incident resolution time by 30%</li>
                 </ul>
             </div>
         </div>
