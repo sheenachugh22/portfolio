@@ -227,174 +227,130 @@ downloadResumeBtn.addEventListener('click', () => {
 });
 
 function generateResumePDF() {
-    // Show loading notification
     showNotification('Generating PDF resume...');
     
-    // Create a temporary div with resume content
     const resumeContent = document.createElement('div');
-    resumeContent.style.width = '210mm';
-    resumeContent.style.backgroundColor = '#ffffff';
-    resumeContent.style.color = '#000000';
-    resumeContent.style.fontFamily = 'Arial, sans-serif';
-    resumeContent.style.fontSize = '11px';
-    resumeContent.style.lineHeight = '1.5';
+    resumeContent.id = 'pdf-resume-content';
     
+    // Using simple block-level elements only - no flex, no complex CSS
     resumeContent.innerHTML = `
-        <style>
-            .pdf-page { padding: 15mm 18mm; }
-            .page-break { page-break-before: always; }
-            .section-title { color: #0a192f; font-size: 14px; border-bottom: 2px solid #0052CC; padding-bottom: 4px; margin: 15px 0 10px 0; font-weight: bold; }
-            .job-title { color: #0a192f; font-size: 12px; margin-bottom: 3px; font-weight: bold; }
-            .job-meta { color: #555; font-size: 11px; margin-bottom: 6px; }
-            .bullet { margin-bottom: 4px; padding-left: 12px; text-indent: -12px; }
-            .two-col { columns: 2; column-gap: 25px; }
-        </style>
-        
-        <div class="pdf-page">
+        <div style="width: 800px; padding: 50px 60px; font-family: Georgia, serif; font-size: 11px; line-height: 1.5; color: #222; background: #fff; box-sizing: border-box;">
+            
             <!-- Header -->
-            <div style="text-align: center; margin-bottom: 15px; border-bottom: 3px solid #0052CC; padding-bottom: 12px;">
-                <h1 style="color: #0a192f; font-size: 26px; margin: 0 0 6px 0;">Sheena Chugh</h1>
-                <p style="color: #0052CC; font-size: 12px; margin: 4px 0; font-weight: bold;">Project Manager | Program Lead | Release Manager</p>
-                <p style="color: #555; font-size: 11px; margin: 4px 0;">Brampton, Ontario, Canada · sheenachugh92@gmail.com · +1 (647) 236-0034</p>
+            <div style="text-align: center; border-bottom: 2px solid #333; padding-bottom: 15px; margin-bottom: 20px;">
+                <div style="font-size: 26px; font-weight: bold; letter-spacing: 2px; margin-bottom: 8px;">SHEENA CHUGH</div>
+                <div style="font-size: 12px; color: #444; margin-bottom: 5px;">Senior Project Manager | Program Lead | Release Manager</div>
+                <div style="font-size: 10px; color: #666;">Brampton, ON, Canada | sheenachugh92@gmail.com | +1 (647) 236-0034</div>
             </div>
             
-            <!-- Career Summary -->
-            <div class="section-title">Career Summary</div>
-            <div class="bullet">• Strategic Project Manager with 9+ years delivering enterprise programs across cloud, infrastructure, and application platforms.</div>
-            <div class="bullet">• Expert in Agile execution, end-to-end delivery, stakeholder management, and cross-functional leadership to achieve measurable business outcomes.</div>
-            <div class="bullet">• Strong expertise in Jira administration, process automation, and AI integration, reducing manual effort by 40% and improving forecasting by 25%.</div>
-            <div class="bullet">• Proven ability to drive client relationships, lead project estimations, write requirements, and maintain communication channels across stakeholders.</div>
+            <!-- Executive Summary -->
+            <div style="margin-bottom: 18px;">
+                <div style="font-size: 12px; font-weight: bold; border-bottom: 1px solid #333; padding-bottom: 3px; margin-bottom: 8px;">EXECUTIVE SUMMARY</div>
+                <div style="text-align: justify;">Results-driven Project Manager with 9+ years of progressive experience leading enterprise programs across cloud infrastructure, MSP software, and application platforms. Deep expertise in Jira administration, process automation, and AI integration—reducing manual coordination by 40% and improving forecasting accuracy by 25%. Proven track record in client relationship management, cross-functional leadership, and implementing governance frameworks that ensure on-time, on-budget delivery.</div>
+            </div>
             
             <!-- Core Competencies -->
-            <div class="section-title">Core Competencies</div>
-            <div class="two-col" style="margin-bottom: 12px;">
-                <div class="bullet">• Project &amp; Program Management</div>
-                <div class="bullet">• Agile / Scrum / SDLC</div>
-                <div class="bullet">• Stakeholder Management</div>
-                <div class="bullet">• Risk &amp; Issue Management</div>
-                <div class="bullet">• Release Management</div>
-                <div class="bullet">• Cross-Functional Leadership</div>
-                <div class="bullet">• Process Improvement</div>
-                <div class="bullet">• Jira &amp; Confluence Administration</div>
-                <div class="bullet">• Client Communication &amp; Relations</div>
-                <div class="bullet">• Resource &amp; Cost Estimation</div>
-                <div class="bullet">• Requirements Documentation</div>
-                <div class="bullet">• AI Integration &amp; Automation</div>
+            <div style="margin-bottom: 18px;">
+                <div style="font-size: 12px; font-weight: bold; border-bottom: 1px solid #333; padding-bottom: 3px; margin-bottom: 8px;">CORE COMPETENCIES</div>
+                <div style="margin-bottom: 3px;">• Program & Portfolio Management | Agile/Scrum/Waterfall | Stakeholder Engagement | Release Management</div>
+                <div style="margin-bottom: 3px;">• Risk & Issue Mitigation | Resource & Budget Planning | Jira & Confluence Administration | Process Automation</div>
+                <div style="margin-bottom: 3px;">• Client Communication | Cross-Functional Leadership | Requirements Management | AI Integration | Vendor Management</div>
             </div>
-            
-            <!-- Technical Skills -->
-            <div class="section-title">Technical &amp; Automation Skills</div>
-            <div class="bullet">• Built Jira dashboards, portfolios, and timelines for real-time project visibility across 50+ stakeholders</div>
-            <div class="bullet">• Designed 9+ Jira automations for ticket workflows, deployment triggers, and sprint tracking</div>
-            <div class="bullet">• Introduced AI into test case generation with direct Jira mapping for seamless QA integration</div>
-            <div class="bullet">• Implemented story point vs actual time tracking improving forecasting accuracy by 25%</div>
-            <div class="bullet">• Manage Confluence spaces for documentation, runbooks, and cross-team collaboration</div>
-            <div class="bullet">• Created Excel macros (VBA) for automated financial calculations and QA payment tracking</div>
             
             <!-- Professional Experience -->
-            <div class="section-title">Professional Experience</div>
-            
-            <!-- Job 1 -->
-            <div class="job-title">Idealogical Group – Markham, ON</div>
-            <div class="job-meta"><strong>Program &amp; Project Manager</strong> | May 2024 – Present</div>
-            <div class="bullet">• Lead strategic programs across MSP software and infrastructure initiatives, ensuring alignment with corporate objectives and measurable KPIs</div>
-            <div class="bullet">• Drive client calls and maintain communication channels for internal and external stakeholders</div>
-            <div class="bullet">• Lead project estimations for resources, timelines, and cost planning across multiple workstreams</div>
-            <div class="bullet">• Introduced AI into test case generation workflows, directly mapping AI-generated test cases into Jira</div>
-            <div class="bullet">• Write requirement documents based on client meetings; resolve requirement gaps and queries proactively</div>
-            <div class="bullet">• Built Jira dashboards, portfolios, and timelines used by 50+ stakeholders for real-time visibility</div>
-            <div class="bullet">• Designed 9+ Jira automations reducing manual coordination by 40% and improving planning accuracy by 25%</div>
-            <div class="bullet">• Manage Confluence spaces for documentation, process guidelines, and cross-team collaboration</div>
+            <div style="margin-bottom: 18px;">
+                <div style="font-size: 12px; font-weight: bold; border-bottom: 1px solid #333; padding-bottom: 3px; margin-bottom: 10px;">PROFESSIONAL EXPERIENCE</div>
+                
+                <!-- Job 1 -->
+                <div style="margin-bottom: 14px;">
+                    <div style="font-weight: bold; margin-bottom: 2px;">IDEALOGICAL GROUP – Markham, ON</div>
+                    <div style="font-style: italic; margin-bottom: 5px;">Program & Project Manager | May 2024 – Present</div>
+                    <div style="margin-bottom: 3px; padding-left: 15px;">• Lead strategic programs across MSP software and infrastructure, aligning with corporate objectives and KPIs</div>
+                    <div style="margin-bottom: 3px; padding-left: 15px;">• Drive client engagement through regular calls; maintain communication channels for internal/external stakeholders</div>
+                    <div style="margin-bottom: 3px; padding-left: 15px;">• Own project estimations for resources, timelines, and cost planning across multiple concurrent workstreams</div>
+                    <div style="margin-bottom: 3px; padding-left: 15px;">• Pioneered AI integration into test case generation, directly mapping outputs to Jira for QA traceability</div>
+                    <div style="margin-bottom: 3px; padding-left: 15px;">• Author requirement documents from client meetings; proactively resolve gaps and ambiguities</div>
+                    <div style="margin-bottom: 3px; padding-left: 15px;">• Architected Jira dashboards, portfolios, and timelines providing visibility to 50+ stakeholders</div>
+                    <div style="margin-bottom: 3px; padding-left: 15px;">• Designed 9+ workflow automations, reducing manual coordination by 40% and improving accuracy by 25%</div>
+                </div>
+                
+                <!-- Job 2 -->
+                <div style="margin-bottom: 14px;">
+                    <div style="font-weight: bold; margin-bottom: 2px;">TESTINGXPERTS – Remote</div>
+                    <div style="font-style: italic; margin-bottom: 5px;">Project Manager / Coordinator | Aug 2021 – Jan 2024</div>
+                    <div style="margin-bottom: 3px; padding-left: 15px;">• Delivered 15+ enterprise projects across cloud, API, and web platforms with 98% on-time completion rate</div>
+                    <div style="margin-bottom: 3px; padding-left: 15px;">• Managed client relationships through regular calls; served as primary contact for project communications</div>
+                    <div style="margin-bottom: 3px; padding-left: 15px;">• Developed requirement documents from stakeholder meetings; resolved gaps to ensure clear project scope</div>
+                    <div style="margin-bottom: 3px; padding-left: 15px;">• Led resource, timeline, and cost estimations ensuring accurate project scoping and budget adherence</div>
+                    <div style="margin-bottom: 3px; padding-left: 15px;">• Facilitated Agile ceremonies, sprint planning, and executive reporting for global cross-functional teams</div>
+                    <div style="margin-bottom: 3px; padding-left: 15px;">• Implemented governance frameworks and change control processes, reducing rework by 30%</div>
+                </div>
+                
+                <!-- Job 3 -->
+                <div style="margin-bottom: 14px;">
+                    <div style="font-weight: bold; margin-bottom: 2px;">SEASIA INFOTECH – India</div>
+                    <div style="font-style: italic; margin-bottom: 5px;">Associate Project Manager | May 2019 – Aug 2021</div>
+                    <div style="margin-bottom: 3px; padding-left: 15px;">• Managed project planning and execution for large-scale healthcare and financial services programs</div>
+                    <div style="margin-bottom: 3px; padding-left: 15px;">• Cultivated client relationships through proactive communication across full project lifecycles</div>
+                    <div style="margin-bottom: 3px; padding-left: 15px;">• Conducted resource and timeline estimations; documented detailed requirements from stakeholder sessions</div>
+                    <div style="margin-bottom: 3px; padding-left: 15px;">• Introduced reporting templates increasing visibility and reducing follow-up delays by 40%</div>
+                    <div style="margin-bottom: 3px; padding-left: 15px;">• Automated 150+ workflows, reducing manual effort by 60% and improving team productivity</div>
+                </div>
+                
+                <!-- Job 4 -->
+                <div style="margin-bottom: 14px;">
+                    <div style="font-weight: bold; margin-bottom: 2px;">TECH MAHINDRA – India</div>
+                    <div style="font-style: italic; margin-bottom: 5px;">Project Coordinator | Aug 2016 – Apr 2019</div>
+                    <div style="margin-bottom: 3px; padding-left: 15px;">• Supported deployment programs for national utility and telecom projects ensuring zero-downtime releases</div>
+                    <div style="margin-bottom: 3px; padding-left: 15px;">• Maintained communication channels with internal teams and external vendors for seamless coordination</div>
+                    <div style="margin-bottom: 3px; padding-left: 15px;">• Coordinated 20+ monthly deployments with detailed playbooks, readiness packs, and rollback plans</div>
+                    <div style="margin-bottom: 3px; padding-left: 15px;">• Created dashboards and reports improving decision-making speed by 25%</div>
+                    <div style="margin-bottom: 3px; padding-left: 15px;">• Developed automation scripts reducing incident resolution time by 30%</div>
+                </div>
+            </div>
         </div>
         
-        <!-- Page 2 -->
-        <div class="pdf-page page-break">
-            <!-- Job 2 -->
-            <div class="job-title">TestingXperts – Remote</div>
-            <div class="job-meta"><strong>Project Manager / Coordinator</strong> | Aug 2021 – Jan 2024</div>
-            <div class="bullet">• Managed delivery of enterprise projects across cloud, API, and web platforms with 98% on-time completion</div>
-            <div class="bullet">• Drove client calls and maintained communication channels for internal and external stakeholders</div>
-            <div class="bullet">• Wrote requirement documents based on meetings; resolved requirement gaps and queries efficiently</div>
-            <div class="bullet">• Led project estimations for resources, time, and cost planning to ensure accurate project scoping</div>
-            <div class="bullet">• Facilitated Agile ceremonies, sprint planning, and executive updates for global cross-functional teams</div>
-            <div class="bullet">• Implemented project governance models and reporting frameworks to track deliverables and risk indicators</div>
-            <div class="bullet">• Enhanced stakeholder communication and change control processes, reducing rework by 30%</div>
-            
-            <!-- Job 3 -->
-            <div class="job-title" style="margin-top: 18px;">Seasia Infotech – India</div>
-            <div class="job-meta"><strong>Associate Project Manager</strong> | May 2019 – Aug 2021</div>
-            <div class="bullet">• Coordinated project planning and execution for large-scale healthcare and finance programs</div>
-            <div class="bullet">• Drove client communications and maintained stakeholder relationships across project lifecycles</div>
-            <div class="bullet">• Conducted project estimations for resources and timelines; documented requirements from stakeholder meetings</div>
-            <div class="bullet">• Monitored schedules, deliverables, and budgets ensuring full compliance with SLAs and quality standards</div>
-            <div class="bullet">• Introduced reporting templates that increased visibility and reduced follow-up delays by 40%</div>
-            <div class="bullet">• Automated 150+ workflows reducing manual effort by 60% and improving team productivity</div>
-            <div class="bullet">• Supported process improvement initiatives enhancing delivery predictability and client satisfaction</div>
-            
-            <!-- Job 4 -->
-            <div class="job-title" style="margin-top: 18px;">Tech Mahindra – India</div>
-            <div class="job-meta"><strong>Project Coordinator</strong> | Aug 2016 – Apr 2019</div>
-            <div class="bullet">• Supported deployment programs for national utility and telecom projects ensuring zero downtime</div>
-            <div class="bullet">• Maintained communication channels with internal teams and external vendors for deployment coordination</div>
-            <div class="bullet">• Resolved requirement gaps and queries; documented project requirements and change requests</div>
-            <div class="bullet">• Coordinated between onshore and offshore teams to maintain delivery timelines and stakeholder alignment</div>
-            <div class="bullet">• Coordinated 20+ monthly deployments with detailed playbooks and readiness packs</div>
-            <div class="bullet">• Created project reports and dashboards improving decision-making speed by 25%</div>
-            <div class="bullet">• Facilitated documentation, change management, and risk tracking across projects</div>
-            <div class="bullet">• Built automation scripts reducing incident resolution time by 30%</div>
+        <!-- PAGE 2 -->
+        <div style="width: 800px; padding: 50px 60px; font-family: Georgia, serif; font-size: 11px; line-height: 1.5; color: #222; background: #fff; box-sizing: border-box;">
             
             <!-- Key Achievements -->
-            <div class="section-title" style="margin-top: 18px;">Key Achievements &amp; Impact</div>
-            <div class="bullet">• <strong>40% Reduction</strong> in manual coordination through Jira automation implementation</div>
-            <div class="bullet">• <strong>25% Improvement</strong> in project forecasting accuracy via story point tracking</div>
-            <div class="bullet">• <strong>98% On-time Delivery</strong> rate across 15+ enterprise projects</div>
-            <div class="bullet">• <strong>30% Reduction</strong> in rework through improved stakeholder communication</div>
-            <div class="bullet">• <strong>50+ Stakeholders</strong> using dashboards for real-time project visibility</div>
-            <div class="bullet">• <strong>AI Integration</strong> for test case generation with direct Jira mapping</div>
-        </div>
-        
-        <!-- Page 3 -->
-        <div class="pdf-page page-break">
-            <!-- Education -->
-            <div class="section-title">Education</div>
-            <p style="margin: 0 0 8px 0;"><strong>Master of Computer Applications (MCA)</strong><br>Indira Gandhi National Open University (2017–2021)</p>
-            <p style="margin: 0 0 15px 0;"><strong>Bachelor of Science, Computer Science</strong><br>Kurukshetra University (2013–2016)</p>
-            
-            <!-- Certifications -->
-            <div class="section-title">Certifications</div>
-            <div class="bullet">• ISTQB Certified Tester – Advanced Level Test Management</div>
-            <div class="bullet">• Business Analyst Certification</div>
-            
-            <!-- Tools & Technologies -->
-            <div class="section-title">Tools &amp; Technologies</div>
-            <div class="two-col">
-                <div class="bullet">• Jira (Administration &amp; Automation)</div>
-                <div class="bullet">• Confluence</div>
-                <div class="bullet">• Microsoft Project</div>
-                <div class="bullet">• Excel (Macros/VBA)</div>
-                <div class="bullet">• Azure DevOps</div>
-                <div class="bullet">• ServiceNow</div>
-                <div class="bullet">• Slack / Teams</div>
-                <div class="bullet">• Git / GitHub</div>
+            <div style="margin-bottom: 18px;">
+                <div style="font-size: 12px; font-weight: bold; border-bottom: 1px solid #333; padding-bottom: 3px; margin-bottom: 8px;">KEY ACHIEVEMENTS</div>
+                <div style="margin-bottom: 3px;">• 40% Reduction in manual coordination through Jira automation implementation</div>
+                <div style="margin-bottom: 3px;">• 25% Improvement in project forecasting accuracy via story point tracking system</div>
+                <div style="margin-bottom: 3px;">• 98% On-time Delivery rate across 15+ enterprise projects</div>
+                <div style="margin-bottom: 3px;">• Pioneered AI Integration for automated test case generation with Jira mapping</div>
+                <div style="margin-bottom: 3px;">• 50+ Stakeholders actively using real-time dashboards for project visibility</div>
             </div>
             
-            <!-- Additional Highlights -->
-            <div class="section-title">Additional Highlights</div>
-            <div class="bullet">• <strong>AI-Driven Processes:</strong> Pioneered AI integration for test case generation, automating quality assurance workflows and improving test coverage</div>
-            <div class="bullet">• <strong>Client Leadership:</strong> Lead client calls, manage expectations, and serve as primary point of contact for project communications</div>
-            <div class="bullet">• <strong>Resource Planning:</strong> Expert in project estimations covering resources, timelines, costs, and capacity planning</div>
-            <div class="bullet">• <strong>Requirements Management:</strong> Write detailed requirement documents from meetings; bridge gaps between stakeholders and development teams</div>
-            <div class="bullet">• <strong>Communication Excellence:</strong> Maintain robust communication channels for internal teams and external stakeholders</div>
-            <div class="bullet">• <strong>Problem Resolution:</strong> Proactively identify and resolve requirement gaps, queries, and project blockers</div>
+            <!-- Technical Expertise -->
+            <div style="margin-bottom: 18px;">
+                <div style="font-size: 12px; font-weight: bold; border-bottom: 1px solid #333; padding-bottom: 3px; margin-bottom: 8px;">TECHNICAL EXPERTISE</div>
+                <div style="margin-bottom: 3px;"><strong>PM Tools:</strong> Jira (Administration & Automation), Confluence, Microsoft Project, Azure DevOps, ServiceNow</div>
+                <div style="margin-bottom: 3px;"><strong>Automation:</strong> Jira Workflows, Excel VBA/Macros, AI-driven Test Generation, Process Scripting</div>
+                <div style="margin-bottom: 3px;"><strong>Collaboration:</strong> Slack, Microsoft Teams, SharePoint, Git/GitHub</div>
+                <div style="margin-bottom: 3px;"><strong>Methodologies:</strong> Agile, Scrum, Kanban, Waterfall, SDLC, SAFe</div>
+            </div>
+            
+            <!-- Education -->
+            <div style="margin-bottom: 18px;">
+                <div style="font-size: 12px; font-weight: bold; border-bottom: 1px solid #333; padding-bottom: 3px; margin-bottom: 8px;">EDUCATION</div>
+                <div style="margin-bottom: 5px;"><strong>Master of Computer Applications (MCA)</strong> – Indira Gandhi National Open University, 2017–2021</div>
+                <div><strong>Bachelor of Science, Computer Science</strong> – Kurukshetra University, 2013–2016</div>
+            </div>
+            
+            <!-- Certifications -->
+            <div style="margin-bottom: 10px;">
+                <div style="font-size: 12px; font-weight: bold; border-bottom: 1px solid #333; padding-bottom: 3px; margin-bottom: 8px;">CERTIFICATIONS</div>
+                <div style="margin-bottom: 3px;">• ISTQB Certified Tester – Advanced Level Test Management</div>
+                <div>• Business Analyst Certification</div>
+            </div>
+            
         </div>
     `;
     
-    // Append to body temporarily (hidden)
-    resumeContent.style.position = 'absolute';
-    resumeContent.style.left = '-9999px';
     document.body.appendChild(resumeContent);
     
-    // Generate PDF with page break support
     const opt = {
         margin: 0,
         filename: 'Sheena_Chugh_Resume.pdf',
@@ -402,14 +358,13 @@ function generateResumePDF() {
         html2canvas: { 
             scale: 2, 
             useCORS: true,
-            logging: false
+            logging: false,
+            backgroundColor: '#ffffff'
         },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-        pagebreak: { mode: ['css', 'legacy'], before: '.page-break' }
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
     };
     
     html2pdf().set(opt).from(resumeContent).save().then(() => {
-        // Remove temporary element
         document.body.removeChild(resumeContent);
         showNotification('Resume downloaded successfully!');
     }).catch(err => {
