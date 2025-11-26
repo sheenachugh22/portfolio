@@ -85,12 +85,12 @@ const closeModal = document.querySelector('.close');
 // Project details based on resume experience
 const projectDetails = {
     1: {
-        title: 'Program & Project Lead — Idealogical Group',
+        title: 'Program & Project Manager — Idealogical Group',
         description: 'Lead strategic programs across MSP software and infrastructure initiatives, ensuring alignment with corporate objectives and measurable KPIs. Manage cross-functional project delivery with clear milestones, risks, dependencies, and stakeholder communications. Built Jira dashboards, portfolios, and timelines used by 50+ stakeholders for real-time project visibility. Designed 9+ Jira automations reducing manual coordination by 40% and improving planning accuracy by 25%. Implemented story point tracking for sprint velocity and forecasting. Manage Confluence spaces for documentation and cross-team collaboration.'
     },
     2: {
         title: 'Project Manager / Coordinator — TestingXperts',
-        description: 'Managed delivery of 15+ enterprise projects with 98% on-time completion across cloud, API, and web platforms. Facilitated Agile ceremonies, sprint planning, and executive updates for global cross-functional teams. Implemented project governance models and reporting frameworks to track deliverables and risk indicators. Enhanced stakeholder communication and change control, reducing rework by 30%.'
+        description: 'Managed delivery of enterprise projects with 98% on-time completion across cloud, API, and web platforms. Facilitated Agile ceremonies, sprint planning, and executive updates for global cross-functional teams. Implemented project governance models and reporting frameworks to track deliverables and risk indicators. Enhanced stakeholder communication and change control, reducing rework by 30%.'
     },
     3: {
         title: 'Associate Project Manager — Seasia Infotech',
