@@ -312,7 +312,7 @@ function generateResumePDF() {
             <!-- Job 2 -->
             <div class="job-title">TestingXperts – Remote</div>
             <div class="job-meta"><strong>Project Manager / Coordinator</strong> | Aug 2021 – Jan 2024</div>
-            <div class="bullet">• Managed delivery of 15+ enterprise projects across cloud, API, and web platforms with 98% on-time completion</div>
+            <div class="bullet">• Managed delivery of enterprise projects across cloud, API, and web platforms with 98% on-time completion</div>
             <div class="bullet">• Drove client calls and maintained communication channels for internal and external stakeholders</div>
             <div class="bullet">• Wrote requirement documents based on meetings; resolved requirement gaps and queries efficiently</div>
             <div class="bullet">• Led project estimations for resources, time, and cost planning to ensure accurate project scoping</div>
