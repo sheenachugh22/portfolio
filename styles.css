@@ -629,6 +629,21 @@ body::before {
     margin-bottom: 3rem;
 }
 
+.automations-grid.compact {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+}
+
+.automation-card.automation-wide {
+    grid-column: span 1;
+}
+
+@media (max-width: 900px) {
+    .automations-grid.compact {
+        grid-template-columns: 1fr;
+    }
+}
+
 .automation-card {
     background: var(--card-bg);
     border-radius: 15px;
@@ -694,6 +709,16 @@ body::before {
 [data-theme="light"] .auto-tag {
     background: rgba(0, 82, 204, 0.1);
     color: #0052CC;
+}
+
+.auto-tag.ai-tag {
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.2), rgba(75, 0, 130, 0.3));
+    color: #9932CC;
+    border-color: #9932CC;
+}
+
+[data-theme="light"] .auto-tag.ai-tag {
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.15), rgba(75, 0, 130, 0.2));
 }
 
 .automation-impact {
@@ -878,6 +903,17 @@ body::before {
 
 [data-theme="light"] .tech-tag.tech-jira {
     background: rgba(0, 82, 204, 0.15);
+}
+
+.tech-tag.tech-ai {
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.2), rgba(75, 0, 130, 0.3));
+    color: #9932CC;
+    border-color: #9932CC;
+    font-weight: 600;
+}
+
+[data-theme="light"] .tech-tag.tech-ai {
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.15), rgba(75, 0, 130, 0.2));
 }
 
 .project-card.featured-card {
