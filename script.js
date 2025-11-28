@@ -90,7 +90,7 @@ const projectDetails = {
     },
     2: {
         title: 'Project Manager / Coordinator — TestingXperts',
-        description: 'Managed delivery of 15+ enterprise projects with 98% on-time completion across cloud, API, and web platforms. Drove client calls and maintained communication channels for internal and external stakeholders. Wrote requirement documents based on meetings and efficiently resolved requirement gaps and queries. Led project estimations for resources, time, and cost planning. Facilitated Agile ceremonies, sprint planning, and executive updates for global cross-functional teams. Implemented project governance models and reporting frameworks. Enhanced stakeholder communication and change control, reducing rework by 30%.'
+        description: 'Managed delivery of enterprise projects with 98% on-time completion across cloud, API, and web platforms. Drove client calls and maintained communication channels for internal and external stakeholders. Wrote requirement documents based on meetings and efficiently resolved requirement gaps and queries. Led project estimations for resources, time, and cost planning. Facilitated Agile ceremonies, sprint planning, and executive updates for global cross-functional teams. Implemented project governance models and reporting frameworks. Enhanced stakeholder communication and change control, reducing rework by 30%.'
     },
     3: {
         title: 'Associate Project Manager — Seasia Infotech',
