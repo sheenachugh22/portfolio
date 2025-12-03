@@ -257,20 +257,20 @@ function generateResumePDF() {
 
 <div style="margin-bottom:10px;">
 <div style="font-weight:bold;font-size:10.5px;">IDEALOGICAL GROUP – Markham, ON</div>
-<div style="font-style:italic;margin-bottom:4px;font-size:10px;">Program & Project Manager | May 2024 – Present</div>
+<div style="font-style:italic;margin-bottom:4px;font-size:10px;"> Project Manager & Business Analyst | May 2024 – Present</div>
 <div style="padding-left:12px;margin-bottom:2px;">• Lead strategic programs across MSP software and infrastructure, aligning with corporate objectives</div>
 <div style="padding-left:12px;margin-bottom:2px;">• Drive client engagement; maintain communication channels for internal/external stakeholders</div>
 <div style="padding-left:12px;margin-bottom:2px;">• Own project estimations for resources, timelines, and cost planning across workstreams</div>
 <div style="padding-left:12px;margin-bottom:2px;">• Pioneered AI integration into test case generation, mapping outputs to Jira for QA traceability</div>
 <div style="padding-left:12px;margin-bottom:2px;">• Author requirement documents from client meetings; resolve gaps and ambiguities</div>
-<div style="padding-left:12px;margin-bottom:2px;">• Architected Jira dashboards, portfolios, timelines for 50+ stakeholders</div>
+<div style="padding-left:12px;margin-bottom:2px;">• Architected Jira dashboards, portfolios, timelines for multiple stakeholders</div>
 <div style="padding-left:12px;">• Designed 9+ workflow automations, reducing manual coordination by 40 percent</div>
 </div>
 
 <div style="margin-bottom:10px;">
 <div style="font-weight:bold;font-size:10.5px;">TESTINGXPERTS – Remote</div>
-<div style="font-style:italic;margin-bottom:4px;font-size:10px;">Project Manager / Coordinator | Aug 2021 – Jan 2024</div>
-<div style="padding-left:12px;margin-bottom:2px;">• Delivered 15+ enterprise projects across cloud, API, web platforms with 98 percent on-time completion</div>
+<div style="font-style:italic;margin-bottom:4px;font-size:10px;">Project Manager | Aug 2021 – Jan 2024</div>
+<div style="padding-left:12px;margin-bottom:2px;">• Delivered enterprise projects across cloud, API, web platforms with 98 percent on-time completion</div>
 <div style="padding-left:12px;margin-bottom:2px;">• Managed client relationships; served as primary contact for project communications</div>
 <div style="padding-left:12px;margin-bottom:2px;">• Developed requirement documents from stakeholder meetings; resolved scope gaps</div>
 <div style="padding-left:12px;margin-bottom:2px;">• Led resource, timeline, cost estimations ensuring accurate scoping and budget adherence</div>
@@ -279,13 +279,14 @@ function generateResumePDF() {
 </div>
 
 <div style="margin-bottom:10px;">
-<div style="font-weight:bold;font-size:10.5px;">SEASIA INFOTECH – India</div>
-<div style="font-style:italic;margin-bottom:4px;font-size:10px;">Associate Project Manager | May 2019 – Aug 2021</div>
-<div style="padding-left:12px;margin-bottom:2px;">• Managed project planning for large-scale healthcare and financial services programs</div>
-<div style="padding-left:12px;margin-bottom:2px;">• Cultivated client relationships through proactive communication across lifecycles</div>
-<div style="padding-left:12px;margin-bottom:2px;">• Conducted resource/timeline estimations; documented requirements from stakeholder sessions</div>
+<div style="font-weight:bold;font-size:10.5px;">SEASIA INFOTECH(BECTON DICKINSON) – India</div>
+<div style="font-style:italic;margin-bottom:4px;font-size:10px;">Healthcare Buisness Analyst & Project Coordinator | May 2019 – Aug 2021</div>
+<div style="padding-left:12px;margin-bottom:2px;">• Coordinated multiple product releases for clinical and cloud-based platforms ensuring scope accuracy, risk mitigation, and stakeholder communication.</div>
+<div style="padding-left:12px;margin-bottom:2px;">• Worked with healthcare clients to validate HL7/FHIR-based interfaces, patient record flows, and scheduling system behavior.</div>
+<div style="padding-left:12px;margin-bottom:2px;">• Conducted business-level UAT, wrote test scripts, and supported feature validation for provider workflows.</div>
 <div style="padding-left:12px;margin-bottom:2px;">• Introduced reporting templates increasing visibility, reducing follow-up delays by 40 percent</div>
-<div style="padding-left:12px;">• Automated 150+ workflows, reducing manual effort by 60 percent</div>
+<div style="padding-left:12px;margin-bottom:2px;">• Led defect triage and post-release analysis, reducing recurring issues across clinical workflows.</div>
+<div style="padding-left:12px;">• Enabled metrics-driven reporting that improved predictability and early risk identification.</div>
 </div>
 
 <div style="margin-bottom:10px;">
@@ -305,7 +306,7 @@ function generateResumePDF() {
     
     const technical = document.createElement('div');
     technical.style.cssText = 'margin-bottom:12px;';
-    technical.innerHTML = '<div style="font-size:11px;font-weight:bold;border-bottom:1px solid #333;padding-bottom:2px;margin-bottom:7px;">TECHNICAL EXPERTISE</div><div style="margin-bottom:3px;"><b>PM Tools:</b> Jira (Admin), Confluence, MS Project, Azure DevOps, ServiceNow</div><div style="margin-bottom:3px;"><b>Automation:</b> Jira Workflows, Excel VBA, AI-driven Test Generation, Scripting</div><div style="margin-bottom:3px;"><b>Collaboration:</b> Slack, Microsoft Teams, SharePoint, Git/GitHub</div><div><b>Methodologies:</b> Agile, Scrum, Kanban, Waterfall, SDLC, SAFe</div>';
+    technical.innerHTML = '<div style="font-size:11px;font-weight:bold;border-bottom:1px solid #333;padding-bottom:2px;margin-bottom:7px;">TECHNICAL EXPERTISE</div><div style="margin-bottom:3px;"><b>PM Tools:</b> Jira (Admin), Confluence, MS Project, Azure DevOps</div><div style="margin-bottom:3px;"><b>Automation:</b> Jira Workflows, Excel VBA, AI-driven Test Generation, Scripting</div><div style="margin-bottom:3px;"><b>Collaboration:</b> Slack, Microsoft Teams, SharePoint, Git/GitHub</div><div><b>Methodologies:</b> Agile, Scrum, Kanban, Waterfall, SDLC, SAFe, HL7/FHIR Standards, Requirement Gathering, User Stories, Process Mapping</div>';
     
     const education = document.createElement('div');
     education.style.cssText = 'margin-bottom:12px;';
