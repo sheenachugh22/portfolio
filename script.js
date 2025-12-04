@@ -1,22 +1,3 @@
-// Theme Toggle Functionality
-const themeToggle = document.getElementById('themeToggle');
-const htmlElement = document.documentElement;
-
-// Function to set theme
-function setTheme(theme) {
-    htmlElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-}
-
-// Toggle theme on button click
-if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-        const currentTheme = htmlElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        setTheme(newTheme);
-    });
-}
-
 // Mobile Menu Toggle
 const menuToggle = document.getElementById('menuToggle');
 const navMenu = document.querySelector('.nav-menu');
@@ -82,23 +63,23 @@ const modalTitle = document.getElementById('modalTitle');
 const modalDescription = document.getElementById('modalDescription');
 const closeModal = document.querySelector('.close');
 
-// Project details based on resume experience
+// Project details for BA/CSM/Account Manager/Pre-Sales profile
 const projectDetails = {
     1: {
-        title: 'Program & Project Manager — Idealogical Group',
-        description: 'Lead strategic programs across MSP software and infrastructure initiatives, ensuring alignment with corporate objectives and measurable KPIs. Drive client calls and maintain communication channels for internal and external stakeholders. Lead project estimations for resources, timelines, and cost planning. Introduced AI into test case generation with direct Jira mapping for seamless QA integration. Write requirement documents based on meetings and proactively resolve requirement gaps and queries. Built Jira dashboards, portfolios, and timelines used by 50+ stakeholders for real-time project visibility. Designed 9+ Jira automations reducing manual coordination by 40% and improving planning accuracy by 25%.'
+        title: 'Senior Business Analyst / Program Manager — Idealogical Group',
+        description: 'Primary liaison between business stakeholders, vendors, and implementation teams for enterprise MSP software and infrastructure initiatives. Lead client discovery sessions, translating complex business needs into structured requirements and solution proposals. Manage end-to-end client relationships from pre-sales engagement through implementation and ongoing success. Create process mapping diagrams, user stories with acceptance criteria, and use cases to guide solution delivery. Architected Jira dashboards, portfolios, and real-time timelines reducing manual coordination by 40%. Pioneered AI integration into test case generation, demonstrating innovation in delivery quality improvement.'
     },
     2: {
-        title: 'Project Manager / Coordinator — TestingXperts',
-        description: 'Managed delivery of enterprise projects with 98% on-time completion across cloud, API, and web platforms. Drove client calls and maintained communication channels for internal and external stakeholders. Wrote requirement documents based on meetings and efficiently resolved requirement gaps and queries. Led project estimations for resources, time, and cost planning. Facilitated Agile ceremonies, sprint planning, and executive updates for global cross-functional teams. Implemented project governance models and reporting frameworks. Enhanced stakeholder communication and change control, reducing rework by 30%.'
+        title: 'Business Analyst / Project Coordinator — TestingXperts',
+        description: 'Managed client engagements and requirements gathering for enterprise testing projects across cloud, API, and web platforms. Conducted discovery workshops with clients to gather and prioritize business requirements. Developed BRDs, proposals, and functional specifications from stakeholder meetings; resolved scope gaps ensuring alignment with client goals. Owned client communication and escalation management throughout project lifecycle, ensuring satisfaction. Implemented governance frameworks reducing rework by 30% through improved requirements traceability.'
     },
     3: {
-        title: 'Associate Project Manager — Seasia Infotech',
-        description: 'Coordinated project planning and execution for large-scale healthcare and finance programs. Drove client communications and maintained stakeholder relationships across project lifecycles. Conducted project estimations for resources and timelines; documented requirements from stakeholder meetings. Monitored schedules, deliverables, and budgets ensuring full compliance with SLAs and quality standards. Introduced reporting templates that increased visibility and reduced follow-up delays by 40%. Automated 150+ workflows reducing manual effort by 60%.'
+        title: 'Associate Business Analyst / Project Manager — Seasia Infotech',
+        description: 'Managed business analysis and client relationships for large-scale healthcare and financial services programs, ensuring compliance with industry regulations. Served as primary client contact for requirements gathering, solution consulting, and ongoing relationship management. Conducted workflow observation sessions with clinical and operational teams to document current-state processes and identify improvement opportunities. Introduced reporting templates and process enhancements, increasing client visibility and reducing follow-up delays by 40%. Automated 150+ workflows, reducing manual effort by 60%.'
     },
     4: {
-        title: 'Project Coordinator — Tech Mahindra',
-        description: 'Supported deployment programs for national utility and telecom projects ensuring zero downtime. Maintained communication channels with internal teams and external vendors. Resolved requirement gaps and queries; documented project requirements and change requests. Coordinated between onshore and offshore teams to maintain delivery timelines and stakeholder alignment. Coordinated 20+ monthly deployments with detailed playbooks and readiness packs. Created project reports and dashboards improving decision-making speed by 25%. Built automation scripts reducing incident resolution time by 30%.'
+        title: 'Business Analyst / Project Coordinator — Tech Mahindra',
+        description: 'Supported client deployments for utility and telecom projects, ensuring seamless transitions and client satisfaction. Maintained client communication channels and coordinated between internal teams and external vendors. Coordinated 20+ monthly deployments with detailed playbooks and readiness documentation. Created dashboards improving decision-making speed by 25% and providing real-time visibility to clients and stakeholders.'
     }
 };
 
@@ -106,7 +87,7 @@ function openProjectModal(project) {
     modalTitle.textContent = project.title;
     modalDescription.innerHTML = project.description
         .split('. ')
-        .map(sentence => sentence.trim() ? `<p>${sentence.trim()}${sentence.trim().endsWith('.') ? '' : '.'}</p>` : '')
+        .map(sentence => sentence.trim() ? `<p>• ${sentence.trim()}${sentence.trim().endsWith('.') ? '' : '.'}</p>` : '')
         .join('');
     modal.classList.add('open');
     document.body.classList.add('modal-open');
@@ -145,9 +126,7 @@ const emailElement = document.getElementById('email');
 copyEmailBtn.addEventListener('click', () => {
     const email = emailElement.textContent;
     
-    // Copy to clipboard
     navigator.clipboard.writeText(email).then(() => {
-        // Show notification
         showNotification('Email copied to clipboard!');
     }).catch(err => {
         console.error('Failed to copy email:', err);
@@ -157,19 +136,16 @@ copyEmailBtn.addEventListener('click', () => {
 
 // Show Notification Function
 function showNotification(message) {
-    // Remove existing notification if any
     const existingNotification = document.querySelector('.notification');
     if (existingNotification) {
         existingNotification.remove();
     }
     
-    // Create new notification
     const notification = document.createElement('div');
     notification.className = 'notification';
     notification.textContent = message;
     document.body.appendChild(notification);
     
-    // Remove notification after 3 seconds
     setTimeout(() => {
         notification.style.animation = 'slideUp 0.3s reverse';
         setTimeout(() => {
@@ -182,13 +158,13 @@ function showNotification(message) {
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.15)';
+        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
     } else {
-        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
     }
 });
 
-// Add animation on scroll (optional enhancement)
+// Add animation on scroll
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -219,141 +195,276 @@ document.querySelectorAll('.automation-card').forEach((card, index) => {
     observer.observe(card);
 });
 
-// Download Resume PDF
-const downloadResumeBtn = document.getElementById('downloadResumeBtn');
-
-downloadResumeBtn.addEventListener('click', () => {
-    generateResumePDF();
+// Observe fit items for animation
+document.querySelectorAll('.fit-item').forEach((item, index) => {
+    item.style.opacity = '0';
+    item.style.transform = 'translateX(-20px)';
+    item.style.transition = `opacity 0.5s ease ${index * 0.08}s, transform 0.5s ease ${index * 0.08}s`;
+    observer.observe(item);
 });
 
-function generateResumePDF() {
-    showNotification('Generating PDF resume...');
-    
-    // Create a visible container that will be captured
-    const resumeContent = document.createElement('div');
-    resumeContent.id = 'resume-pdf-content';
-    resumeContent.style.cssText = 'position:relative;width:595px;background:#fff;color:#000;font-family:Georgia,serif;font-size:10px;line-height:1.4;padding:35px 40px;box-sizing:border-box;';
-    
-    // Use text nodes and proper escaping to avoid LaTeX conversion issues
-    const createText = (text) => document.createTextNode(text);
-    
-    // Build the resume structure
-    const header = document.createElement('div');
-    header.style.cssText = 'text-align:center;border-bottom:2px solid #333;padding-bottom:10px;margin-bottom:15px;';
-    header.innerHTML = '<div style="font-size:22px;font-weight:bold;letter-spacing:2px;margin-bottom:5px;">SHEENA CHUGH</div><div style="font-size:11px;color:#444;margin-bottom:3px;">Senior Project Manager | Program Lead | Release Manager</div><div style="font-size:9px;color:#555;">Brampton, ON, Canada | sheenachugh92@gmail.com | +1 (647) 236-0034</div>';
-    
-    const execSummary = document.createElement('div');
-    execSummary.style.cssText = 'margin-bottom:12px;';
-    execSummary.innerHTML = '<div style="font-size:11px;font-weight:bold;border-bottom:1px solid #333;padding-bottom:2px;margin-bottom:7px;">EXECUTIVE SUMMARY</div><div style="text-align:justify;">Results-driven Project Manager with 9+ years of progressive experience leading enterprise programs across cloud infrastructure, MSP software, and application platforms. Deep expertise in Jira administration, process automation, and AI integration—reducing manual coordination by 40 percent and improving forecasting accuracy by 25 percent. Proven track record in client relationship management, cross-functional leadership, and governance frameworks ensuring on-time, on-budget delivery.</div>';
-    
-    const competencies = document.createElement('div');
-    competencies.style.cssText = 'margin-bottom:12px;';
-    competencies.innerHTML = '<div style="font-size:11px;font-weight:bold;border-bottom:1px solid #333;padding-bottom:2px;margin-bottom:7px;">CORE COMPETENCIES</div><div style="margin-bottom:3px;">• Program & Portfolio Management • Agile/Scrum/Waterfall • Stakeholder Engagement • Release Management</div><div style="margin-bottom:3px;">• Risk & Issue Mitigation • Resource & Budget Planning • Jira & Confluence Administration • Process Automation</div><div>• Client Communication • Cross-Functional Leadership • Requirements Management • AI Integration</div>';
-    
-    const experience = document.createElement('div');
-    experience.style.cssText = 'margin-bottom:12px;';
-    experience.innerHTML = `
-<div style="font-size:11px;font-weight:bold;border-bottom:1px solid #333;padding-bottom:2px;margin-bottom:8px;">PROFESSIONAL EXPERIENCE</div>
+// Resume Modal Elements
+const resumeModal = document.getElementById('resumeModal');
+const resumePreviewContainer = document.getElementById('resumePreviewContainer');
+const closeResumeModal = document.getElementById('closeResumeModal');
+const confirmDownloadBtn = document.getElementById('confirmDownloadBtn');
+const downloadResumeBtn = document.getElementById('downloadResumeBtn');
 
-<div style="margin-bottom:10px;">
-<div style="font-weight:bold;font-size:10.5px;">IDEALOGICAL GROUP – Markham, ON</div>
-<div style="font-style:italic;margin-bottom:4px;font-size:10px;"> Project Manager & Business Analyst | May 2024 – Present</div>
-<div style="padding-left:12px;margin-bottom:2px;">• Lead strategic programs across MSP software and infrastructure, aligning with corporate objectives</div>
-<div style="padding-left:12px;margin-bottom:2px;">• Drive client engagement; maintain communication channels for internal/external stakeholders</div>
-<div style="padding-left:12px;margin-bottom:2px;">• Own project estimations for resources, timelines, and cost planning across workstreams</div>
-<div style="padding-left:12px;margin-bottom:2px;">• Pioneered AI integration into test case generation, mapping outputs to Jira for QA traceability</div>
-<div style="padding-left:12px;margin-bottom:2px;">• Author requirement documents from client meetings; resolve gaps and ambiguities</div>
-<div style="padding-left:12px;margin-bottom:2px;">• Architected Jira dashboards, portfolios, timelines for multiple stakeholders</div>
-<div style="padding-left:12px;">• Designed 9+ workflow automations, reducing manual coordination by 40 percent</div>
+// Generate Resume HTML for preview and download
+function generateResumeHTML() {
+    return `
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+body { font-family: Calibri, Arial, sans-serif; font-size: 11pt; line-height: 1.4; margin: 0.5in; color: #000; }
+h1 { font-size: 20pt; text-align: center; margin: 0 0 5px 0; letter-spacing: 2px; }
+.subtitle { text-align: center; font-size: 11pt; color: #444; margin-bottom: 5px; }
+.contact { text-align: center; font-size: 10pt; color: #555; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid #333; }
+h2 { font-size: 11pt; font-weight: bold; border-bottom: 1px solid #333; margin: 15px 0 8px 0; padding-bottom: 3px; text-transform: uppercase; letter-spacing: 1px; }
+.summary { text-align: justify; margin-bottom: 10px; }
+.competencies { margin-bottom: 10px; }
+.job { margin-bottom: 12px; }
+.job-header { font-weight: bold; }
+.job-location { float: right; font-weight: normal; color: #555; }
+.job-title { font-style: italic; color: #444; margin-bottom: 5px; }
+ul { margin: 5px 0; padding-left: 20px; }
+li { margin-bottom: 3px; }
+.two-col { display: table; width: 100%; }
+.two-col > div { display: table-cell; width: 50%; vertical-align: top; }
+</style>
+</head>
+<body>
+
+<h1>SHEENA CHUGH</h1>
+<div class="subtitle">Business Analyst | Customer Success Manager | Account Manager | Pre-Sales</div>
+<div class="contact">Brampton, ON, Canada | sheenachugh92@gmail.com | +1 (647) 236-0034 | sheenachugh22.github.io/portfolio</div>
+
+<h2>Executive Summary</h2>
+<div class="summary">Results-driven Business Analyst and Project Management professional with 9+ years of experience bridging business stakeholders and technical teams across healthcare, enterprise software, and cloud platforms. Proven expertise in client relationship management, requirements elicitation, solution consulting, and driving customer success through strategic engagement and value delivery. Strong track record in leading discovery sessions, creating proposals and BRDs, managing accounts, and ensuring client satisfaction through the entire customer lifecycle.</div>
+
+<h2>Core Competencies</h2>
+<ul>
+<li>Requirements Elicitation & Documentation</li>
+<li>Client Onboarding & Adoption</li>
+<li>Account Planning & Relationship Building</li>
+<li>Discovery Calls & Needs Assessment</li>
+<li>Solution Demonstrations & POCs</li>
+<li>Proposal & RFP Response</li>
+<li>Process Mapping (BPMN, Flowcharts)</li>
+<li>Renewal Management & Retention</li>
+<li>Stakeholder Engagement</li>
+<li>Executive Presentations</li>
+<li>Jira Administration & Workflows</li>
+<li>Upsell & Cross-sell Identification</li>
+</ul>
+
+<h2>Professional Experience</h2>
+
+<div class="job">
+<div class="job-header">IDEALOGICAL GROUP <span class="job-location">Markham, ON</span></div>
+<div class="job-title">Senior Business Analyst / Program Manager | May 2024 – Present</div>
+<ul>
+<li>Primary liaison between business stakeholders, vendors, and implementation teams for enterprise MSP software initiatives</li>
+<li>Lead client discovery sessions, translating complex business needs into structured requirements and solution proposals</li>
+<li>Manage end-to-end client relationships from pre-sales engagement through implementation and ongoing success</li>
+<li>Create process mapping diagrams, user stories with acceptance criteria, and use cases to guide solution delivery</li>
+<li>Architected Jira dashboards and automations reducing manual coordination by 40%</li>
+</ul>
 </div>
 
-<div style="margin-bottom:10px;">
-<div style="font-weight:bold;font-size:10.5px;">TESTINGXPERTS – Remote</div>
-<div style="font-style:italic;margin-bottom:4px;font-size:10px;">Project Manager | Aug 2021 – Jan 2024</div>
-<div style="padding-left:12px;margin-bottom:2px;">• Delivered enterprise projects across cloud, API, web platforms with 98 percent on-time completion</div>
-<div style="padding-left:12px;margin-bottom:2px;">• Managed client relationships; served as primary contact for project communications</div>
-<div style="padding-left:12px;margin-bottom:2px;">• Developed requirement documents from stakeholder meetings; resolved scope gaps</div>
-<div style="padding-left:12px;margin-bottom:2px;">• Led resource, timeline, cost estimations ensuring accurate scoping and budget adherence</div>
-<div style="padding-left:12px;margin-bottom:2px;">• Facilitated Agile ceremonies, sprint planning, executive reporting for global teams</div>
-<div style="padding-left:12px;">• Implemented governance frameworks, reducing rework by 30 percent</div>
+<div class="job">
+<div class="job-header">TESTINGXPERTS <span class="job-location">Remote</span></div>
+<div class="job-title">Business Analyst / Project Coordinator | Aug 2021 – Jan 2024</div>
+<ul>
+<li>Managed client engagements and requirements gathering for enterprise projects across cloud, API, and web platforms</li>
+<li>Conducted discovery workshops with clients to gather and prioritize business requirements</li>
+<li>Developed BRDs, proposals, and functional specifications; resolved scope gaps ensuring alignment with client goals</li>
+<li>Owned client communication and escalation management throughout project lifecycle</li>
+<li>Implemented governance frameworks reducing rework by 30%</li>
+</ul>
 </div>
 
-<div style="margin-bottom:10px;">
-<div style="font-weight:bold;font-size:10.5px;">SEASIA INFOTECH(BECTON DICKINSON) – India</div>
-<div style="font-style:italic;margin-bottom:4px;font-size:10px;">Healthcare Buisness Analyst & Project Coordinator | May 2019 – Aug 2021</div>
-<div style="padding-left:12px;margin-bottom:2px;">• Coordinated multiple product releases for clinical and cloud-based platforms ensuring scope accuracy, risk mitigation, and stakeholder communication.</div>
-<div style="padding-left:12px;margin-bottom:2px;">• Worked with healthcare clients to validate HL7/FHIR-based interfaces, patient record flows, and scheduling system behavior.</div>
-<div style="padding-left:12px;margin-bottom:2px;">• Conducted business-level UAT, wrote test scripts, and supported feature validation for provider workflows.</div>
-<div style="padding-left:12px;margin-bottom:2px;">• Introduced reporting templates increasing visibility, reducing follow-up delays by 40 percent</div>
-<div style="padding-left:12px;margin-bottom:2px;">• Led defect triage and post-release analysis, reducing recurring issues across clinical workflows.</div>
-<div style="padding-left:12px;">• Enabled metrics-driven reporting that improved predictability and early risk identification.</div>
+<div class="job">
+<div class="job-header">SEASIA INFOTECH <span class="job-location">India</span></div>
+<div class="job-title">Associate Business Analyst / Project Manager | May 2019 – Aug 2021</div>
+<ul>
+<li>Managed business analysis and client relationships for healthcare and financial services programs</li>
+<li>Served as primary client contact for requirements gathering, solution consulting, and relationship management</li>
+<li>Introduced reporting templates increasing client visibility and reducing follow-up delays by 40%</li>
+<li>Automated 150+ workflows, reducing manual effort by 60%</li>
+</ul>
 </div>
 
-<div style="margin-bottom:10px;">
-<div style="font-weight:bold;font-size:10.5px;">TECH MAHINDRA – India</div>
-<div style="font-style:italic;margin-bottom:4px;font-size:10px;">Project Coordinator | Aug 2016 – Apr 2019</div>
-<div style="padding-left:12px;margin-bottom:2px;">• Supported deployment programs for utility and telecom projects ensuring zero-downtime</div>
-<div style="padding-left:12px;margin-bottom:2px;">• Maintained communication channels with internal teams and external vendors</div>
-<div style="padding-left:12px;margin-bottom:2px;">• Coordinated 20+ monthly deployments with playbooks and readiness packs</div>
-<div style="padding-left:12px;margin-bottom:2px;">• Created dashboards improving decision-making speed by 25 percent</div>
-<div style="padding-left:12px;">• Developed automation scripts reducing incident resolution time by 30 percent</div>
+<div class="job">
+<div class="job-header">TECH MAHINDRA <span class="job-location">India</span></div>
+<div class="job-title">Business Analyst / Project Coordinator | Aug 2016 – Apr 2019</div>
+<ul>
+<li>Supported client deployments for utility and telecom projects, ensuring seamless transitions</li>
+<li>Maintained client communication channels and coordinated with internal teams and vendors</li>
+<li>Created dashboards improving decision-making speed by 25%</li>
+</ul>
 </div>
-    `;
-    
-    const achievements = document.createElement('div');
-    achievements.style.cssText = 'margin-bottom:12px;';
-    achievements.innerHTML = '<div style="font-size:11px;font-weight:bold;border-bottom:1px solid #333;padding-bottom:2px;margin-bottom:7px;">KEY ACHIEVEMENTS</div><div style="padding-left:12px;margin-bottom:2px;">• 40 percent Reduction in manual coordination through Jira automation</div><div style="padding-left:12px;margin-bottom:2px;">• 25 percent Improvement in forecasting accuracy via story point tracking</div><div style="padding-left:12px;margin-bottom:2px;">• 98 percent On-time Delivery rate across 15+ enterprise projects</div><div style="padding-left:12px;margin-bottom:2px;">• Pioneered AI Integration for automated test case generation</div><div style="padding-left:12px;">• 50+ Stakeholders using real-time dashboards for visibility</div>';
-    
-    const technical = document.createElement('div');
-    technical.style.cssText = 'margin-bottom:12px;';
-    technical.innerHTML = '<div style="font-size:11px;font-weight:bold;border-bottom:1px solid #333;padding-bottom:2px;margin-bottom:7px;">TECHNICAL EXPERTISE</div><div style="margin-bottom:3px;"><b>PM Tools:</b> Jira (Admin), Confluence, MS Project, Azure DevOps</div><div style="margin-bottom:3px;"><b>Automation:</b> Jira Workflows, Excel VBA, AI-driven Test Generation, Scripting</div><div style="margin-bottom:3px;"><b>Collaboration:</b> Slack, Microsoft Teams, SharePoint, Git/GitHub</div><div><b>Methodologies:</b> Agile, Scrum, Kanban, Waterfall, SDLC, SAFe, HL7/FHIR Standards, Requirement Gathering, User Stories, Process Mapping</div>';
-    
-    const education = document.createElement('div');
-    education.style.cssText = 'margin-bottom:12px;';
-    education.innerHTML = '<div style="font-size:11px;font-weight:bold;border-bottom:1px solid #333;padding-bottom:2px;margin-bottom:7px;">EDUCATION</div><div style="margin-bottom:4px;"><b>Master of Computer Applications (MCA)</b> – IGNOU, 2017–2021</div><div><b>Bachelor of Science, Computer Science</b> – Kurukshetra University, 2013–2016</div>';
-    
-    const certifications = document.createElement('div');
-    certifications.innerHTML = '<div style="font-size:11px;font-weight:bold;border-bottom:1px solid #333;padding-bottom:2px;margin-bottom:7px;">CERTIFICATIONS</div><div style="padding-left:12px;margin-bottom:2px;">• ISTQB Certified Tester – Advanced Level Test Management</div><div style="padding-left:12px;">• Business Analyst Certification</div>';
-    
-    resumeContent.appendChild(header);
-    resumeContent.appendChild(execSummary);
-    resumeContent.appendChild(competencies);
-    resumeContent.appendChild(experience);
-    resumeContent.appendChild(achievements);
-    resumeContent.appendChild(technical);
-    resumeContent.appendChild(education);
-    resumeContent.appendChild(certifications);
-    
-    document.body.appendChild(resumeContent);
-    
-    // Wait for render
-    setTimeout(() => {
-        const opt = {
-            margin: [10, 10, 10, 10],
-            filename: 'Sheena_Chugh_Resume.pdf',
-            image: { type: 'jpeg', quality: 0.98 },
-            html2canvas: { 
-                scale: 2,
-                useCORS: true,
-                logging: false,
-                backgroundColor: '#ffffff'
-            },
-            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-        };
-        
-        html2pdf()
-            .set(opt)
-            .from(resumeContent)
-            .save()
-            .then(() => {
-                document.body.removeChild(resumeContent);
-                showNotification('Resume downloaded successfully!');
-            })
-            .catch(err => {
-                document.body.removeChild(resumeContent);
-                console.error('Error generating PDF:', err);
-                showNotification('Error generating PDF. Please try again.');
-            });
-    }, 500);
+
+<h2>Key Achievements</h2>
+<ul>
+<li><strong>40% Reduction</strong> in manual coordination through Jira automation and workflow optimization</li>
+<li><strong>60% Faster Onboarding</strong> through automated workflows and streamlined client processes</li>
+<li><strong>30% Reduced Rework</strong> through improved governance frameworks and requirements traceability</li>
+<li><strong>25% Improved Planning</strong> accuracy through better forecasting and dashboard visibility</li>
+</ul>
+
+<h2>Technical Expertise</h2>
+<div>
+<strong>BA & CSM Tools:</strong> Jira (Advanced Admin), Confluence, Microsoft Visio, MS Project, Azure DevOps, ServiceNow<br>
+<strong>Documentation:</strong> BRDs, Proposals, User Stories, Use Cases, BPMN Process Maps, Functional Specifications<br>
+<strong>Collaboration:</strong> Microsoft Office Suite, Slack, Teams, SharePoint, CRM Systems<br>
+<strong>Methodologies:</strong> Agile, Scrum, Kanban, Waterfall, SDLC, Customer Success Frameworks
+</div>
+
+<h2>Education & Certifications</h2>
+<div>
+<strong>Master of Computer Applications (MCA)</strong> – IGNOU | 2017 – 2021<br>
+<strong>Bachelor of Science, Computer Science</strong> – Kurukshetra University | 2013 – 2016<br><br>
+• Business Analyst Certification &nbsp;&nbsp; • ISTQB Certified Tester – Advanced Level Test Management
+</div>
+
+<h2>Why I'm A Strong Fit</h2>
+<ul>
+<li>9+ years bridging business stakeholders and technical teams</li>
+<li>Extensive experience creating BRDs, proposals, and solution documentation</li>
+<li>Proven track record in client relationship management and account growth</li>
+<li>Strong pre-sales capabilities including discovery, demos, and POCs</li>
+<li>Healthcare and enterprise software domain expertise</li>
+<li>Skilled at presenting business cases to executive leadership</li>
+</ul>
+
+</body>
+</html>`;
 }
 
+// Generate Resume Preview HTML for modal display
+function generateResumePreviewHTML() {
+    return `<div class="resume-preview" id="resumePreviewContent" style="background:#fff;padding:30px 40px;font-family:Calibri,Arial,sans-serif;font-size:11px;line-height:1.4;color:#000;">
+        <div style="text-align:center;border-bottom:2px solid #333;padding-bottom:10px;margin-bottom:15px;">
+            <div style="font-size:20px;font-weight:bold;letter-spacing:2px;margin-bottom:5px;">SHEENA CHUGH</div>
+            <div style="font-size:11px;color:#444;margin-bottom:5px;">Business Analyst | Customer Success Manager | Account Manager | Pre-Sales</div>
+            <div style="font-size:10px;color:#555;">Brampton, ON, Canada | sheenachugh92@gmail.com | +1 (647) 236-0034 | sheenachugh22.github.io/portfolio</div>
+        </div>
+        
+        <div style="font-size:11px;font-weight:bold;border-bottom:1px solid #333;margin:12px 0 8px;padding-bottom:3px;">EXECUTIVE SUMMARY</div>
+        <div style="text-align:justify;margin-bottom:10px;">Results-driven Business Analyst and Project Management professional with 9+ years of experience bridging business stakeholders and technical teams across healthcare, enterprise software, and cloud platforms. Proven expertise in client relationship management, requirements elicitation, solution consulting, and driving customer success.</div>
+        
+        <div style="font-size:11px;font-weight:bold;border-bottom:1px solid #333;margin:12px 0 8px;padding-bottom:3px;">CORE COMPETENCIES</div>
+        <div style="margin-bottom:10px;font-size:10px;padding-left:10px;">
+            • Requirements Elicitation & Documentation<br>
+            • Client Onboarding & Adoption<br>
+            • Account Planning & Relationship Building<br>
+            • Discovery Calls & Needs Assessment<br>
+            • Solution Demonstrations & POCs<br>
+            • Proposal & RFP Response<br>
+            • Process Mapping (BPMN, Flowcharts)<br>
+            • Renewal Management & Retention<br>
+            • Stakeholder Engagement<br>
+            • Executive Presentations<br>
+            • Jira Administration & Workflows<br>
+            • Upsell & Cross-sell Identification
+        </div>
+        
+        <div style="font-size:11px;font-weight:bold;border-bottom:1px solid #333;margin:12px 0 8px;padding-bottom:3px;">PROFESSIONAL EXPERIENCE</div>
+        
+        <div style="margin-bottom:10px;">
+            <div style="font-weight:bold;">IDEALOGICAL GROUP <span style="float:right;font-weight:normal;color:#555;">Markham, ON</span></div>
+            <div style="font-style:italic;color:#444;margin-bottom:4px;">Senior Business Analyst / Program Manager | May 2024 – Present</div>
+            <div style="padding-left:10px;font-size:10px;">• Primary liaison between stakeholders, vendors, and implementation teams<br>• Lead client discovery sessions, translating needs into requirements<br>• Manage end-to-end client relationships from pre-sales to success<br>• Architected Jira dashboards reducing coordination by 40%</div>
+        </div>
+        
+        <div style="margin-bottom:10px;">
+            <div style="font-weight:bold;">TESTINGXPERTS <span style="float:right;font-weight:normal;color:#555;">Remote</span></div>
+            <div style="font-style:italic;color:#444;margin-bottom:4px;">Business Analyst / Project Coordinator | Aug 2021 – Jan 2024</div>
+            <div style="padding-left:10px;font-size:10px;">• Managed client engagements for enterprise projects<br>• Conducted discovery workshops with clients<br>• Developed BRDs, proposals, and functional specifications<br>• Implemented governance frameworks reducing rework by 30%</div>
+        </div>
+        
+        <div style="margin-bottom:10px;">
+            <div style="font-weight:bold;">SEASIA INFOTECH <span style="float:right;font-weight:normal;color:#555;">India</span></div>
+            <div style="font-style:italic;color:#444;margin-bottom:4px;">Associate Business Analyst / Project Manager | May 2019 – Aug 2021</div>
+            <div style="padding-left:10px;font-size:10px;">• Primary client contact for requirements and consulting<br>• Increased client visibility by 40% with reporting templates<br>• Automated 150+ workflows, 60% effort reduction</div>
+        </div>
+        
+        <div style="margin-bottom:10px;">
+            <div style="font-weight:bold;">TECH MAHINDRA <span style="float:right;font-weight:normal;color:#555;">India</span></div>
+            <div style="font-style:italic;color:#444;margin-bottom:4px;">Business Analyst / Project Coordinator | Aug 2016 – Apr 2019</div>
+            <div style="padding-left:10px;font-size:10px;">• Supported client deployments for utility and telecom<br>• Created dashboards improving decisions by 25%</div>
+        </div>
+        
+        <div style="font-size:11px;font-weight:bold;border-bottom:1px solid #333;margin:12px 0 8px;padding-bottom:3px;">EDUCATION & CERTIFICATIONS</div>
+        <div style="font-size:10px;"><strong>MCA</strong> – IGNOU | <strong>BSc Computer Science</strong> – Kurukshetra University<br>• Business Analyst Certification • ISTQB Advanced Level</div>
+        
+        <div style="font-size:11px;font-weight:bold;border-bottom:1px solid #333;margin:12px 0 8px;padding-bottom:3px;">WHY I'M A STRONG FIT</div>
+        <div style="font-size:10px;padding-left:10px;">
+            • 9+ years bridging business stakeholders and technical teams<br>
+            • Extensive experience creating BRDs, proposals, and solution documentation<br>
+            • Proven track record in client relationship management and account growth<br>
+            • Strong pre-sales capabilities including discovery, demos, and POCs<br>
+            • Healthcare and enterprise software domain expertise<br>
+            • Skilled at presenting business cases to executive leadership
+        </div>
+    </div>`;
+}
+
+// Open Resume Modal with Preview
+downloadResumeBtn.addEventListener('click', () => {
+    resumePreviewContainer.innerHTML = generateResumePreviewHTML();
+    resumeModal.classList.add('open');
+    document.body.classList.add('modal-open');
+});
+
+// Close Resume Modal
+closeResumeModal.addEventListener('click', () => {
+    resumeModal.classList.remove('open');
+    document.body.classList.remove('modal-open');
+});
+
+// Close on outside click
+window.addEventListener('click', (e) => {
+    if (e.target === resumeModal) {
+        resumeModal.classList.remove('open');
+        document.body.classList.remove('modal-open');
+    }
+});
+
+// Download Word Document
+confirmDownloadBtn.addEventListener('click', () => {
+    generateResumeDoc();
+});
+
+function generateResumeDoc() {
+    showNotification('Generating Word document...');
+    
+    const htmlContent = generateResumeHTML();
+    
+    // Create blob with Word-compatible HTML
+    const blob = new Blob(['\ufeff' + htmlContent], {
+        type: 'application/msword'
+    });
+    
+    // Create download link
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'Sheena_Chugh_BA_CSM_Resume.doc';
+    
+    // Trigger download
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    
+    // Clean up
+    URL.revokeObjectURL(link.href);
+    
+    showNotification('Resume downloaded successfully!');
+    setTimeout(() => {
+        resumeModal.classList.remove('open');
+        document.body.classList.remove('modal-open');
+    }, 1000);
+}

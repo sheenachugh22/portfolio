@@ -3,19 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sheena Chugh - Portfolio</title>
+    <title>Sheena Chugh - Business Analyst | Customer Success | Pre-Sales</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    <script>
-        // Initialize theme immediately to prevent flash of unstyled content
-        (function() {
-            const theme = localStorage.getItem('theme') || 'dark';
-            document.documentElement.setAttribute('data-theme', theme);
-        })();
-    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -25,15 +17,11 @@
             <ul class="nav-menu" id="primaryNavigation">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#automations" class="nav-link">Automations</a></li>
                 <li><a href="#projects" class="nav-link">Experience</a></li>
+                <li><a href="#automations" class="nav-link">Automations</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="nav-controls">
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-                    <span class="theme-icon sun-icon">☀️</span>
-                    <span class="theme-icon moon-icon">🌙</span>
-                </button>
                 <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primaryNavigation">☰</button>
             </div>
         </div>
@@ -43,15 +31,15 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <div class="hero-text">
-                <p class="subtitle">Project Manager | Program Lead | Release Manager</p>
+                <p class="subtitle">Business Analyst | Customer Success Manager | Account Manager | Pre-Sales</p>
                 <h1>Sheena Chugh</h1>
-                <p class="hero-description">Strategic Project Manager with 9+ years delivering enterprise programs across cloud, infrastructure, and application platforms. I bring structure, visibility, and precision to complex projects through strong governance, stakeholder alignment, and data-driven decision making—enhanced by deep expertise in Jira administration and process automation.</p>
+                <p class="hero-description">Results-driven Business Analyst and Project Management professional with 9+ years of experience bridging business stakeholders and technical teams across healthcare, enterprise software, and cloud platforms. Proven expertise in client relationship management, requirements elicitation, solution consulting, and driving customer success through strategic engagement and value delivery.</p>
                 <div class="hero-metrics">
                     <div class="metric-item">
                         <div class="metric-icon" aria-hidden="true">🚀</div>
                         <div class="metric-copy">
                             <span class="metric-value">9+ yrs</span>
-                            <span class="metric-label">Project Delivery</span>
+                            <span class="metric-label">Client-Facing Experience</span>
                         </div>
                     </div>
                     <div class="metric-item">
@@ -69,13 +57,42 @@
                         </div>
                     </div>
                 </div>
-                <div class="jira-badge">
-                    <span class="badge-icon">🔧</span>
-                    <span class="badge-text">Jira &amp; Process Automation Expert</span>
-                </div>
                 <div class="hero-buttons">
                     <button class="cta-button" id="contactBtn">Get In Touch</button>
                     <button class="cta-button download-btn" id="downloadResumeBtn">📥 Download Resume</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why I'm a Strong Fit Section - Moved Up -->
+    <section id="fit" class="fit-section">
+        <div class="container">
+            <h2>Why I'm A Strong Fit</h2>
+            <div class="fit-grid">
+                <div class="fit-item">
+                    <span class="fit-icon">✓</span>
+                    <span class="fit-text">9+ years bridging business stakeholders and technical teams</span>
+                </div>
+                <div class="fit-item">
+                    <span class="fit-icon">✓</span>
+                    <span class="fit-text">Extensive experience creating BRDs, proposals, and solution documentation</span>
+                </div>
+                <div class="fit-item">
+                    <span class="fit-icon">✓</span>
+                    <span class="fit-text">Proven track record in client relationship management and account growth</span>
+                </div>
+                <div class="fit-item">
+                    <span class="fit-icon">✓</span>
+                    <span class="fit-text">Strong pre-sales capabilities including discovery, demos, and POCs</span>
+                </div>
+                <div class="fit-item">
+                    <span class="fit-icon">✓</span>
+                    <span class="fit-text">Healthcare and enterprise software domain expertise</span>
+                </div>
+                <div class="fit-item">
+                    <span class="fit-icon">✓</span>
+                    <span class="fit-text">Skilled at presenting business cases to executive leadership</span>
                 </div>
             </div>
         </div>
@@ -87,135 +104,54 @@
             <h2>About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I'm a <strong>Project Manager</strong> and <strong>Program Lead</strong> with a passion for delivering complex initiatives on time and within scope. I specialize in end-to-end project delivery, stakeholder management, and cross-functional coordination across technology and business domains.</p>
-                    <p>What sets me apart is my deep expertise in <strong>Jira administration</strong> and <strong>process automation</strong>. I don't just manage projects—I optimize how teams work by building dashboards, automating workflows, and implementing scalable processes that drive efficiency and visibility.</p>
-                    <div class="core-list">
-                        <h3>Core Competencies</h3>
-                        <ul>
-                            <li>Project &amp; Program Management</li>
-                            <li>Agile / Scrum / SDLC</li>
-                            <li>Stakeholder Management</li>
-                            <li>Risk &amp; Issue Management</li>
-                            <li>Release Management</li>
-                            <li>Cross-Functional Leadership</li>
-                            <li>Process Improvement</li>
-                            <li>Jira &amp; Confluence Administration</li>
-                        </ul>
+                    <p>I'm a <strong>Business Analyst</strong> and <strong>Customer Success Professional</strong> with a passion for understanding client needs and delivering solutions that drive real business value. I specialize in stakeholder management, requirements engineering, and building lasting client relationships across technology and business domains.</p>
+                    <p>What sets me apart is my ability to bridge the gap between technical teams and business stakeholders—whether translating complex requirements into actionable specifications, onboarding clients to new platforms, or identifying upsell opportunities through deep account understanding. My expertise in <strong>Jira administration</strong> and <strong>process automation</strong> enables me to deliver efficiency gains while maintaining focus on customer outcomes.</p>
+                    
+                    <div class="competency-grid">
+                        <div class="competency-category">
+                            <h3>📋 Business Analysis</h3>
+                            <ul>
+                                <li>Requirements Elicitation &amp; Documentation</li>
+                                <li>Process Mapping (BPMN, Flowcharts)</li>
+                                <li>Gap Analysis &amp; Root Cause Analysis</li>
+                                <li>User Stories &amp; Acceptance Criteria</li>
+                                <li>UAT Planning &amp; Execution</li>
+                                <li>Solution Design &amp; Consulting</li>
+                            </ul>
+                        </div>
+                        <div class="competency-category">
+                            <h3>🤝 Customer Success & Account Management</h3>
+                            <ul>
+                                <li>Client Onboarding &amp; Adoption</li>
+                                <li>Account Planning &amp; Relationship Building</li>
+                                <li>Renewal Management &amp; Retention</li>
+                                <li>Upsell &amp; Cross-sell Identification</li>
+                                <li>Customer Health Monitoring</li>
+                                <li>Escalation Management</li>
+                            </ul>
+                        </div>
+                        <div class="competency-category">
+                            <h3>💼 Pre-Sales & Solution Consulting</h3>
+                            <ul>
+                                <li>Discovery Calls &amp; Needs Assessment</li>
+                                <li>Solution Demonstrations &amp; POCs</li>
+                                <li>Proposal &amp; RFP Response</li>
+                                <li>Technical &amp; Business Presentations</li>
+                                <li>Competitive Positioning</li>
+                                <li>Value Proposition Development</li>
+                            </ul>
+                        </div>
                     </div>
+                    
                     <div class="education-section">
                         <h3>Education</h3>
-                        <p><strong>Master of Computer Applications (MCA)</strong><br>Indira Gandhi National Open University (2017–2021)</p>
-                        <p><strong>Bachelor of Science (BS), Computer Science</strong><br>Kurukshetra University (2013–2016)</p>
+                        <p><strong>Master of Computer Applications (MCA)</strong><br>IGNOU (2017–2021)</p>
+                        <p><strong>Bachelor of Science, Computer Science</strong><br>Kurukshetra University (2013–2016)</p>
                         <h3>Certifications</h3>
-                        <p>ISTQB Certified Tester – Advanced Level Test Management | Business Analyst Certification</p>
-                    </div>
-                </div>
-                <div class="skills">
-                    <h3>Skills &amp; Tools</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">Project Planning &amp; Execution</div>
-                        <div class="skill-item">Stakeholder Communication</div>
-                        <div class="skill-item">Risk &amp; Dependency Management</div>
-                        <div class="skill-item">Agile / Scrum / Kanban</div>
-                        <div class="skill-item">Release Governance</div>
-                        <div class="skill-item">KPI &amp; Metrics Reporting</div>
-                        <div class="skill-item skill-featured">Jira Administration</div>
-                        <div class="skill-item skill-featured">Jira Automation</div>
-                        <div class="skill-item skill-featured">Confluence Management</div>
-                        <div class="skill-item skill-featured">Process Automation</div>
-                        <div class="skill-item">Excel Macros &amp; VBA</div>
-                        <div class="skill-item">Sprint Planning &amp; Velocity</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Jira & Process Automations Section -->
-    <section id="automations" class="automations">
-        <div class="container">
-            <h2>Jira &amp; Process Automations</h2>
-            <p class="section-intro">Beyond traditional project management, I bring hands-on expertise in Jira administration and process automation. I build the tools and workflows that make teams more efficient:</p>
-            
-            <div class="automations-grid compact">
-                <!-- Project Visibility & Reporting -->
-                <div class="automation-card automation-wide">
-                    <div class="automation-icon">📊</div>
-                    <div class="automation-content">
-                        <h3>Project Visibility &amp; Reporting</h3>
-                        <p>Built comprehensive Jira dashboards, portfolios, and timelines for real-time tracking of progress, blockers, sprint health, and team velocity. Configured Jira Goals linking epics to strategic objectives for clear OKR alignment.</p>
-                        <div class="automation-tags">
-                            <span class="auto-tag">Dashboards</span>
-                            <span class="auto-tag">Portfolio Management</span>
-                            <span class="auto-tag">Timeline Views</span>
-                            <span class="auto-tag">Goal Tracking</span>
+                        <div class="cert-list">
+                            <span class="cert-item">Business Analyst Certification</span>
+                            <span class="cert-item">ISTQB Certified Tester – Advanced Level Test Management</span>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Workflow Automation -->
-                <div class="automation-card automation-wide">
-                    <div class="automation-icon">🔄</div>
-                    <div class="automation-content">
-                        <h3>Workflow &amp; Deployment Automation</h3>
-                        <p>Designed 9+ Jira automations including PR→Merged→QA transitions with auto-assignment, UAT/Production deployment triggers, and "This Week" sprint tracking for velocity calculations and planning optimization.</p>
-                        <div class="automation-tags">
-                            <span class="auto-tag">Workflow Automation</span>
-                            <span class="auto-tag">Deployment Triggers</span>
-                            <span class="auto-tag">Auto-Assignment</span>
-                            <span class="auto-tag">Sprint Velocity</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- AI & Test Automation -->
-                <div class="automation-card automation-wide">
-                    <div class="automation-icon">🤖</div>
-                    <div class="automation-content">
-                        <h3>AI-Powered Test Case Generation</h3>
-                        <p>Introduced AI into test case generation workflows, directly mapping AI-generated test cases into Jira for seamless QA integration. Streamlined testing processes while maintaining traceability and coverage metrics.</p>
-                        <div class="automation-tags">
-                            <span class="auto-tag ai-tag">AI Integration</span>
-                            <span class="auto-tag">Test Automation</span>
-                            <span class="auto-tag">Jira Mapping</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Metrics & Financial Automation -->
-                <div class="automation-card automation-wide">
-                    <div class="automation-icon">📈</div>
-                    <div class="automation-content">
-                        <h3>Metrics, Forecasting &amp; Documentation</h3>
-                        <p>Automated story point vs actual time tracking for improved forecasting. Created Excel macros for QA payment calculations. Manage Confluence spaces for documentation, runbooks, and cross-team collaboration.</p>
-                        <div class="automation-tags">
-                            <span class="auto-tag">Time Tracking</span>
-                            <span class="auto-tag">Excel VBA</span>
-                            <span class="auto-tag">Confluence</span>
-                            <span class="auto-tag">Knowledge Management</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="automation-impact">
-                <h3>Impact &amp; Results</h3>
-                <div class="impact-metrics">
-                    <div class="impact-stat">
-                        <span class="impact-number">40%</span>
-                        <span class="impact-label">Reduction in Manual Coordination</span>
-                    </div>
-                    <div class="impact-stat">
-                        <span class="impact-number">25%</span>
-                        <span class="impact-label">Improved Planning Accuracy</span>
-                    </div>
-                    <div class="impact-stat">
-                        <span class="impact-number">50+</span>
-                        <span class="impact-label">Stakeholders Using Dashboards</span>
-                    </div>
-                    <div class="impact-stat">
-                        <span class="impact-number">100%</span>
-                        <span class="impact-label">Automated Ticket Transitions</span>
                     </div>
                 </div>
             </div>
@@ -232,24 +168,21 @@
                         <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&auto=format&q=80" alt="Technology Analytics Dashboard">
                     </div>
                     <div class="project-content">
-                        <h3>Idealogical Group – Program &amp; Project Manager</h3>
+                        <h3>Idealogical Group – Senior Business Analyst / Program Manager</h3>
                         <p class="project-meta">May 2024 – Present · Markham, ON</p>
-                        <p class="project-description">Lead strategic programs across MSP software and infrastructure initiatives, ensuring alignment with corporate objectives and on-time delivery.</p>
+                        <p class="project-description">Primary liaison between stakeholders, vendors, and implementation teams for enterprise MSP initiatives.</p>
                         <ul class="impact-list">
-                            <li>Manage cross-functional project delivery with milestones, risks, and stakeholder communications.</li>
-                            <li>Drive client calls, maintain communication channels for internal/external stakeholders.</li>
-                            <li>Lead project estimations for resources, timelines, and cost planning.</li>
-                            <li>Introduced AI into test case generation with direct Jira mapping integration.</li>
-                            <li>Built Jira dashboards, portfolios, and automations reducing manual coordination by 40%.</li>
-                            <li>Write requirement documents based on meetings; resolve requirement gaps and queries.</li>
+                            <li>Lead client discovery sessions and translate needs into requirements</li>
+                            <li>Manage end-to-end client relationships from pre-sales to success</li>
+                            <li>Create process maps, user stories, and acceptance criteria</li>
+                            <li>Built Jira dashboards reducing coordination by 40%</li>
                         </ul>
                         <div class="project-tech">
-                            <span class="tech-tag">Project Management</span>
-                            <span class="tech-tag">Program Delivery</span>
-                            <span class="tech-tag tech-jira">Jira Administration</span>
-                            <span class="tech-tag tech-ai">AI Integration</span>
+                            <span class="tech-tag tech-ba">Business Analysis</span>
+                            <span class="tech-tag tech-csm">Client Success</span>
+                            <span class="tech-tag tech-jira">Jira Admin</span>
                         </div>
-                        <button class="project-button" type="button" data-project="1">Role Outcomes</button>
+                        <button class="project-button" type="button" data-project="1">Role Details</button>
                     </div>
                 </div>
 
@@ -258,23 +191,21 @@
                         <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop&auto=format&q=80" alt="Project Management Teamwork">
                     </div>
                     <div class="project-content">
-                        <h3>TestingXperts – Project Manager / Coordinator</h3>
+                        <h3>TestingXperts – Business Analyst / Project Coordinator</h3>
                         <p class="project-meta">Aug 2021 – Jan 2024 · Remote</p>
-                        <p class="project-description">Managed delivery of enterprise projects across cloud, API, and web platforms with 98% on-time completion.</p>
+                        <p class="project-description">Managed client engagements and requirements for enterprise testing projects.</p>
                         <ul class="impact-list">
-                            <li>Managed enterprise projects ensuring scope, timeline, and quality goals were met.</li>
-                            <li>Drove client calls and maintained communication for internal/external stakeholders.</li>
-                            <li>Wrote requirement documents based on meetings; resolved requirement gaps and queries.</li>
-                            <li>Led project estimations for resources, time, and cost planning.</li>
-                            <li>Facilitated Agile ceremonies, sprint planning, and executive updates for global teams.</li>
-                            <li>Enhanced stakeholder communication and governance reducing rework by 30%.</li>
+                            <li>Conducted discovery workshops to gather requirements</li>
+                            <li>Developed BRDs, proposals, and functional specs</li>
+                            <li>Owned client communication and escalations</li>
+                            <li>Implemented governance reducing rework by 30%</li>
                         </ul>
                         <div class="project-tech">
-                            <span class="tech-tag">Project Management</span>
-                            <span class="tech-tag">Client Relations</span>
-                            <span class="tech-tag">Stakeholder Management</span>
+                            <span class="tech-tag tech-ba">Requirements</span>
+                            <span class="tech-tag tech-csm">Client Management</span>
+                            <span class="tech-tag">UAT Leadership</span>
                         </div>
-                        <button class="project-button" type="button" data-project="2">Role Outcomes</button>
+                        <button class="project-button" type="button" data-project="2">Role Details</button>
                     </div>
                 </div>
 
@@ -283,21 +214,20 @@
                         <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=600&fit=crop&auto=format&q=80" alt="Healthcare Finance">
                     </div>
                     <div class="project-content">
-                        <h3>Seasia Infotech – Associate Project Manager</h3>
+                        <h3>Seasia Infotech – Associate Business Analyst / Project Manager</h3>
                         <p class="project-meta">May 2019 – Aug 2021 · India</p>
-                        <p class="project-description">Coordinated project planning and execution for large-scale healthcare and finance programs.</p>
+                        <p class="project-description">BA and client relationships for healthcare and financial services.</p>
                         <ul class="impact-list">
-                            <li>Monitored schedules, deliverables, and budgets ensuring SLA compliance.</li>
-                            <li>Introduced reporting templates increasing visibility by 40%.</li>
-                            <li>Automated 150+ workflows reducing manual effort by 60%.</li>
-                            <li>Supported process improvement initiatives enhancing delivery predictability.</li>
+                            <li>Primary client contact for requirements and consulting</li>
+                            <li>Documented workflows and identified opportunities</li>
+                            <li>Reporting templates increased visibility by 40%</li>
+                            <li>Automated 150+ workflows, 60% effort reduction</li>
                         </ul>
                         <div class="project-tech">
-                            <span class="tech-tag">Project Coordination</span>
-                            <span class="tech-tag">Process Improvement</span>
-                            <span class="tech-tag">Automation</span>
+                            <span class="tech-tag tech-healthcare">Healthcare Domain</span>
+                            <span class="tech-tag tech-ba">Process Analysis</span>
                         </div>
-                        <button class="project-button" type="button" data-project="3">Role Outcomes</button>
+                        <button class="project-button" type="button" data-project="3">Role Details</button>
                     </div>
                 </div>
 
@@ -306,21 +236,74 @@
                         <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=600&fit=crop&auto=format&q=80" alt="Deployment planning">
                     </div>
                     <div class="project-content">
-                        <h3>Tech Mahindra – Project Coordinator</h3>
+                        <h3>Tech Mahindra – Business Analyst / Project Coordinator</h3>
                         <p class="project-meta">Aug 2016 – Apr 2019 · India</p>
-                        <p class="project-description">Supported deployment programs for national utility and telecom projects ensuring zero downtime.</p>
+                        <p class="project-description">Client deployments for utility and telecom projects.</p>
                         <ul class="impact-list">
-                            <li>Coordinated 20+ monthly deployments with detailed playbooks and readiness packs.</li>
-                            <li>Created project reports and dashboards improving decision-making by 25%.</li>
-                            <li>Facilitated documentation, change management, and risk tracking.</li>
-                            <li>Built automation scripts reducing incident resolution time by 30%.</li>
+                            <li>Maintained client communications and vendor coordination</li>
+                            <li>Coordinated 20+ monthly deployments</li>
+                            <li>Dashboards improved decisions by 25%</li>
                         </ul>
                         <div class="project-tech">
-                            <span class="tech-tag">Project Coordination</span>
-                            <span class="tech-tag">Deployment Management</span>
-                            <span class="tech-tag">Risk Tracking</span>
+                            <span class="tech-tag">Client Coordination</span>
+                            <span class="tech-tag">Vendor Management</span>
                         </div>
-                        <button class="project-button" type="button" data-project="4">Role Outcomes</button>
+                        <button class="project-button" type="button" data-project="4">Role Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jira & Process Automations Section - Shortened -->
+    <section id="automations" class="automations">
+        <div class="container">
+            <h2>Jira &amp; Process Automations</h2>
+            <p class="section-intro">Hands-on expertise in Jira administration and process automation—enabling teams to work smarter while ensuring client visibility:</p>
+            
+            <div class="automations-grid compact">
+                <div class="automation-card automation-wide">
+                    <div class="automation-icon">📊</div>
+                    <div class="automation-content">
+                        <h3>Client Dashboards &amp; Metrics</h3>
+                        <p>Built Jira dashboards, portfolios, and timelines for real-time tracking of client deliverables and success metrics.</p>
+                        <div class="automation-tags">
+                            <span class="auto-tag">Dashboards</span>
+                            <span class="auto-tag">Success Metrics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="automation-card automation-wide">
+                    <div class="automation-icon">🔄</div>
+                    <div class="automation-content">
+                        <h3>Workflow Automation</h3>
+                        <p>Designed 9+ automations streamlining handoffs, onboarding triggers, and escalation workflows.</p>
+                        <div class="automation-tags">
+                            <span class="auto-tag">Onboarding</span>
+                            <span class="auto-tag">Escalations</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="automation-impact">
+                <div class="impact-metrics">
+                    <div class="impact-stat">
+                        <span class="impact-number">40%</span>
+                        <span class="impact-label">Less Manual Coordination</span>
+                    </div>
+                    <div class="impact-stat">
+                        <span class="impact-number">25%</span>
+                        <span class="impact-label">Better Planning Accuracy</span>
+                    </div>
+                    <div class="impact-stat">
+                        <span class="impact-number">60%</span>
+                        <span class="impact-label">Faster Onboarding</span>
+                    </div>
+                    <div class="impact-stat">
+                        <span class="impact-number">30%</span>
+                        <span class="impact-label">Reduced Rework</span>
                     </div>
                 </div>
             </div>
@@ -363,7 +346,22 @@
         </div>
     </div>
 
+    <!-- Resume Preview Modal -->
+    <div id="resumeModal" class="modal resume-modal">
+        <div class="resume-modal-content">
+            <div class="resume-modal-header">
+                <h2>Resume Preview</h2>
+                <div class="resume-modal-actions">
+                    <button class="resume-download-btn" id="confirmDownloadBtn">📥 Download Word</button>
+                    <span class="close" id="closeResumeModal">&times;</span>
+                </div>
+            </div>
+            <div class="resume-preview-container" id="resumePreviewContainer">
+                <!-- Resume preview will be rendered here -->
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
-
