@@ -1,22 +1,3 @@
-// Theme Toggle Functionality
-const themeToggle = document.getElementById('themeToggle');
-const htmlElement = document.documentElement;
-
-// Function to set theme
-function setTheme(theme) {
-    htmlElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-}
-
-// Toggle theme on button click
-if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-        const currentTheme = htmlElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        setTheme(newTheme);
-    });
-}
-
 // Mobile Menu Toggle
 const menuToggle = document.getElementById('menuToggle');
 const navMenu = document.querySelector('.nav-menu');
@@ -232,7 +213,7 @@ function generateResumePDF() {
     // Create a visible container that will be captured
     const resumeContent = document.createElement('div');
     resumeContent.id = 'resume-pdf-content';
-    resumeContent.style.cssText = 'position:relative;width:595px;background:#fff;color:#000;font-family:Georgia,serif;font-size:10px;line-height:1.4;padding:35px 40px;box-sizing:border-box;';
+    resumeContent.style.cssText = 'position:relative;width:595px;background:#fff;color:#000;font-family:Georgia,serif;font-size:10px;line-height:1.4;padding:15px 40px;box-sizing:border-box;';
     
     // Use text nodes and proper escaping to avoid LaTeX conversion issues
     const createText = (text) => document.createTextNode(text);
@@ -240,7 +221,7 @@ function generateResumePDF() {
     // Build the resume structure
     const header = document.createElement('div');
     header.style.cssText = 'text-align:center;border-bottom:2px solid #333;padding-bottom:10px;margin-bottom:15px;';
-    header.innerHTML = '<div style="font-size:22px;font-weight:bold;letter-spacing:2px;margin-bottom:5px;">SHEENA CHUGH</div><div style="font-size:11px;color:#444;margin-bottom:3px;">Senior Project Manager | Program Lead | Release Manager</div><div style="font-size:9px;color:#555;">Brampton, ON, Canada | sheenachugh92@gmail.com | +1 (647) 236-0034</div>';
+    header.innerHTML = '<div style="font-size:22px;font-weight:bold;letter-spacing:2px;margin-bottom:5px;">SHEENA CHUGH</div><div style="font-size:11px;color:#444;margin-bottom:3px;">Senior Project Manager | Program Lead | Release Manager</div><div style="font-size:9px;color:#555;">Brampton, ON, Canada | sheenachugh92@gmail.com | +1 (647) 236-0034</div><div style="font-size:9px;color:#0066cc;margin-top:3px;">sheenachugh22.github.io/portfolio</div>';
     
     const execSummary = document.createElement('div');
     execSummary.style.cssText = 'margin-bottom:12px;';
@@ -328,7 +309,7 @@ function generateResumePDF() {
     // Wait for render
     setTimeout(() => {
         const opt = {
-            margin: [10, 10, 10, 10],
+            margin: [2, 10, 2, 10],
             filename: 'Sheena_Chugh_Resume.pdf',
             image: { type: 'jpeg', quality: 0.98 },
             html2canvas: { 
