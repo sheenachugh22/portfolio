@@ -3,322 +3,436 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sheena Chugh - Senior Program Manager | Lead to Cash Transformation</title>
+    <title>Sheena Chugh | Hybrid Project Manager</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Fraunces:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Animated Background -->
+    <div class="bg-gradient"></div>
+    <div class="bg-pattern"></div>
+    
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">Sheena Chugh</div>
+            <a href="#home" class="logo">
+                <span class="logo-icon">S</span>
+                <span class="logo-text">Sheena</span>
+            </a>
             <ul class="nav-menu" id="primaryNavigation">
-                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#home" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#projects" class="nav-link">Experience</a></li>
-                <li><a href="#automations" class="nav-link">Automations</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="nav-controls">
-                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primaryNavigation">☰</button>
+            <div class="nav-actions">
+                <a href="resume.html" class="nav-cta" target="_blank">View Resume</a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <p class="subtitle">Senior Program Manager | Lead to Cash Transformation | Cross-Functional Leadership</p>
-                <h1>Sheena Chugh</h1>
-                <p class="hero-description">Results-driven Senior Program Manager with 9+ years of experience leading complex transformation programs across enterprise operations, cloud infrastructure, and business process optimization. Trusted advisor to senior leadership (VP+), delivering strategic program outcomes through process innovation, stakeholder alignment, and data-driven decision making—enhanced by deep expertise in Jira, Salesforce ecosystem, and Smartsheet.</p>
-                <div class="hero-metrics">
-                    <div class="metric-item">
-                        <div class="metric-icon" aria-hidden="true">🚀</div>
-                        <div class="metric-copy">
-                            <span class="metric-value">9+ yrs</span>
-                            <span class="metric-label">Complex Program Management</span>
-                        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Open to New Opportunities
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line">Hi, I'm</span>
+                    <span class="title-name">Sheena Chugh</span>
+                </h1>
+                <p class="hero-tagline">Hybrid Project Manager</p>
+                <p class="hero-subtitle">PMBOK & Agile Delivery • Former QA Manager</p>
+                <p class="hero-description">
+                    Driving quality, risk management, and on-time delivery through the perfect blend of 
+                    <span class="highlight">predictive governance</span> and <span class="highlight">agile execution</span>.
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">9+</span>
+                        <span class="stat-label">Years Experience</span>
                     </div>
-                    <div class="metric-item">
-                        <div class="metric-icon" aria-hidden="true">📊</div>
-                        <div class="metric-copy">
-                            <span class="metric-value">98%</span>
-                            <span class="metric-label">On-Time Delivery Rate</span>
-                        </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">PMBOK</span>
+                        <span class="stat-label">Certified Practices</span>
                     </div>
-                    <div class="metric-item">
-                        <div class="metric-icon" aria-hidden="true">⚡</div>
-                        <div class="metric-copy">
-                            <span class="metric-value">50+</span>
-                            <span class="metric-label">VP+ Stakeholders Managed</span>
-                        </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">ISTQB</span>
+                        <span class="stat-label">Advanced Certified</span>
                     </div>
                 </div>
-                <div class="hero-buttons">
-                    <button class="cta-button" id="contactBtn">Get In Touch</button>
+                
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">
+                        <span>Get In Touch</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="#experience" class="btn btn-secondary">View My Work</a>
                 </div>
             </div>
+            
+            <div class="hero-visual">
+                <div class="visual-card">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="card-icon-large">📋</div>
+                        <div class="card-info">
+                            <h3>Delivering Excellence</h3>
+                            <p>Complex projects, clear outcomes</p>
+                        </div>
+                        <div class="card-badges">
+                            <span class="mini-badge">Agile</span>
+                            <span class="mini-badge">PMBOK®</span>
+                            <span class="mini-badge">Hybrid</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow"></div>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <div class="about-intro">
-                    <p>I'm a <strong>Senior Program Manager</strong> with a passion for driving <strong>Lead to Cash transformation</strong> and delivering complex initiatives on time and within scope. I specialize in business process optimization, cross-functional stakeholder alignment (VP+), and strategic roadmap development across technology and business domains.</p>
-                    <p>What sets me apart is my ability to serve as a <strong>trusted advisor to senior leadership</strong>, combined with deep expertise in <strong>Jira, Salesforce ecosystem, and Smartsheet</strong>. I don't just manage programs—I optimize how teams work by building dashboards, automating workflows, and implementing scalable processes that drive efficiency and visibility.</p>
+            <div class="section-header">
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">Bridging Quality & Delivery</h2>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-content">
+                    <p class="about-lead">
+                        I started my career in <strong>Quality Assurance</strong>, building a strong foundation in manual and automation testing, where I learned to think critically about systems, user impact, and risk.
+                    </p>
+                    <p>
+                        As my responsibilities grew, I progressed into a <strong>QA Lead role</strong>, owning test strategy, mentoring teams, and partnering closely with product and development to embed quality across the SDLC.
+                    </p>
+                    <p>
+                        Over time, my role naturally expanded beyond testing into <strong>end-to-end delivery ownership</strong>, leading me into Project Management. Today, I work as a <strong>Hybrid Project Manager</strong>, blending predictive project governance with Agile execution practices.
+                    </p>
+                    <p class="about-highlight">
+                        I thrive in roles that sit at the intersection of <em>business, technology, and delivery</em>—where structured execution meets adaptability. Known for being detail-oriented, calm under pressure, and collaborative.
+                    </p>
                 </div>
                 
-                <!-- Unified Expertise Section -->
-                <div class="expertise-grid">
-                    <div class="expertise-card">
-                        <h3>Core Competencies</h3>
-                        <ul>
-                            <li>Lead to Cash Process Optimization</li>
-                            <li>Complex Program Management</li>
-                            <li>Business Process Transformation</li>
-                            <li>Cross-Functional Leadership (VP+)</li>
-                            <li>Strategic Roadmap Development</li>
-                            <li>Risk Mitigation &amp; Issue Resolution</li>
-                            <li>Budget &amp; Schedule Management</li>
-                            <li>Change Management</li>
-                        </ul>
+                <div class="about-cards">
+                    <div class="value-card">
+                        <div class="value-icon">🎯</div>
+                        <h4>Strategic Alignment</h4>
+                        <p>Ensuring every project aligns with organizational strategy and stakeholder expectations</p>
                     </div>
-                    <div class="expertise-card">
-                        <h3>Skills &amp; Tools</h3>
-                        <ul>
-                            <li>Jira Administration &amp; Automation</li>
-                            <li>Salesforce Ecosystem</li>
-                            <li>Smartsheet &amp; MS Project</li>
-                            <li>Azure DevOps &amp; ServiceNow</li>
-                            <li>Excel VBA &amp; Process Automation</li>
-                            <li>Agile / Scrum / SAFe / Kanban</li>
-                            <li>Lean Six Sigma Principles</li>
-                            <li>AI-driven Solutions</li>
-                        </ul>
+                    <div class="value-card">
+                        <div class="value-icon">⚖️</div>
+                        <h4>Hybrid Approach</h4>
+                        <p>Blending PMBOK predictive governance with Agile iterative delivery</p>
                     </div>
-                    <div class="expertise-card">
-                        <h3>Key Achievements</h3>
-                        <ul>
-                            <li>40% Reduction in manual coordination</li>
-                            <li>25% Improvement in forecasting accuracy</li>
-                            <li>98% On-time delivery rate</li>
-                            <li>60% Efficiency gain via automation</li>
-                            <li>50+ VP+ stakeholders served</li>
-                            <li>15+ Enterprise projects delivered</li>
-                            <li>150+ Workflows automated</li>
-                            <li>Pioneered AI test automation</li>
-                        </ul>
+                    <div class="value-card">
+                        <div class="value-icon">🛡️</div>
+                        <h4>Quality Focus</h4>
+                        <p>QA background brings risk-based decision-making to every initiative</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🤝</div>
+                        <h4>Stakeholder Success</h4>
+                        <p>Transparent communication and cross-functional collaboration</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Professional Experience Section -->
-    <section id="projects" class="projects">
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
         <div class="container">
-            <h2>Professional Experience</h2>
-            <div class="projects-grid">
-                <div class="project-card featured-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&auto=format&q=80" alt="Technology Analytics Dashboard">
-                    </div>
-                    <div class="project-content">
-                        <h3>Idealogical Group – Program &amp; Project Manager</h3>
-                        <p class="project-meta">May 2024 – Present · Markham, ON</p>
-                        <p class="project-description">Serve as trusted advisor to senior leadership, driving strategic programs across MSP software and infrastructure initiatives.</p>
-                        <ul class="impact-list">
-                            <li>Partner with program leadership to prioritize transformation outcomes aligned to strategic roadmaps</li>
-                            <li>Develop detailed program plans including scope, schedule, and budget</li>
-                            <li>Facilitate Project Core Team meetings to mitigate risks and accelerate execution</li>
-                            <li>Reduced manual coordination by 40% through Jira automation</li>
-                            <li>Pioneer AI integration for test case generation</li>
-                        </ul>
-                        <div class="project-tech">
-                            <span class="tech-tag">Program Transformation</span>
-                            <span class="tech-tag">Cross-Functional Leadership</span>
-                            <span class="tech-tag">Jira &amp; Smartsheet</span>
-                        </div>
-                        <button class="project-button" type="button" data-project="1">Role Details</button>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop&auto=format&q=80" alt="Project Management Teamwork">
-                    </div>
-                    <div class="project-content">
-                        <h3>TestingXperts – Project Manager / Coordinator</h3>
-                        <p class="project-meta">Aug 2021 – Jan 2024 · Remote</p>
-                        <p class="project-description">Managed complex program delivery across 15+ enterprise projects with 98% on-time completion rate.</p>
-                        <ul class="impact-list">
-                            <li>Cultivated trusted partnerships with stakeholders and PMOs</li>
-                            <li>Implemented governance frameworks reducing rework by 30%</li>
-                            <li>Facilitated Agile ceremonies for global cross-functional teams</li>
-                            <li>Leveraged data insights to propose execution strategies</li>
-                        </ul>
-                        <div class="project-tech">
-                            <span class="tech-tag">Complex Program Delivery</span>
-                            <span class="tech-tag">Stakeholder Alignment</span>
-                        </div>
-                        <button class="project-button" type="button" data-project="2">Role Details</button>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=600&fit=crop&auto=format&q=80" alt="Healthcare Finance">
-                    </div>
-                    <div class="project-content">
-                        <h3>Seasia Infotech – Associate Project Manager</h3>
-                        <p class="project-meta">May 2019 – Aug 2021 · India</p>
-                        <p class="project-description">Led project planning for large-scale healthcare and financial services transformation programs.</p>
-                        <ul class="impact-list">
-                            <li>Drove process standardization improving efficiency by 60%</li>
-                            <li>Automated 150+ workflows reducing manual effort</li>
-                            <li>Introduced reporting templates increasing visibility by 40%</li>
-                        </ul>
-                        <div class="project-tech">
-                            <span class="tech-tag">Process Transformation</span>
-                            <span class="tech-tag">Workflow Automation</span>
-                        </div>
-                        <button class="project-button" type="button" data-project="3">Role Details</button>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=600&fit=crop&auto=format&q=80" alt="Deployment planning">
-                    </div>
-                    <div class="project-content">
-                        <h3>Tech Mahindra – Project Coordinator</h3>
-                        <p class="project-meta">Aug 2016 – Apr 2019 · India</p>
-                        <p class="project-description">Coordinated complex deployment programs for national utility and telecom projects ensuring zero-downtime.</p>
-                        <ul class="impact-list">
-                            <li>Managed 20+ monthly deployments with playbooks</li>
-                            <li>Built dashboards improving decision-making by 25%</li>
-                            <li>Developed automation scripts reducing resolution time by 30%</li>
-                        </ul>
-                        <div class="project-tech">
-                            <span class="tech-tag">Complex Deployments</span>
-                            <span class="tech-tag">Risk Mitigation</span>
-                        </div>
-                        <button class="project-button" type="button" data-project="4">Role Details</button>
-                    </div>
-                </div>
+            <div class="section-header">
+                <span class="section-tag">Career Journey</span>
+                <h2 class="section-title">Professional Experience</h2>
             </div>
-        </div>
-    </section>
-
-    <!-- Jira & Process Automations Section -->
-    <section id="automations" class="automations">
-        <div class="container">
-            <h2>Process Transformation &amp; Automation</h2>
-            <p class="section-intro">Beyond traditional program management, I bring hands-on expertise in process standardization, simplification, and automation that drives Lead to Cash excellence:</p>
             
-            <div class="automations-grid compact">
-                <div class="automation-card automation-wide">
-                    <div class="automation-icon">📊</div>
-                    <div class="automation-content">
-                        <h3>Project Visibility &amp; Reporting</h3>
-                        <p>Built comprehensive Jira dashboards, portfolios, and timelines for real-time tracking of progress, blockers, sprint health, and team velocity.</p>
-                        <div class="automation-tags">
-                            <span class="auto-tag">Dashboards</span>
-                            <span class="auto-tag">Portfolio Management</span>
-                            <span class="auto-tag">Goal Tracking</span>
+            <div class="timeline">
+                <div class="timeline-item current">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <span class="timeline-badge">Current Role</span>
+                                <h3 class="timeline-title">Project Manager</h3>
+                                <p class="timeline-company">Ideological Group</p>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-location">📍 Markham, ON</span>
+                                <span class="timeline-date">May 2024 – Present</span>
+                            </div>
+                        </div>
+                        <p class="timeline-description">
+                            Managing projects using a hybrid delivery approach, integrating PMBOK® predictive governance with Agile execution practices.
+                        </p>
+                        <ul class="timeline-highlights">
+                            <li>Define business cases, project charters, stakeholder registers, and success metrics</li>
+                            <li>Establish iterative delivery plans, release roadmaps, and milestone schedules</li>
+                            <li>Lead risk and issue management with proactive identification and resolution</li>
+                            <li>Govern change management while maintaining alignment with objectives</li>
+                            <li>Ensure quality through acceptance criteria and validation of deliverables</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Hybrid Delivery</span>
+                            <span>PMBOK®</span>
+                            <span>Agile</span>
+                            <span>Risk Management</span>
                         </div>
                     </div>
                 </div>
-
-                <div class="automation-card automation-wide">
-                    <div class="automation-icon">🔄</div>
-                    <div class="automation-content">
-                        <h3>Workflow &amp; Deployment Automation</h3>
-                        <p>Designed 9+ Jira automations including PR→Merged→QA transitions, UAT/Production deployment triggers, and sprint tracking.</p>
-                        <div class="automation-tags">
-                            <span class="auto-tag">Workflow Automation</span>
-                            <span class="auto-tag">Deployment Triggers</span>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-title">Project Manager</h3>
+                                <p class="timeline-company">TestingXperts</p>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-location">📍 India (Remote)</span>
+                                <span class="timeline-date">Aug 2021 – Jan 2024</span>
+                            </div>
+                        </div>
+                        <p class="timeline-description">
+                            Planned, executed, monitored, controlled, and closed cross-functional projects in accordance with PMBOK® Guide process groups and knowledge areas.
+                        </p>
+                        <ul class="timeline-highlights">
+                            <li>Developed Project Charters with sponsors for formal project authorization</li>
+                            <li>Created schedules using critical path method and earned value management (EVM)</li>
+                            <li>Managed procurement including vendor evaluation and contract administration</li>
+                            <li>Performed integrated change control with impact assessment and approvals</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>PMBOK®</span>
+                            <span>EVM</span>
+                            <span>Procurement</span>
+                            <span>Change Control</span>
                         </div>
                     </div>
                 </div>
-
-                <div class="automation-card automation-wide">
-                    <div class="automation-icon">🤖</div>
-                    <div class="automation-content">
-                        <h3>AI-Powered Test Case Generation</h3>
-                        <p>Introduced AI into test case generation workflows, directly mapping AI-generated test cases into Jira for seamless QA integration.</p>
-                        <div class="automation-tags">
-                            <span class="auto-tag ai-tag">AI Integration</span>
-                            <span class="auto-tag">Test Automation</span>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-title">Quality Assurance Lead</h3>
+                                <p class="timeline-company">Seasia Infotech</p>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-location">📍 India</span>
+                                <span class="timeline-date">May 2019 – Aug 2021</span>
+                            </div>
+                        </div>
+                        <p class="timeline-description">
+                            Led QA strategy, test governance, and continuous improvement initiatives ensuring high-quality software delivery.
+                        </p>
+                        <ul class="timeline-highlights">
+                            <li>Defined test strategy aligning quality objectives with business goals</li>
+                            <li>Established test governance frameworks with entry/exit criteria and metrics</li>
+                            <li>Led risk-based testing to optimize coverage and testing effort</li>
+                            <li>Implemented test automation strategies for scalability and maintainability</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Test Strategy</span>
+                            <span>QA Governance</span>
+                            <span>Automation</span>
+                            <span>Team Leadership</span>
                         </div>
                     </div>
                 </div>
-
-                <div class="automation-card automation-wide">
-                    <div class="automation-icon">📈</div>
-                    <div class="automation-content">
-                        <h3>Metrics, Forecasting &amp; Documentation</h3>
-                        <p>Automated story point vs actual time tracking for improved forecasting. Created Excel macros and manage Confluence spaces.</p>
-                        <div class="automation-tags">
-                            <span class="auto-tag">Time Tracking</span>
-                            <span class="auto-tag">Excel VBA</span>
-                            <span class="auto-tag">Confluence</span>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-title">Quality Assurance Engineer</h3>
+                                <p class="timeline-company">Tech Mahindra</p>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-location">📍 India</span>
+                                <span class="timeline-date">Aug 2016 – Apr 2019</span>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="automation-impact">
-                <div class="impact-metrics">
-                    <div class="impact-stat">
-                        <span class="impact-number">40%</span>
-                        <span class="impact-label">Reduction in Manual Coordination</span>
-                    </div>
-                    <div class="impact-stat">
-                        <span class="impact-number">25%</span>
-                        <span class="impact-label">Improved Forecasting Accuracy</span>
-                    </div>
-                    <div class="impact-stat">
-                        <span class="impact-number">60%</span>
-                        <span class="impact-label">Efficiency Gain via Automation</span>
-                    </div>
-                    <div class="impact-stat">
-                        <span class="impact-number">30%</span>
-                        <span class="impact-label">Reduced Rework</span>
+                        <p class="timeline-description">
+                            Executed manual and automated tests, collaborated cross-functionally to ensure reliable, high-quality releases.
+                        </p>
+                        <ul class="timeline-highlights">
+                            <li>Designed test cases and exploratory tests validating application behavior</li>
+                            <li>Developed automated test scripts for functional and regression testing</li>
+                            <li>Supported CI/CD pipelines with automated test execution and reporting</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Manual Testing</span>
+                            <span>Automation</span>
+                            <span>CI/CD</span>
+                            <span>API Testing</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section class="education-section">
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
         <div class="container">
-            <h2>Education &amp; Certifications</h2>
-            <div class="education-grid">
-                <div class="education-card">
-                    <h3>Master of Computer Applications (MCA)</h3>
-                    <p>Indira Gandhi National Open University</p>
-                    <p>2017 – 2021</p>
+            <div class="section-header">
+                <span class="section-tag">Expertise</span>
+                <h2 class="section-title">Skills & Certifications</h2>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>
+                        <span class="cat-icon">📋</span>
+                        Project Management
+                    </h3>
+                    <div class="skill-tags">
+                        <span>Hybrid Agile–PMBOK</span>
+                        <span>Release Planning</span>
+                        <span>Roadmapping</span>
+                        <span>Scope Management</span>
+                        <span>Risk & Issue Management</span>
+                        <span>Change Management</span>
+                        <span>Earned Value Management</span>
+                        <span>Stakeholder Communication</span>
+                    </div>
                 </div>
-                <div class="education-card">
-                    <h3>Bachelor of Science, Computer Science</h3>
-                    <p>Kurukshetra University</p>
-                    <p>2013 – 2016</p>
+                
+                <div class="skill-category">
+                    <h3>
+                        <span class="cat-icon">🔍</span>
+                        Quality Assurance
+                    </h3>
+                    <div class="skill-tags">
+                        <span>Test Strategy & Policy</span>
+                        <span>Test Governance</span>
+                        <span>Risk-Based Testing</span>
+                        <span>Defect Management</span>
+                        <span>Test Automation</span>
+                        <span>Quality Metrics & KPIs</span>
+                        <span>Compliance & Audits</span>
+                    </div>
                 </div>
-                <div class="education-card">
-                    <h3>ISTQB Certified Tester</h3>
-                    <p>Advanced Level Test Management</p>
+                
+                <div class="skill-category">
+                    <h3>
+                        <span class="cat-icon">⚙️</span>
+                        Methodologies
+                    </h3>
+                    <div class="skill-tags">
+                        <span>Agile</span>
+                        <span>Scrum</span>
+                        <span>Kanban</span>
+                        <span>Waterfall</span>
+                        <span>PMBOK®</span>
+                        <span>SDLC</span>
+                        <span>SAFe</span>
+                        <span>Lean Six Sigma</span>
+                    </div>
                 </div>
-                <div class="education-card">
-                    <h3>Business Analyst Certification</h3>
-                    <p>Professional Certification</p>
+                
+                <div class="skill-category">
+                    <h3>
+                        <span class="cat-icon">🛠️</span>
+                        Tools & Platforms
+                    </h3>
+                    <div class="skill-tags">
+                        <span>Jira</span>
+                        <span>Confluence</span>
+                        <span>MS Project</span>
+                        <span>Azure DevOps</span>
+                        <span>ServiceNow</span>
+                        <span>Smartsheet</span>
+                        <span>Selenium</span>
+                        <span>Postman</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="certifications">
+                <h3>Certifications</h3>
+                <div class="cert-grid">
+                    <div class="cert-card">
+                        <div class="cert-icon">🏆</div>
+                        <div class="cert-info">
+                            <h4>ISTQB® Advanced Level</h4>
+                            <p>Test Management</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">📊</div>
+                        <div class="cert-info">
+                            <h4>Business Analyst</h4>
+                            <p>Certified Professional</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">🔄</div>
+                        <div class="cert-info">
+                            <h4>Scrum Fundamentals</h4>
+                            <p>Certified (SFC)</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">✅</div>
+                        <div class="cert-info">
+                            <h4>ISTQB® Foundation</h4>
+                            <p>Level Certified</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="education">
+                <h3>Education</h3>
+                <div class="edu-grid">
+                    <div class="edu-card">
+                        <div class="edu-degree">Master of Computer Applications (MCA)</div>
+                        <div class="edu-school">Indira Gandhi National Open University</div>
+                        <div class="edu-year">2017 – 2021</div>
+                    </div>
+                    <div class="edu-card">
+                        <div class="edu-degree">Bachelor of Science (Computer Science)</div>
+                        <div class="edu-school">Kurukshetra University</div>
+                        <div class="edu-year">2013 – 2016</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -327,38 +441,75 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Get In Touch</h2>
-            <p class="contact-intro">I'm always open to discussing new opportunities and interesting projects. Feel free to reach out!</p>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <strong>Location:</strong> Brampton, Ontario, Canada
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <span class="section-tag">Get In Touch</span>
+                    <h2 class="contact-title">Let's Connect</h2>
+                    <p class="contact-description">
+                        I'm always open to discussing new opportunities, interesting projects, or ways I can help drive quality and delivery excellence for your organization.
+                    </p>
+                    
+                    <div class="contact-details">
+                        <a href="mailto:sheenachugh92@gmail.com" class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <div>
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">sheenachugh92@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/sheena-chugh" target="_blank" class="contact-item">
+                            <div class="contact-icon">💼</div>
+                            <div>
+                                <span class="contact-label">LinkedIn</span>
+                                <span class="contact-value">linkedin.com/in/sheena-chugh</span>
+                            </div>
+                        </a>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <span class="contact-label">Location</span>
+                                <span class="contact-value">Oshawa, Ontario, Canada</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-actions">
+                        <a href="resume.html" class="btn btn-primary" target="_blank">
+                            <span>Download Resume</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="7 10 12 15 17 10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
-                <div class="contact-item">
-                    <strong>Email:</strong> <span id="email">sheenachugh92@gmail.com</span>
-                </div>
-                <div class="contact-item">
-                    <strong>Phone:</strong> <span id="phone">+1 (647) 236-0034</span>
+                
+                <div class="contact-visual">
+                    <div class="quote-card">
+                        <div class="quote-mark">"</div>
+                        <p class="quote-text">
+                            I thrive in roles that sit at the intersection of business, technology, and delivery—where structured execution meets adaptability.
+                        </p>
+                        <div class="quote-author">— Sheena Chugh</div>
+                    </div>
                 </div>
             </div>
-            <button class="cta-button" id="copyEmailBtn">Copy Email</button>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Sheena Chugh. All rights reserved.</p>
+            <div class="footer-content">
+                <p>&copy; 2025 Sheena Chugh. Crafted with precision and attention to detail.</p>
+                <div class="footer-links">
+                    <a href="resume.html" target="_blank">Resume</a>
+                    <a href="https://www.linkedin.com/in/sheena-chugh" target="_blank">LinkedIn</a>
+                </div>
+            </div>
         </div>
     </footer>
-
-    <!-- Modal for Project Details -->
-    <div id="projectModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2 id="modalTitle">Project Details</h2>
-            <div id="modalDescription" class="modal-description">Project description will appear here.</div>
-        </div>
-    </div>
 
     <script src="script.js"></script>
 </body>

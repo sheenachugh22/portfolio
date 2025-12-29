@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheena Chugh - Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        @media print {
+            @page { margin: 0.5in 0.6in; size: letter; }
+            body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .no-print { display: none !important; }
+            .resume-container { box-shadow: none; max-width: none; }
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Source Sans 3', 'Segoe UI', Arial, sans-serif;
+            font-size: 10.5pt;
+            line-height: 1.45;
+            color: #2d2d2d;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .resume-container {
+            max-width: 8.5in;
+            margin: 0 auto;
+            background: #fff;
+            padding: 0.5in 0.6in;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            padding-bottom: 16px;
+            border-bottom: 2.5px solid #1a365d;
+            margin-bottom: 18px;
+        }
+        
+        .name {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 28pt;
+            font-weight: 700;
+            color: #1a365d;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        
+        .tagline {
+            font-size: 11pt;
+            color: #4a5568;
+            font-weight: 500;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+        
+        .contact-info {
+            font-size: 9.5pt;
+            color: #555;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 6px 20px;
+        }
+        
+        .contact-info a {
+            color: #2b6cb0;
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        .divider {
+            color: #cbd5e0;
+        }
+        
+        /* Section Styling */
+        .section {
+            margin-bottom: 16px;
+        }
+        
+        .section-title {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 12pt;
+            font-weight: 700;
+            color: #1a365d;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-bottom: 1.5px solid #e2e8f0;
+            padding-bottom: 4px;
+            margin-bottom: 10px;
+        }
+        
+        /* Summary */
+        .summary {
+            text-align: justify;
+            color: #4a5568;
+            line-height: 1.55;
+        }
+        
+        /* Competencies */
+        .competencies-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4px 16px;
+            font-size: 10pt;
+        }
+        
+        .competency-item {
+            padding: 2px 0;
+            padding-left: 14px;
+            position: relative;
+            color: #4a5568;
+        }
+        
+        .competency-item::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #2b6cb0;
+            font-size: 9pt;
+        }
+        
+        /* Experience */
+        .job {
+            margin-bottom: 14px;
+        }
+        
+        .job:last-child {
+            margin-bottom: 0;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2px;
+        }
+        
+        .company {
+            font-weight: 700;
+            color: #1a365d;
+            font-size: 11pt;
+        }
+        
+        .location {
+            font-size: 9.5pt;
+            color: #718096;
+            font-style: italic;
+        }
+        
+        .job-title-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 6px;
+        }
+        
+        .job-title {
+            font-style: italic;
+            color: #4a5568;
+            font-weight: 500;
+        }
+        
+        .job-dates {
+            font-size: 9.5pt;
+            color: #718096;
+        }
+        
+        .job-description {
+            padding-left: 0;
+            list-style: none;
+        }
+        
+        .job-description li {
+            padding-left: 14px;
+            position: relative;
+            margin-bottom: 3px;
+            color: #4a5568;
+            font-size: 10pt;
+            line-height: 1.45;
+        }
+        
+        .job-description li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #2b6cb0;
+            font-weight: bold;
+        }
+        
+        /* Education & Certifications */
+        .edu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        
+        .edu-item {
+            padding: 8px 12px;
+            background: #f7fafc;
+            border-left: 3px solid #2b6cb0;
+        }
+        
+        .edu-title {
+            font-weight: 600;
+            color: #1a365d;
+            font-size: 10pt;
+            margin-bottom: 2px;
+        }
+        
+        .edu-details {
+            font-size: 9.5pt;
+            color: #718096;
+        }
+        
+        .cert-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px 20px;
+            list-style: none;
+        }
+        
+        .cert-list li {
+            padding-left: 14px;
+            position: relative;
+            font-size: 10pt;
+            color: #4a5568;
+        }
+        
+        .cert-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #38a169;
+            font-weight: bold;
+            font-size: 9pt;
+        }
+        
+        /* Skills */
+        .skills-row {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 5px;
+            align-items: baseline;
+        }
+        
+        .skill-category {
+            font-weight: 600;
+            color: #1a365d;
+            font-size: 9.5pt;
+            min-width: 100px;
+        }
+        
+        .skill-items {
+            color: #4a5568;
+            font-size: 9.5pt;
+        }
+        
+        /* Print Button */
+        .print-controls {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .print-btn {
+            background: linear-gradient(135deg, #1a365d, #2b6cb0);
+            color: #fff;
+            border: none;
+            padding: 12px 32px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .print-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(26,54,93,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="print-controls no-print">
+        <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+    </div>
+    
+    <div class="resume-container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="name">Sheena Chugh</h1>
+            <p class="tagline">Hybrid Project Manager | PMBOK & Agile Delivery | Former QA Manager</p>
+            <div class="contact-info">
+                <span>📍 Oshawa, Ontario, Canada</span>
+                <span class="divider">|</span>
+                <span>✉️ <a href="mailto:sheenachugh92@gmail.com">sheenachugh92@gmail.com</a></span>
+                <span class="divider">|</span>
+                <span>🔗 <a href="https://www.linkedin.com/in/sheena-chugh" target="_blank">linkedin.com/in/sheena-chugh</a></span>
+                <span class="divider">|</span>
+                <span>🌐 <a href="https://sheenachugh22.github.io/portfolio/" target="_blank">sheenachugh22.github.io/portfolio</a></span>
+            </div>
+        </header>
+        
+        <!-- Professional Summary -->
+        <section class="section">
+            <h2 class="section-title">Professional Summary</h2>
+            <p class="summary">
+                Results-driven Hybrid Project Manager with progressive experience from Quality Assurance through Project Management. Expert at blending PMBOK® predictive governance with Agile execution practices to deliver complex initiatives with clarity and accountability. Known for embedding quality across the SDLC, building strong stakeholder relationships, and transforming ambiguity into clear plans and measurable outcomes. Background in QA brings a unique focus on quality, transparency, and risk-based decision-making to every project.
+            </p>
+        </section>
+        
+        <!-- Core Competencies -->
+        <section class="section">
+            <h2 class="section-title">Core Competencies</h2>
+            <div class="competencies-grid">
+                <div class="competency-item">Hybrid Agile–PMBOK Delivery</div>
+                <div class="competency-item">Iterative Delivery Planning</div>
+                <div class="competency-item">Release Planning & Roadmapping</div>
+                <div class="competency-item">Scope & Change Management</div>
+                <div class="competency-item">Risk & Issue Management</div>
+                <div class="competency-item">Stakeholder Communication</div>
+                <div class="competency-item">Quality Assurance Strategy</div>
+                <div class="competency-item">Cross-Functional Leadership</div>
+                <div class="competency-item">Earned Value Management</div>
+                <div class="competency-item">Vendor & Procurement Mgmt</div>
+                <div class="competency-item">Process Improvement</div>
+                <div class="competency-item">Test Strategy & Governance</div>
+            </div>
+        </section>
+        
+        <!-- Professional Experience -->
+        <section class="section">
+            <h2 class="section-title">Professional Experience</h2>
+            
+            <div class="job">
+                <div class="job-header">
+                    <span class="company">Ideological Group</span>
+                    <span class="location">Markham, ON</span>
+                </div>
+                <div class="job-title-row">
+                    <span class="job-title">Project Manager</span>
+                    <span class="job-dates">May 2024 – Present</span>
+                </div>
+                <ul class="job-description">
+                    <li>Manage projects using hybrid delivery approach, integrating PMBOK® predictive governance with Agile execution to ensure alignment with business objectives and stakeholder expectations</li>
+                    <li>Initiate projects by defining business case, project charter, stakeholder register, and success metrics in alignment with organizational strategy</li>
+                    <li>Establish iterative delivery plans, release roadmaps, and milestone schedules while maintaining schedule and cost baselines</li>
+                    <li>Lead risk and issue management, proactively identifying impediments, facilitating resolution, and escalating risks where necessary</li>
+                    <li>Ensure quality assurance through acceptance criteria, definition of done, reviews, and validation of deliverables</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <span class="company">TestingXperts</span>
+                    <span class="location">India (Remote)</span>
+                </div>
+                <div class="job-title-row">
+                    <span class="job-title">Project Manager</span>
+                    <span class="job-dates">August 2021 – January 2024</span>
+                </div>
+                <ul class="job-description">
+                    <li>Planned, executed, monitored, controlled, and closed cross-functional projects in accordance with PMBOK® Guide process groups</li>
+                    <li>Developed Project Charters in collaboration with sponsors to formally authorize projects and establish high-level scope, objectives, and success criteria</li>
+                    <li>Created and maintained project schedules using critical path method, activity sequencing, and duration estimation; tracked progress using earned value management (EVM)</li>
+                    <li>Managed procurement processes including vendor evaluation, contract administration, and supplier performance monitoring</li>
+                    <li>Performed integrated change control, evaluating change requests, assessing impact, securing approvals, and updating baselines</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <span class="company">Seasia Infotech</span>
+                    <span class="location">India</span>
+                </div>
+                <div class="job-title-row">
+                    <span class="job-title">Quality Assurance Lead</span>
+                    <span class="job-dates">May 2019 – August 2021</span>
+                </div>
+                <ul class="job-description">
+                    <li>Defined and executed test strategy and policy, aligning quality objectives with business goals across Agile, Hybrid, and Predictive delivery models</li>
+                    <li>Established test governance frameworks including test plans, entry/exit criteria, quality metrics, and compliance standards</li>
+                    <li>Led risk-based testing initiatives, prioritizing test coverage and optimizing testing effort based on product and project risks</li>
+                    <li>Managed defect processes including root cause analysis, severity classification, and continuous improvement initiatives</li>
+                    <li>Implemented test automation strategies ensuring scalability, maintainability, and alignment with delivery timelines</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <span class="company">Tech Mahindra</span>
+                    <span class="location">India</span>
+                </div>
+                <div class="job-title-row">
+                    <span class="job-title">Quality Assurance Engineer</span>
+                    <span class="job-dates">August 2016 – April 2019</span>
+                </div>
+                <ul class="job-description">
+                    <li>Analyzed requirements, user stories, and acceptance criteria to understand functional and non-functional testing needs</li>
+                    <li>Designed and executed manual test cases, test scenarios, and exploratory tests validating application behavior</li>
+                    <li>Developed automated test scripts for functional, regression, and smoke testing using approved automation frameworks</li>
+                    <li>Supported CI/CD pipelines by running automated tests and reporting results; collaborated with DevOps teams</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Education -->
+        <section class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="edu-grid">
+                <div class="edu-item">
+                    <div class="edu-title">Master of Computer Applications (MCA)</div>
+                    <div class="edu-details">Indira Gandhi National Open University | 2017 – 2021</div>
+                </div>
+                <div class="edu-item">
+                    <div class="edu-title">Bachelor of Science (Computer Science)</div>
+                    <div class="edu-details">Kurukshetra University | 2013 – 2016</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Certifications -->
+        <section class="section">
+            <h2 class="section-title">Certifications</h2>
+            <ul class="cert-list">
+                <li>ISTQB® Certified Tester – Advanced Level Test Management</li>
+                <li>Scrum Fundamentals Certified (SFC)</li>
+                <li>Business Analyst Certification</li>
+                <li>ISTQB® Foundation Level</li>
+            </ul>
+        </section>
+        
+        <!-- Technical Skills -->
+        <section class="section">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-row">
+                <span class="skill-category">Methodologies:</span>
+                <span class="skill-items">Agile, Scrum, Kanban, Waterfall, PMBOK®, SDLC, SAFe, Lean Six Sigma</span>
+            </div>
+            <div class="skills-row">
+                <span class="skill-category">PM Tools:</span>
+                <span class="skill-items">Jira, Confluence, MS Project, Azure DevOps, ServiceNow, Smartsheet</span>
+            </div>
+            <div class="skills-row">
+                <span class="skill-category">QA Tools:</span>
+                <span class="skill-items">Selenium, TestNG, JUnit, Postman, JIRA Xray, qTest, TestRail</span>
+            </div>
+            <div class="skills-row">
+                <span class="skill-category">Automation:</span>
+                <span class="skill-items">Excel VBA, Python scripting, CI/CD Integration, API Testing</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
