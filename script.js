@@ -86,7 +86,7 @@ window.addEventListener('scroll', highlightNavOnScroll);
 // ===== SCROLL ANIMATIONS =====
 const animateOnScroll = () => {
     const elements = document.querySelectorAll(
-        '.hero-content, .hero-visual, .section-header, .about-content, .about-cards, .timeline-item, .skill-category, .contact-wrapper > *'
+        '.hero-content, .hero-visual, .section-header, .about-content, .about-cards, .timeline-item, .project-card, .skill-category, .contact-wrapper > *'
     );
     
     const observer = new IntersectionObserver((entries) => {

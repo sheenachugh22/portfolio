@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheena Chugh - Cover Letter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        @media print {
+            @page { margin: 0.75in 1in; size: letter; }
+            body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .no-print { display: none !important; }
+            .letter-container { box-shadow: none; max-width: none; padding: 0; }
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Source Sans 3', 'Segoe UI', Arial, sans-serif;
+            font-size: 11pt;
+            line-height: 1.6;
+            color: #2d2d2d;
+            background: linear-gradient(135deg, #e8eef5 0%, #f5f5f5 100%);
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+        
+        .letter-container {
+            max-width: 8.5in;
+            margin: 0 auto;
+            background: #fff;
+            padding: 50px 70px;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+            border-radius: 4px;
+        }
+        
+        /* Header */
+        .header {
+            margin-bottom: 35px;
+        }
+        
+        .name {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 26pt;
+            font-weight: 700;
+            color: #1a365d;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+        
+        .tagline {
+            font-size: 11pt;
+            color: #4a5568;
+            font-weight: 500;
+            margin-bottom: 12px;
+            letter-spacing: 0.3px;
+        }
+        
+        .contact-line {
+            font-size: 9.5pt;
+            color: #718096;
+            line-height: 1.7;
+        }
+        
+        .contact-line a {
+            color: #2b6cb0;
+            text-decoration: none;
+        }
+        
+        .accent-bar {
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #1a365d, #2b6cb0);
+            margin-top: 15px;
+        }
+        
+        /* Date & Address */
+        .date-section {
+            margin-bottom: 25px;
+            color: #4a5568;
+        }
+        
+        .recipient-section {
+            margin-bottom: 25px;
+        }
+        
+        .recipient-section p {
+            color: #2d2d2d;
+            line-height: 1.5;
+        }
+        
+        .editable {
+            background: #fffde7;
+            border-bottom: 2px dashed #f59e0b;
+            padding: 0 4px;
+            cursor: text;
+            transition: background 0.2s;
+        }
+        
+        .editable:hover {
+            background: #fef3c7;
+        }
+        
+        .editable:focus {
+            outline: none;
+            background: #fef3c7;
+            border-color: #d97706;
+        }
+        
+        /* Greeting */
+        .greeting {
+            font-weight: 600;
+            color: #1a365d;
+            margin-bottom: 18px;
+            font-size: 11.5pt;
+        }
+        
+        /* Body */
+        .body-text {
+            margin-bottom: 18px;
+            text-align: justify;
+            color: #374151;
+        }
+        
+        .highlight {
+            color: #1a365d;
+            font-weight: 600;
+        }
+        
+        .bullet-section {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+        
+        .bullet-section li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 18px;
+            list-style: none;
+        }
+        
+        .bullet-section li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #2b6cb0;
+            font-weight: bold;
+        }
+        
+        /* Closing */
+        .closing {
+            margin-top: 30px;
+        }
+        
+        .closing-text {
+            margin-bottom: 35px;
+            color: #374151;
+        }
+        
+        .signature-line {
+            font-weight: 600;
+            color: #1a365d;
+            font-size: 12pt;
+        }
+        
+        /* Controls */
+        .controls {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .btn {
+            background: linear-gradient(135deg, #1a365d, #2b6cb0);
+            color: #fff;
+            border: none;
+            padding: 12px 28px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin: 0 8px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(26,54,93,0.3);
+        }
+        
+        .btn-secondary {
+            background: #fff;
+            color: #1a365d;
+            border: 2px solid #1a365d;
+        }
+        
+        .btn-secondary:hover {
+            background: #f7fafc;
+        }
+        
+        .instructions {
+            background: linear-gradient(135deg, #ebf8ff, #e6fffa);
+            border: 1px solid #90cdf4;
+            border-radius: 8px;
+            padding: 16px 24px;
+            margin-bottom: 25px;
+            max-width: 8.5in;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .instructions h3 {
+            color: #2b6cb0;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        
+        .instructions p {
+            color: #4a5568;
+            font-size: 13px;
+            margin: 0;
+        }
+        
+        .instructions code {
+            background: #fff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 12px;
+            color: #d97706;
+        }
+    </style>
+</head>
+<body>
+    <div class="controls no-print">
+        <button class="btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+        <button class="btn btn-secondary" onclick="resetFields()">↻ Reset Fields</button>
+    </div>
+    
+    <div class="instructions no-print">
+        <h3>📝 Customization Instructions</h3>
+        <p>Click on the <code>highlighted fields</code> below to customize this cover letter. The yellow highlighted areas are placeholders for you to fill in with the specific job details. Print or save as PDF when ready!</p>
+    </div>
+    
+    <div class="letter-container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="name">Sheena Chugh</h1>
+            <p class="tagline">Hybrid Project Manager | PMBOK & Agile Delivery | Former QA Manager</p>
+            <div class="contact-line">
+                Oshawa, Ontario, Canada<br>
+                <a href="mailto:sheenachugh92@gmail.com">sheenachugh92@gmail.com</a> · 
+                <a href="https://www.linkedin.com/in/sheena-chugh" target="_blank">LinkedIn</a> · 
+                <a href="https://sheenachugh22.github.io/portfolio/" target="_blank">Portfolio</a>
+            </div>
+            <div class="accent-bar"></div>
+        </header>
+        
+        <!-- Date -->
+        <div class="date-section">
+            <span contenteditable="true" class="editable" data-default="[Current Date]">[Current Date]</span>
+        </div>
+        
+        <!-- Recipient -->
+        <div class="recipient-section">
+            <p>
+                <span contenteditable="true" class="editable" data-default="[Hiring Manager's Name]">[Hiring Manager's Name]</span><br>
+                <span contenteditable="true" class="editable" data-default="[Title]">[Title]</span><br>
+                <span contenteditable="true" class="editable" data-default="[Company Name]">[Company Name]</span><br>
+                <span contenteditable="true" class="editable" data-default="[Company Address]">[Company Address]</span>
+            </p>
+        </div>
+        
+        <!-- Greeting -->
+        <p class="greeting">Dear <span contenteditable="true" class="editable" data-default="[Hiring Manager]">[Hiring Manager]</span>,</p>
+        
+        <!-- Body -->
+        <p class="body-text">
+            I am writing to express my strong interest in the <span contenteditable="true" class="editable" data-default="[Position Title]">[Position Title]</span> position at <span contenteditable="true" class="editable" data-default="[Company Name]">[Company Name]</span>. With over eight years of progressive experience spanning Quality Assurance leadership through Project Management, I bring a unique perspective that combines <span class="highlight">structured PMBOK governance</span> with <span class="highlight">Agile execution practices</span>—a hybrid approach that consistently delivers complex initiatives on time, within scope, and to the highest quality standards.
+        </p>
+        
+        <p class="body-text">
+            My career journey began in QA, where I built a strong foundation in systematic thinking, risk assessment, and quality-first delivery. As I progressed to QA Lead at Seasia Infotech, I owned test strategy, mentored teams, and partnered closely with product and development to embed quality across the SDLC. This foundation naturally evolved into full project ownership, where I now manage end-to-end delivery as a Hybrid Project Manager at Ideological Group.
+        </p>
+        
+        <p class="body-text">
+            I am particularly drawn to this opportunity because <span contenteditable="true" class="editable" data-default="[reason you're interested in the company/role - e.g., 'your commitment to innovative technology solutions aligns with my passion for driving transformation']">[reason you're interested in the company/role]</span>. My background positions me to make an immediate impact through:
+        </p>
+        
+        <ul class="bullet-section">
+            <li><strong>Hybrid Delivery Excellence:</strong> Expert at blending predictive project governance with iterative delivery, ensuring strategic alignment while maintaining team agility and stakeholder transparency</li>
+            <li><strong>Quality-Driven Approach:</strong> My QA background means I proactively identify risks, establish clear acceptance criteria, and embed quality checkpoints throughout the project lifecycle</li>
+            <li><strong>Stakeholder Communication:</strong> Proven ability to transform ambiguity into clear plans, facilitate cross-functional collaboration, and maintain stakeholder alignment through transparent dashboards and regular cadences</li>
+            <li><strong>Process Improvement:</strong> Track record of implementing governance frameworks, change management processes, and lessons learned practices that drive continuous improvement</li>
+        </ul>
+        
+        <p class="body-text">
+            In my current role, I have successfully initiated and delivered projects aligned with organizational strategy, established iterative delivery plans and release roadmaps, and led risk management efforts that proactively identify and resolve impediments. I am confident these skills would translate effectively to supporting <span contenteditable="true" class="editable" data-default="[Company Name]">[Company Name]</span>'s objectives.
+        </p>
+        
+        <p class="body-text">
+            I would welcome the opportunity to discuss how my hybrid project management approach and quality-focused mindset can contribute to your team's success. Thank you for considering my application. I look forward to the possibility of speaking with you soon.
+        </p>
+        
+        <!-- Closing -->
+        <div class="closing">
+            <p class="closing-text">Warm regards,</p>
+            <p class="signature-line">Sheena Chugh</p>
+        </div>
+    </div>
+    
+    <script>
+        // Clear placeholder text on focus
+        document.querySelectorAll('.editable').forEach(el => {
+            el.addEventListener('focus', function() {
+                if (this.textContent === this.dataset.default) {
+                    this.textContent = '';
+                }
+            });
+            
+            el.addEventListener('blur', function() {
+                if (this.textContent.trim() === '') {
+                    this.textContent = this.dataset.default;
+                }
+            });
+        });
+        
+        function resetFields() {
+            document.querySelectorAll('.editable').forEach(el => {
+                el.textContent = el.dataset.default;
+            });
+        }
+    </script>
+</body>
+</html>
+
