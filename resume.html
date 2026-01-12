@@ -3,25 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sheena Chugh - Resume</title>
+    <title>Sheena Chugh - QA Manager Resume</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         @media print {
-            @page { margin: 0.5in 0.6in; size: letter; }
-            body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            @page { margin: 0.4in 0.5in; size: letter; }
+            html, body { 
+                -webkit-print-color-adjust: exact; 
+                print-color-adjust: exact;
+                margin: 0;
+                padding: 0;
+            }
             .no-print { display: none !important; }
-            .resume-container { box-shadow: none; max-width: none; }
+            .resume-container { 
+                box-shadow: none; 
+                max-width: none; 
+                padding: 0;
+                margin: 0;
+            }
+            .section { margin-bottom: 12px; }
+            .job { margin-bottom: 10px; }
+            .header { margin-bottom: 14px; padding-bottom: 10px; }
         }
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
-            font-family: 'Source Sans 3', 'Segoe UI', Arial, sans-serif;
-            font-size: 10.5pt;
-            line-height: 1.45;
-            color: #2d2d2d;
+            font-family: 'Source Sans 3', Arial, sans-serif;
+            font-size: 11pt;
+            line-height: 1.5;
+            color: #000;
             background: #f5f5f5;
             padding: 20px;
         }
@@ -34,104 +47,79 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
         
-        /* Header */
+        /* Header - Simple centered text */
         .header {
             text-align: center;
-            padding-bottom: 16px;
-            border-bottom: 2.5px solid #1a365d;
-            margin-bottom: 18px;
+            margin-bottom: 16px;
+            border-bottom: 2px solid #000;
+            padding-bottom: 12px;
         }
         
         .name {
-            font-family: 'Crimson Pro', Georgia, serif;
-            font-size: 28pt;
+            font-size: 24pt;
             font-weight: 700;
-            color: #1a365d;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            margin-bottom: 8px;
+            color: #000;
+            margin-bottom: 5px;
         }
         
         .tagline {
-            font-size: 11pt;
-            color: #4a5568;
+            font-size: 12pt;
+            color: #333;
             font-weight: 500;
-            margin-bottom: 10px;
-            letter-spacing: 0.5px;
+            margin-bottom: 8px;
         }
         
         .contact-info {
-            font-size: 9.5pt;
-            color: #555;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 6px 20px;
+            font-size: 10pt;
+            color: #333;
         }
         
         .contact-info a {
-            color: #2b6cb0;
+            color: #000;
             text-decoration: none;
         }
         
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-        
-        .divider {
-            color: #cbd5e0;
-        }
-        
-        /* Section Styling */
+        /* Section Styling - Standard headings for ATS */
         .section {
-            margin-bottom: 16px;
+            margin-bottom: 14px;
+            page-break-inside: avoid;
         }
         
         .section-title {
-            font-family: 'Crimson Pro', Georgia, serif;
             font-size: 12pt;
             font-weight: 700;
-            color: #1a365d;
+            color: #000;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            border-bottom: 1.5px solid #e2e8f0;
-            padding-bottom: 4px;
+            border-bottom: 1px solid #000;
+            padding-bottom: 3px;
             margin-bottom: 10px;
         }
         
         /* Summary */
         .summary {
             text-align: justify;
-            color: #4a5568;
-            line-height: 1.55;
+            color: #000;
+            line-height: 1.5;
         }
         
-        /* Competencies */
-        .competencies-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 4px 16px;
-            font-size: 10pt;
+        /* Skills - Simple list format for ATS */
+        .skills-section {
+            margin-bottom: 5px;
         }
         
-        .competency-item {
-            padding: 2px 0;
-            padding-left: 14px;
-            position: relative;
-            color: #4a5568;
+        .skills-label {
+            font-weight: 700;
+            color: #000;
         }
         
-        .competency-item::before {
-            content: '▸';
-            position: absolute;
-            left: 0;
-            color: #2b6cb0;
-            font-size: 9pt;
+        .skills-content {
+            color: #000;
         }
         
-        /* Experience */
+        /* Experience - Simple format */
         .job {
-            margin-bottom: 14px;
+            margin-bottom: 12px;
+            page-break-inside: avoid;
         }
         
         .job:last-child {
@@ -139,130 +127,61 @@
         }
         
         .job-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 2px;
+            margin-bottom: 3px;
         }
         
         .company {
             font-weight: 700;
-            color: #1a365d;
+            color: #000;
             font-size: 11pt;
         }
         
-        .location {
-            font-size: 9.5pt;
-            color: #718096;
-            font-style: italic;
-        }
-        
-        .job-title-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 6px;
-        }
-        
         .job-title {
-            font-style: italic;
-            color: #4a5568;
-            font-weight: 500;
+            font-weight: 600;
+            color: #000;
         }
         
-        .job-dates {
-            font-size: 9.5pt;
-            color: #718096;
+        .job-meta {
+            font-size: 10pt;
+            color: #333;
+            margin-bottom: 5px;
         }
         
         .job-description {
-            padding-left: 0;
-            list-style: none;
+            padding-left: 20px;
+            list-style-type: disc;
         }
         
         .job-description li {
-            padding-left: 14px;
-            position: relative;
-            margin-bottom: 3px;
-            color: #4a5568;
+            margin-bottom: 2px;
+            color: #000;
             font-size: 10pt;
-            line-height: 1.45;
+            line-height: 1.35;
         }
         
-        .job-description li::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            color: #2b6cb0;
-            font-weight: bold;
-        }
-        
-        /* Education & Certifications */
-        .edu-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-        }
-        
+        /* Education & Certifications - Simple lists */
         .edu-item {
-            padding: 8px 12px;
-            background: #f7fafc;
-            border-left: 3px solid #2b6cb0;
+            margin-bottom: 5px;
         }
         
         .edu-title {
             font-weight: 600;
-            color: #1a365d;
-            font-size: 10pt;
-            margin-bottom: 2px;
+            color: #000;
         }
         
         .edu-details {
-            font-size: 9.5pt;
-            color: #718096;
+            font-size: 10pt;
+            color: #333;
         }
         
         .cert-list {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4px 20px;
-            list-style: none;
+            list-style-type: disc;
+            padding-left: 20px;
         }
         
         .cert-list li {
-            padding-left: 14px;
-            position: relative;
-            font-size: 10pt;
-            color: #4a5568;
-        }
-        
-        .cert-list li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #38a169;
-            font-weight: bold;
-            font-size: 9pt;
-        }
-        
-        /* Skills */
-        .skills-row {
-            display: flex;
-            gap: 8px;
-            margin-bottom: 5px;
-            align-items: baseline;
-        }
-        
-        .skill-category {
-            font-weight: 600;
-            color: #1a365d;
-            font-size: 9.5pt;
-            min-width: 100px;
-        }
-        
-        .skill-items {
-            color: #4a5568;
-            font-size: 9.5pt;
+            margin-bottom: 2px;
+            color: #000;
         }
         
         /* Print Button */
@@ -272,7 +191,7 @@
         }
         
         .print-btn {
-            background: linear-gradient(135deg, #1a365d, #2b6cb0);
+            background: #1a365d;
             color: #fff;
             border: none;
             padding: 12px 32px;
@@ -297,16 +216,13 @@
     <div class="resume-container">
         <!-- Header -->
         <header class="header">
-            <h1 class="name">Sheena Chugh</h1>
-            <p class="tagline">Hybrid Project Manager | PMBOK & Agile Delivery | Former QA Manager</p>
+            <h1 class="name">SHEENA CHUGH</h1>
+            <p class="tagline">QA Manager | Test Automation Expert | ISTQB ALTM Certified</p>
             <div class="contact-info">
-                <span>📍 Oshawa, Ontario, Canada</span>
-                <span class="divider">|</span>
-                <span>✉️ <a href="mailto:sheenachugh92@gmail.com">sheenachugh92@gmail.com</a></span>
-                <span class="divider">|</span>
-                <span>🔗 <a href="https://www.linkedin.com/in/sheena-chugh" target="_blank">linkedin.com/in/sheena-chugh</a></span>
-                <span class="divider">|</span>
-                <span>🌐 <a href="https://sheenachugh22.github.io/portfolio/" target="_blank">sheenachugh22.github.io/portfolio</a></span>
+                Oshawa, Ontario, Canada | 
+                <a href="mailto:sheenachugh92@gmail.com">sheenachugh92@gmail.com</a> | 
+                <a href="https://www.linkedin.com/in/sheena-chugh">linkedin.com/in/sheena-chugh</a> | 
+                <a href="https://sheenachugh22.github.io/portfolio/">sheenachugh22.github.io/portfolio</a>
             </div>
         </header>
         
@@ -314,26 +230,48 @@
         <section class="section">
             <h2 class="section-title">Professional Summary</h2>
             <p class="summary">
-                Results-driven Hybrid Project Manager with 9+ years of progressive experience from Quality Assurance through Project Management across Healthcare (HL7/FHIR), Telecommunications, Retail, and Workforce Technology domains. Expert at blending PMBOK® predictive governance with Agile execution practices to deliver complex initiatives. Proven track record in functional and automation testing, API validation, and quality governance. Known for embedding quality across the SDLC, building strong stakeholder relationships, and transforming ambiguity into clear plans and measurable outcomes.
+                ISTQB Advanced Level Test Manager (ALTM) certified QA professional with 9+ years of progressive experience from QA Engineer to QA Manager. Expert in test planning, test strategy, and comprehensive test automation across Web, Mobile, API, Database, and Performance testing domains. Proven expertise with Selenium C#, Playwright JavaScript, SoapUI, Postman, and JMeter. Strong track record of building high-performing QA teams, implementing automation frameworks, and driving quality excellence across Healthcare, Telecommunications, and Retail domains. Skilled in risk-based testing, defect management, CI/CD integration, and cross-functional leadership.
             </p>
         </section>
         
-        <!-- Core Competencies -->
+        <!-- Technical Skills -->
         <section class="section">
-            <h2 class="section-title">Core Competencies</h2>
-            <div class="competencies-grid">
-                <div class="competency-item">Hybrid Agile–PMBOK Delivery</div>
-                <div class="competency-item">Functional & Regression Testing</div>
-                <div class="competency-item">Healthcare (HL7/FHIR)</div>
-                <div class="competency-item">Test Automation (Selenium)</div>
-                <div class="competency-item">API Testing (REST/SOAP)</div>
-                <div class="competency-item">Telecom Domain (OSS/BSS)</div>
-                <div class="competency-item">Risk & Issue Management</div>
-                <div class="competency-item">Stakeholder Communication</div>
-                <div class="competency-item">Retail & Inventory Systems</div>
-                <div class="competency-item">CI/CD Integration</div>
-                <div class="competency-item">Test Strategy & Governance</div>
-                <div class="competency-item">Cross-Functional Leadership</div>
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-section">
+                <span class="skills-label">Web Automation:</span>
+                <span class="skills-content">Selenium WebDriver, Selenium C#, Playwright JavaScript, Page Object Model, NUnit, xUnit, Cross-Browser Testing, Data-Driven Testing</span>
+            </div>
+            <div class="skills-section">
+                <span class="skills-label">API/Backend Testing:</span>
+                <span class="skills-content">SoapUI, Postman, Newman, REST Assured, REST API Testing, SOAP Web Services, JSON Validation, XML Validation, API Automation</span>
+            </div>
+            <div class="skills-section">
+                <span class="skills-label">Performance Testing:</span>
+                <span class="skills-content">Apache JMeter, Load Testing, Stress Testing, Endurance Testing, Scalability Testing, API Performance Testing</span>
+            </div>
+            <div class="skills-section">
+                <span class="skills-label">Database Testing:</span>
+                <span class="skills-content">SQL Server, MySQL, Database Testing, Data Validation, Query Optimization, Data Integrity Testing, ETL Testing</span>
+            </div>
+            <div class="skills-section">
+                <span class="skills-label">Mobile Testing:</span>
+                <span class="skills-content">iOS Testing, Android Testing, Mobile Web Testing, Responsive Testing, Cross-Device Validation</span>
+            </div>
+            <div class="skills-section">
+                <span class="skills-label">Test Management:</span>
+                <span class="skills-content">Test Planning, Test Strategy, Test Estimation, Risk-Based Testing, Defect Management, Quality Metrics, Test Governance, Release Management</span>
+            </div>
+            <div class="skills-section">
+                <span class="skills-label">Tools:</span>
+                <span class="skills-content">Jira, Confluence, Azure DevOps, Jenkins, Git, Bitbucket, GitHub, TestRail, qTest, Docker, ServiceNow</span>
+            </div>
+            <div class="skills-section">
+                <span class="skills-label">Methodologies:</span>
+                <span class="skills-content">Agile, Scrum, Kanban, Waterfall, SDLC, CI/CD, DevOps, PMBOK</span>
+            </div>
+            <div class="skills-section">
+                <span class="skills-label">Domains:</span>
+                <span class="skills-content">Healthcare (HL7, FHIR, HIPAA), Telecommunications (OSS/BSS), Retail, Inventory Management, Workforce Technology</span>
             </div>
         </section>
         
@@ -343,89 +281,82 @@
             
             <div class="job">
                 <div class="job-header">
-                    <span class="company">Ideological Group — Skill Trades Platform</span>
-                    <span class="location">Markham, ON</span>
+                    <div class="company">Ideological Group</div>
+                    <div class="job-title">Project Manager</div>
                 </div>
-                <div class="job-title-row">
-                    <span class="job-title">Project Manager | Domain: Workforce Technology / Skilled Trades</span>
-                    <span class="job-dates">May 2024 – Present</span>
-                </div>
+                <div class="job-meta">Markham, ON | May 2025 - Present</div>
                 <ul class="job-description">
-                    <li>Lead end-to-end delivery of Skill Trades platform—a vocational training and workforce development solution connecting skilled workers with employers in construction and technical trades</li>
-                    <li>Manage projects using hybrid delivery approach, integrating PMBOK® predictive governance with Agile sprints</li>
-                    <li>Define business cases, project charters, and success metrics aligned with vocational training industry requirements</li>
-                    <li>Coordinate cross-functional teams including developers, UX designers, and domain experts for iterative releases</li>
-                    <li>Implement quality gates and acceptance criteria ensuring platform reliability and user satisfaction</li>
+                    <li>Transitioned from QA Manager to lead end-to-end project delivery for Skill Trades workforce development platform</li>
+                    <li>Apply QA-driven quality gates and acceptance criteria to all project deliverables ensuring quality-first delivery</li>
+                    <li>Manage projects using hybrid PMBOK and Agile methodologies with quality-focused metrics and release planning</li>
+                    <li>Coordinate cross-functional teams ensuring quality standards are embedded across all deliverables</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="company">Ideological Group</div>
+                    <div class="job-title">QA Manager</div>
+                </div>
+                <div class="job-meta">Markham, ON | May 2024 - May 2025</div>
+                <ul class="job-description">
+                    <li>Led QA function establishing comprehensive test strategy covering Web, Mobile, API, and Database testing</li>
+                    <li>Built and managed QA team, defining test planning best practices and quality governance frameworks</li>
+                    <li>Implemented web automation framework using <strong>Playwright JavaScript</strong> for end-to-end testing</li>
+                    <li>Designed and executed functional testing, regression testing, and integration testing</li>
+                    <li>Established CI/CD integration for automated regression testing pipelines</li>
+                    <li>Managed version control using <strong>Git</strong> and <strong>Bitbucket</strong> for test automation code</li>
+                    <li>Defined quality metrics and KPIs to track test coverage, defect density, and release readiness</li>
                 </ul>
             </div>
             
             <div class="job">
                 <div class="job-header">
-                    <span class="company">TestingXperts — WaspBarcode Technologies</span>
-                    <span class="location">India (Remote)</span>
+                    <div class="company">TestingXperts (Client: WaspBarcode Technologies)</div>
+                    <div class="job-title">QA Lead</div>
                 </div>
-                <div class="job-title-row">
-                    <span class="job-title">Project Manager | Domain: Retail & Inventory Management</span>
-                    <span class="job-dates">August 2021 – January 2024</span>
-                </div>
+                <div class="job-meta">India (Remote) | August 2021 - January 2024</div>
                 <ul class="job-description">
-                    <li>Managed QA and delivery for WaspBarcode—a leading provider of barcode, inventory, and asset tracking solutions for SMBs</li>
-                    <li>Led functional testing initiatives for inventory management, asset tracking, and POS integration systems</li>
-                    <li>Managed barcode scanner integration testing across multiple hardware devices and platforms</li>
-                    <li>Created project schedules using critical path method and earned value management (EVM) for retail domain compliance</li>
-                    <li>Coordinated regression testing for warehouse management modules ensuring seamless multi-platform deployments</li>
+                    <li>Implemented <strong>web automation</strong> framework using <strong>Selenium C#</strong> with Page Object Model design pattern</li>
+                    <li>Owned end-to-end test planning and strategy for inventory management, asset tracking, and POS integration systems</li>
+                    <li>Led functional testing, regression testing, and integration testing across web and mobile platforms</li>
+                    <li>Managed database testing ensuring data integrity, audit trails, and reporting accuracy using SQL</li>
+                    <li>Mentored team of QA engineers, establishing testing standards and best practices</li>
+                    <li>Used <strong>Git</strong> for version control and test script management</li>
+                    <li>Coordinated with development teams for defect triage, root cause analysis, and resolution tracking</li>
                 </ul>
             </div>
             
             <div class="job">
                 <div class="job-header">
-                    <span class="company">Seasia Infotech — Becton Dickinson (BD)</span>
-                    <span class="location">India</span>
+                    <div class="company">Seasia Infotech (Client: Becton Dickinson)</div>
+                    <div class="job-title">Senior QA Consultant</div>
                 </div>
-                <div class="job-title-row">
-                    <span class="job-title">Quality Assurance Lead | Domain: Healthcare / Medical Devices</span>
-                    <span class="job-dates">May 2019 – August 2021</span>
-                </div>
+                <div class="job-meta">India | May 2019 - August 2021</div>
                 <ul class="job-description">
-                    <li>Led QA for Becton Dickinson healthcare applications, validating systems following HL7 and FHIR interoperability standards</li>
-                    <li>Validated healthcare APIs ensuring compliance with HL7 v2.x messaging (ADT, ORM, ORU) and FHIR R4 resources</li>
-                    <li>Designed test strategies for frontend applications ensuring HIPAA compliance and FDA 21 CFR Part 11 guidelines</li>
-                    <li>Implemented API automation testing using Postman and REST Assured for healthcare endpoint validation</li>
-                    <li>Mentored team of 5 QA engineers on healthcare domain testing, HL7 message parsing, and EMR/EHR integrations</li>
+                    <li>Led <strong>API automation</strong> using <strong>SoapUI</strong> and <strong>Postman</strong> for healthcare endpoint validation</li>
+                    <li>Validated healthcare APIs ensuring compliance with HL7 v2.x messaging (ADT, ORM, ORU) and FHIR R4 standards</li>
+                    <li>Executed <strong>API performance testing</strong> using <strong>JMeter</strong> for load, stress, and scalability scenarios</li>
+                    <li>Developed comprehensive test strategies for FDA 21 CFR Part 11 and HIPAA compliance requirements</li>
+                    <li>Led database validation for patient data management ensuring data integrity and audit compliance</li>
+                    <li>Mentored team of 5 QA engineers on healthcare domain testing and API automation best practices</li>
                 </ul>
             </div>
             
             <div class="job">
                 <div class="job-header">
-                    <span class="company">Tech Mahindra — AT&T</span>
-                    <span class="location">India</span>
+                    <div class="company">Tech Mahindra (Client: AT&T)</div>
+                    <div class="job-title">QA Engineer</div>
                 </div>
-                <div class="job-title-row">
-                    <span class="job-title">Quality Assurance Engineer | Domain: Telecommunications</span>
-                    <span class="job-dates">August 2016 – April 2019</span>
-                </div>
+                <div class="job-meta">India | August 2016 - April 2019</div>
                 <ul class="job-description">
-                    <li>Delivered QA services for AT&T—testing network management, billing systems, and customer-facing applications</li>
-                    <li>Executed functional testing for telecom billing, provisioning, and order management (OSS/BSS) systems</li>
-                    <li>Developed Selenium WebDriver automation framework with TestNG for regression testing (500+ test cases)</li>
-                    <li>Performed API testing for network provisioning and service activation endpoints using SOAP/REST</li>
-                    <li>Supported CI/CD pipelines with Jenkins integration for automated smoke and sanity test execution</li>
+                    <li>Executed functional testing for telecom billing, provisioning, and order management systems</li>
+                    <li>Performed comprehensive regression testing and integration testing for customer portals</li>
+                    <li>Conducted database testing for billing data validation, customer records, and transaction integrity</li>
+                    <li>Executed mobile testing for customer-facing applications across iOS and Android platforms</li>
+                    <li>Integrated test execution with Jenkins CI/CD pipelines for continuous testing</li>
+                    <li>Collaborated with offshore and onshore teams across multiple time zones for defect resolution</li>
                 </ul>
-            </div>
-        </section>
-        
-        <!-- Education -->
-        <section class="section">
-            <h2 class="section-title">Education</h2>
-            <div class="edu-grid">
-                <div class="edu-item">
-                    <div class="edu-title">Master of Computer Applications (MCA)</div>
-                    <div class="edu-details">Indira Gandhi National Open University | 2017 – 2021</div>
-                </div>
-                <div class="edu-item">
-                    <div class="edu-title">Bachelor of Science (Computer Science)</div>
-                    <div class="edu-details">Kurukshetra University | 2013 – 2016</div>
-                </div>
             </div>
         </section>
         
@@ -433,38 +364,25 @@
         <section class="section">
             <h2 class="section-title">Certifications</h2>
             <ul class="cert-list">
-                <li>ISTQB® Certified Tester – Advanced Level Test Management</li>
+                <li>ISTQB Certified Tester - Advanced Level Test Manager (ALTM)</li>
+                <li>ISTQB Certified Tester - Foundation Level</li>
                 <li>Scrum Fundamentals Certified (SFC)</li>
                 <li>Business Analyst Certification</li>
-                <li>ISTQB® Foundation Level</li>
             </ul>
         </section>
         
-        <!-- Technical Skills -->
+        <!-- Education -->
         <section class="section">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-row">
-                <span class="skill-category">Domains:</span>
-                <span class="skill-items">Healthcare (HL7 v2.x, FHIR R4, HIPAA), Telecommunications (OSS/BSS), Retail/Inventory, Workforce Tech</span>
+            <h2 class="section-title">Education</h2>
+            <div class="edu-item">
+                <div class="edu-title">Master of Computer Applications (MCA)</div>
+                <div class="edu-details">Indira Gandhi National Open University | 2017 - 2021</div>
             </div>
-            <div class="skills-row">
-                <span class="skill-category">Functional:</span>
-                <span class="skill-items">Requirements Analysis, Test Case Design, UAT, Regression Testing, Integration Testing, E2E Testing</span>
-            </div>
-            <div class="skills-row">
-                <span class="skill-category">Automation:</span>
-                <span class="skill-items">Selenium WebDriver, TestNG, JUnit, REST Assured, Postman/Newman, Jenkins CI/CD, Page Object Model</span>
-            </div>
-            <div class="skills-row">
-                <span class="skill-category">Tools:</span>
-                <span class="skill-items">Jira, Confluence, Azure DevOps, MS Project, TestRail, qTest, Git/GitHub, ServiceNow</span>
-            </div>
-            <div class="skills-row">
-                <span class="skill-category">Methodologies:</span>
-                <span class="skill-items">Agile, Scrum, Kanban, Waterfall, PMBOK®, SDLC, SAFe, Hybrid Delivery</span>
+            <div class="edu-item">
+                <div class="edu-title">Bachelor of Science in Computer Science</div>
+                <div class="edu-details">Kurukshetra University | 2013 - 2016</div>
             </div>
         </section>
     </div>
 </body>
 </html>
-
