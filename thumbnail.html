@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Thumbnail - Sheena Chugh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Fraunces:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: #0f172a;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+        
+        .instructions {
+            color: #94a3b8;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        
+        .instructions strong {
+            color: #d4a574;
+        }
+        
+        /* Thumbnail Container - 1200x630 for social media */
+        .thumbnail {
+            width: 1200px;
+            height: 630px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* Background Pattern */
+        .bg-pattern {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.03) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        
+        /* Gradient Orbs */
+        .orb-1 {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(212, 165, 116, 0.15) 0%, transparent 60%);
+            top: -150px;
+            left: -100px;
+            filter: blur(60px);
+        }
+        
+        .orb-2 {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(45, 212, 191, 0.1) 0%, transparent 60%);
+            bottom: -100px;
+            right: -50px;
+            filter: blur(50px);
+        }
+        
+        /* Content */
+        .content {
+            position: relative;
+            z-index: 1;
+            height: 100%;
+            display: flex;
+            padding: 60px 80px;
+            gap: 60px;
+        }
+        
+        /* Left Side */
+        .left {
+            flex: 1.2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(45, 212, 191, 0.1);
+            border: 1px solid rgba(45, 212, 191, 0.2);
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #2dd4bf;
+            margin-bottom: 25px;
+            width: fit-content;
+        }
+        
+        .badge-dot {
+            width: 8px;
+            height: 8px;
+            background: #2dd4bf;
+            border-radius: 50%;
+        }
+        
+        .name {
+            font-family: 'Fraunces', serif;
+            font-size: 64px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: -2px;
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+        
+        .title {
+            font-family: 'Fraunces', serif;
+            font-size: 32px;
+            font-weight: 500;
+            color: #d4a574;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }
+        
+        .stats {
+            display: flex;
+            gap: 40px;
+        }
+        
+        .stat {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .stat-value {
+            font-family: 'Fraunces', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #fff;
+        }
+        
+        .stat-label {
+            font-size: 12px;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Right Side */
+        .right {
+            flex: 0.8;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 40px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+        
+        .card-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+        
+        .card-title {
+            font-family: 'Fraunces', serif;
+            font-size: 22px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        
+        .card-subtitle {
+            font-size: 14px;
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+        
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .tag {
+            padding: 6px 14px;
+            background: rgba(212, 165, 116, 0.15);
+            border: 1px solid rgba(212, 165, 116, 0.25);
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 500;
+            color: #d4a574;
+        }
+        
+        /* Size Options */
+        .size-options {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .size-btn {
+            padding: 10px 20px;
+            background: #1e293b;
+            border: 1px solid #334155;
+            color: #fff;
+            font-size: 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .size-btn:hover {
+            background: #334155;
+            border-color: #d4a574;
+        }
+        
+        .size-btn.active {
+            background: #d4a574;
+            color: #0f172a;
+            border-color: #d4a574;
+        }
+    </style>
+</head>
+<body>
+    <div class="instructions">
+        <strong>📸 How to save:</strong> Right-click the thumbnail below → "Take Screenshot" (Firefox) or use Snipping Tool / Screenshot tool<br>
+        Recommended size: <strong>1200 x 630px</strong> (Social Media / Open Graph)
+    </div>
+    
+    <div class="thumbnail" id="thumbnail">
+        <div class="bg-pattern"></div>
+        <div class="orb-1"></div>
+        <div class="orb-2"></div>
+        
+        <div class="content">
+            <div class="left">
+                <div class="badge">
+                    <span class="badge-dot"></span>
+                    Portfolio
+                </div>
+                <h1 class="name">Sheena Chugh</h1>
+                <p class="title">QA Manager</p>
+                <p class="subtitle">ISTQB® ALTM Certified | Test Strategy & Automation Leader</p>
+                
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-value">9+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">ISTQB</span>
+                        <span class="stat-label">ALTM Certified</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">Teams</span>
+                        <span class="stat-label">Built & Led</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right">
+                <div class="card">
+                    <div class="card-icon">👨‍💼</div>
+                    <h3 class="card-title">QA Leadership</h3>
+                    <p class="card-subtitle">Strategy • Teams • Automation</p>
+                    <div class="tags">
+                        <span class="tag">Selenium C#</span>
+                        <span class="tag">Playwright</span>
+                        <span class="tag">JMeter</span>
+                        <span class="tag">SoapUI</span>
+                        <span class="tag">Postman</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="size-options">
+        <button class="size-btn active" onclick="setSize(1200, 630)">1200×630 (Social)</button>
+        <button class="size-btn" onclick="setSize(1280, 720)">1280×720 (HD)</button>
+        <button class="size-btn" onclick="setSize(800, 418)">800×418 (Twitter)</button>
+    </div>
+    
+    <script>
+        function setSize(width, height) {
+            const thumbnail = document.getElementById('thumbnail');
+            thumbnail.style.width = width + 'px';
+            thumbnail.style.height = height + 'px';
+            
+            // Update active button
+            document.querySelectorAll('.size-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
+
