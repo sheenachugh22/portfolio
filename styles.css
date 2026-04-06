@@ -1242,6 +1242,17 @@ ul {
     gap: 1rem;
 }
 
+.footer-content > p:first-child {
+    flex: 1 1 100%;
+}
+
+.footer-tagline {
+    margin-top: 0;
+    font-size: 0.8rem !important;
+    opacity: 0.9;
+    flex: 1 1 100%;
+}
+
 .footer p {
     font-size: 0.85rem;
     color: var(--slate-500);
