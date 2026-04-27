@@ -3,348 +3,281 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sheena - QA Automation Engineer Resume</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Sheena - QA Manager and Automation Leader Resume</title>
     <style>
         @media print {
-            @page { margin: 0.4in 0.5in; size: letter; }
-            html, body { 
-                -webkit-print-color-adjust: exact; 
+            @page { margin: 0.45in 0.5in; size: letter; }
+            html, body {
+                margin: 0;
+                padding: 0;
                 print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+            .no-print { display: none !important; }
+            .resume-container {
+                box-shadow: none;
+                max-width: none;
                 margin: 0;
                 padding: 0;
             }
-            .no-print { display: none !important; }
-            .resume-container { 
-                box-shadow: none; 
-                max-width: none; 
-                padding: 0.2in 0.3in;
-                margin: 0 auto;
+            .section { page-break-inside: auto; }
+            .section-title {
+                page-break-after: avoid;
+                break-after: avoid-page;
             }
-            .section { margin-bottom: 8px; page-break-inside: auto; }
-            .job { margin-bottom: 6px; page-break-inside: auto; }
-            .header { margin-bottom: 14px; padding-bottom: 10px; }
+            .job {
+                page-break-inside: auto;
+                break-inside: auto;
+            }
         }
-        
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+
         body {
-            font-family: 'Source Sans 3', Arial, sans-serif;
+            font-family: Calibri, Arial, sans-serif;
             font-size: 11pt;
-            line-height: 1.5;
-            color: #000;
-            background: #f5f5f5;
+            line-height: 1.45;
+            color: #111;
+            background: #f6f6f6;
             padding: 20px;
         }
-        
+
+        .print-controls {
+            text-align: center;
+            margin-bottom: 18px;
+        }
+
+        .print-btn {
+            background: #1f4e78;
+            color: #fff;
+            border: none;
+            padding: 10px 26px;
+            font-size: 14px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
         .resume-container {
             max-width: 8.5in;
             margin: 0 auto;
             background: #fff;
-            padding: 0.4in 0.5in;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            padding: 0.42in 0.5in;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
-        
-        /* Header - Simple centered text */
+
         .header {
             text-align: center;
-            margin-bottom: 16px;
-            border-bottom: 2px solid #000;
-            padding-bottom: 12px;
+            border-bottom: 2px solid #1f4e78;
+            padding-bottom: 10px;
+            margin-bottom: 14px;
         }
-        
+
         .name {
-            font-size: 24pt;
+            font-size: 25pt;
             font-weight: 700;
-            color: #000;
-            margin-bottom: 5px;
+            letter-spacing: 0.2px;
+            margin-bottom: 4px;
         }
-        
+
         .tagline {
             font-size: 12pt;
-            color: #333;
-            font-weight: 500;
-            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2d2d2d;
+            margin-bottom: 6px;
         }
-        
+
         .contact-info {
             font-size: 10pt;
-            color: #333;
+            color: #2d2d2d;
         }
-        
+
         .contact-info a {
-            color: #000;
+            color: #1f4e78;
             text-decoration: none;
         }
-        
-        /* Section Styling - Standard headings for ATS */
+
         .section {
             margin-bottom: 12px;
         }
-        
+
         .section-title {
-            font-size: 12pt;
+            font-size: 11.5pt;
             font-weight: 700;
-            color: #000;
             text-transform: uppercase;
-            border-bottom: 1px solid #000;
-            padding-bottom: 3px;
-            margin-bottom: 10px;
+            border-bottom: 1px solid #666;
+            padding-bottom: 2px;
+            margin-bottom: 7px;
+            letter-spacing: 0.3px;
         }
-        
-        /* Summary */
+
         .summary {
             text-align: justify;
-            color: #000;
-            line-height: 1.5;
         }
-        
-        /* Skills - Simple list format for ATS */
-        .skills-section {
-            margin-bottom: 5px;
+
+        .skills-row {
+            margin-bottom: 4px;
         }
-        
+
         .skills-label {
             font-weight: 700;
-            color: #000;
         }
-        
-        .skills-content {
-            color: #000;
-        }
-        
-        /* Experience - Simple format */
+
         .job {
-            margin-bottom: 12px;
-            page-break-inside: avoid;
+            margin-bottom: 10px;
         }
-        
-        .job:last-child {
-            margin-bottom: 0;
-        }
-        
-        .job-header {
-            margin-bottom: 3px;
-        }
-        
+
         .company {
-            font-weight: 700;
-            color: #000;
             font-size: 11pt;
+            font-weight: 700;
         }
-        
+
         .job-title {
             font-weight: 600;
-            color: #000;
         }
-        
+
         .job-meta {
             font-size: 10pt;
-            color: #333;
-            margin-bottom: 5px;
+            color: #3a3a3a;
+            margin-bottom: 4px;
         }
-        
+
         .job-description {
-            padding-left: 20px;
-            list-style-type: disc;
+            list-style: disc;
+            padding-left: 18px;
         }
-        
+
         .job-description li {
+            font-size: 10.2pt;
             margin-bottom: 2px;
-            color: #000;
-            font-size: 10pt;
-            line-height: 1.35;
         }
-        
-        /* Education & Certifications - Simple lists */
+
         .edu-item {
             margin-bottom: 5px;
         }
-        
+
         .edu-title {
             font-weight: 600;
-            color: #000;
         }
-        
+
         .edu-details {
             font-size: 10pt;
-            color: #333;
-        }
-        
-        .cert-list {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-        
-        .cert-list li {
-            margin-bottom: 2px;
-            color: #000;
-        }
-        
-        /* Print Button */
-        .print-controls {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        
-        .print-btn {
-            background: #1a365d;
-            color: #fff;
-            border: none;
-            padding: 12px 32px;
-            font-size: 14px;
-            font-weight: 600;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        
-        .print-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(26,54,93,0.3);
+            color: #3a3a3a;
         }
     </style>
 </head>
 <body>
     <div class="print-controls no-print">
-        <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+        <button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
     </div>
-    
+
     <div class="resume-container">
-        <!-- Header -->
         <header class="header">
-            <h1 class="name">SHEENA.</h1>
-            <p class="tagline">Senior QA Automation Engineer | Playwright | API &amp; Service Testing</p>
+            <h1 class="name">SHEENA</h1>
+            <p class="tagline">QA Manager | Test Automation Leader | ISTQB ALTM Certified</p>
             <div class="contact-info">
-                Oshawa, Ontario, Canada | 
-                <a href="mailto:sheenachugh92@gmail.com">sheenachugh92@gmail.com</a> | 
-                <a href="https://www.linkedin.com/in/sheena-chugh">linkedin.com/in/sheena-chugh</a> | 
-                <a href="https://sheenachugh22.github.io/portfolio/">sheenachugh22.github.io/portfolio</a>
+                Cambridge, Ontario, Canada |
+                <a href="mailto:sheenachugh92@gmail.com">sheenachugh92@gmail.com</a>
             </div>
         </header>
-        
-        <!-- Professional Summary -->
+
         <section class="section">
             <h2 class="section-title">Professional Summary</h2>
             <p class="summary">
-                ISTQB Advanced Level Test Manager certified QA professional with 8+ years of experience in test automation and quality engineering across healthcare, telecommunications, retail, and enterprise platforms. Strong hands-on expertise in Playwright (JavaScript), Selenium (C#), API and service testing automation, and CI/CD-integrated regression suites. Experienced in end-to-end testing lifecycle activities including requirements analysis, test strategy, test design, execution, defect management, release validation, and post-release quality support. Effective collaborator known for clear communication, cross-team coordination, and stakeholder-ready reporting.
+                ISTQB ALTM-certified QA professional with 9+ years of experience leading quality engineering across Healthcare, Telecommunications, Retail, and Workforce Technology domains. Strong blend of managerial leadership and hands-on automation expertise, with proven success building QA teams, defining enterprise test strategy, and delivering quality-first releases. Experienced in web, mobile, API, database, and performance testing with Playwright, Selenium, Postman, SoapUI, and JMeter. Skilled in AI-assisted QA practices including Claude for UAT test case generation, and in eazyBI dashboarding with reporting automation for data-driven quality decisions.
             </p>
         </section>
-        
-        <!-- Technical Skills -->
+
         <section class="section">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-section">
-                <span class="skills-label">Programming &amp; Automation:</span>
-                <span class="skills-content">JavaScript (Playwright), C# (Selenium WebDriver), Page Object Model, Data-Driven Testing, Python basics</span>
-            </div>
-            <div class="skills-section">
-                <span class="skills-label">API &amp; Service Testing:</span>
-                <span class="skills-content">REST API Testing, SOAP Web Services, Postman, SoapUI, Newman, JSON/XML Validation, API Automation, Contract and Negative Testing</span>
-            </div>
-            <div class="skills-section">
-                <span class="skills-label">Test Lifecycle Ownership:</span>
-                <span class="skills-content">Requirement Analysis, Test Planning, Test Case Design, Functional/Integration/System/Regression Testing, Defect Management, UAT Support, Release Sign-off</span>
-            </div>
-            <div class="skills-section">
-                <span class="skills-label">Performance &amp; Reliability:</span>
-                <span class="skills-content">Apache JMeter, Load/Stress/Scalability Testing, Service Reliability Validation, Performance Analysis</span>
-            </div>
-            <div class="skills-section">
-                <span class="skills-label">AI Feature Testing Capability:</span>
-                <span class="skills-content">AI feature test planning, prompt/response validation, edge-case and failure-mode testing, safety and hallucination checks, human-in-the-loop verification workflows</span>
-            </div>
-            <div class="skills-section">
-                <span class="skills-label">CI/CD &amp; Collaboration:</span>
-                <span class="skills-content">Jenkins, Git, Bitbucket, GitHub, Azure DevOps, Jira, Confluence, Agile/Scrum, Cross-functional communication and stakeholder coordination</span>
-            </div>
-            <div class="skills-section">
-                <span class="skills-label">Domains:</span>
-                <span class="skills-content">Healthcare, Telecommunications, Retail, Workforce Platforms, Inventory and Asset Management Systems</span>
-            </div>
+            <h2 class="section-title">Core Competencies</h2>
+            <div class="skills-row"><span class="skills-label">QA Leadership and Governance:</span> Test strategy, test planning, risk-based testing, defect governance, release readiness, quality KPIs</div>
+            <div class="skills-row"><span class="skills-label">Automation Engineering:</span> Playwright (JavaScript), Selenium WebDriver (C#), Page Object Model, NUnit, xUnit, data-driven framework design</div>
+            <div class="skills-row"><span class="skills-label">API and Backend Validation:</span> Postman, SoapUI, Newman, REST/SOAP API testing, JSON/XML validation, integration testing</div>
+            <div class="skills-row"><span class="skills-label">Performance and Data Testing:</span> JMeter load and stress testing, SQL validation, data integrity checks, ETL and reporting validation</div>
+            <div class="skills-row"><span class="skills-label">AI and Reporting Automation:</span> Claude for UAT test case generation, eazyBI dashboards, automated quality reporting, executive insights</div>
+            <div class="skills-row"><span class="skills-label">Tools and Delivery:</span> Jira, Confluence, Azure DevOps, Jenkins, Git, Bitbucket, GitHub, TestRail, qTest, Agile/Scrum, CI/CD</div>
+            <div class="skills-row"><span class="skills-label">Domain Experience:</span> Healthcare (HL7/FHIR/HIPAA), telecommunications, retail, inventory and workforce technology platforms</div>
         </section>
-        
-        <!-- Professional Experience -->
+
         <section class="section">
             <h2 class="section-title">Professional Experience</h2>
-            
+
             <div class="job">
-                <div class="job-header">
-                    <div class="company">Ideological Group</div>
-                    <div class="job-title">QA Manager / Lead QA</div>
-                </div>
-                <div class="job-meta">Markham, ON | May 2024 - Present</div>
+                <div class="company">Ideological Group</div>
+                <div class="job-title">Project Manager</div>
+                <div class="job-meta">Markham, ON | May 2025 - Present</div>
                 <ul class="job-description">
-                    <li>Led QA for a workforce development platform and defined quality standards across cross-functional engineering teams.</li>
-                    <li>Designed and implemented comprehensive test coverage for front-end, back-end, API, and database validation.</li>
-                    <li>Developed Playwright (JavaScript) automated end-to-end suites and integrated regression checks into CI/CD workflows.</li>
-                    <li>Created detailed test plans and test scenarios across the full testing lifecycle from requirement review to release validation.</li>
-                    <li>Drove defect triage, risk communication, and testing status reporting with clear updates to product and engineering stakeholders.</li>
-                    <li>Collaborated in Agile ceremonies (planning, standups, retrospectives) to coordinate quality activities and release readiness.</li>
+                    <li>Lead end-to-end project delivery for a skilled trades workforce platform while embedding QA quality gates in delivery lifecycle.</li>
+                    <li>Drive hybrid PMBOK and Agile execution with release planning, stakeholder alignment, and quality-focused milestones.</li>
+                    <li>Ensure acceptance criteria and testing outcomes are integrated into project governance and go-live decisions.</li>
                 </ul>
             </div>
-            
+
             <div class="job">
-                <div class="job-header">
-                    <div class="company">TestingXperts (Client: Wasp Barcode Technologies)</div>
-                    <div class="job-title">QA Lead</div>
-                </div>
+                <div class="company">Ideological Group</div>
+                <div class="job-title">QA Manager</div>
+                <div class="job-meta">Markham, ON | May 2024 - May 2025</div>
+                <ul class="job-description">
+                    <li>Built and led QA function, establishing test strategy across web, mobile, API, and database testing.</li>
+                    <li>Implemented Playwright automation framework and integrated regression suites into CI/CD pipelines.</li>
+                    <li>Defined and tracked quality metrics for coverage, defect density, and release confidence.</li>
+                    <li>Introduced Claude-assisted UAT test case generation to accelerate high-quality test design.</li>
+                    <li>Developed eazyBI dashboards and reporting automation to provide real-time QA insights to leadership.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="company">TestingXperts (Client: WaspBarcode Technologies)</div>
+                <div class="job-title">QA Lead</div>
                 <div class="job-meta">Remote | August 2021 - January 2024</div>
                 <ul class="job-description">
-                    <li>Implemented and scaled Selenium (C#) automation framework using Page Object Model for inventory management workflows.</li>
-                    <li>Built risk-based test strategy and executed functional, integration, and regression cycles across web and API components.</li>
-                    <li>Expanded API and service testing coverage using structured request/response validation and reusable test data design.</li>
-                    <li>Improved release confidence by identifying critical defects early and coordinating fixes with development teams.</li>
-                    <li>Provided frequent testing updates, quality metrics, and risk summaries to business and technical stakeholders.</li>
-                    <li>Mentored QA engineers on automation standards, test design quality, and lifecycle best practices.</li>
+                    <li>Owned end-to-end QA strategy for inventory management, asset tracking, and POS integration platforms.</li>
+                    <li>Implemented Selenium C# automation framework using Page Object Model for scalable regression coverage.</li>
+                    <li>Led functional, integration, mobile, and database validation testing to ensure data accuracy and audit reliability.</li>
+                    <li>Mentored QA engineers, strengthened defect triage, and improved cross-team quality collaboration.</li>
                 </ul>
             </div>
-            
+
             <div class="job">
-                <div class="job-header">
-                    <div class="company">Seasia Infotech (Client: Becton Dickinson)</div>
-                    <div class="job-title">Senior QA Analyst</div>
-                </div>
+                <div class="company">Seasia Infotech (Client: Becton Dickinson)</div>
+                <div class="job-title">Senior QA Consultant</div>
                 <div class="job-meta">India | May 2019 - August 2021</div>
                 <ul class="job-description">
-                    <li>Led API automation and service testing for a healthcare platform using Postman, SoapUI, and repeatable validation suites.</li>
-                    <li>Executed API performance testing using JMeter for load, stress, and scalability scenarios.</li>
-                    <li>Developed test strategies aligned to compliance-heavy requirements including FDA 21 CFR Part 11 and HIPAA.</li>
-                    <li>Worked closely with developers and business analysts to clarify requirements and prevent defects early in the lifecycle.</li>
-                    <li>Documented high-impact defects with reproducible evidence and coordinated retesting through closure.</li>
-                    <li>Mentored a team of 5 QA engineers on API automation, test strategy, and communication best practices.</li>
+                    <li>Led API automation and backend validation for healthcare workflows using SoapUI, Postman, and JMeter.</li>
+                    <li>Validated HL7 v2.x and FHIR R4 integrations with HIPAA and FDA 21 CFR Part 11 compliance focus.</li>
+                    <li>Guided QA team members on healthcare testing standards and automation best practices.</li>
                 </ul>
             </div>
-            
+
             <div class="job">
-                <div class="job-header">
-                    <div class="company">Tech Mahindra (Client: AT&amp;T)</div>
-                    <div class="job-title">QA Engineer</div>
-                </div>
+                <div class="company">Tech Mahindra (Client: AT&amp;T)</div>
+                <div class="job-title">QA Engineer</div>
                 <div class="job-meta">India | August 2016 - April 2019</div>
                 <ul class="job-description">
-                    <li>Executed functional and regression testing for telecom billing, provisioning, and order management systems.</li>
-                    <li>Performed front-end and back-end validation including database checks for data integrity and transaction accuracy.</li>
-                    <li>Supported Jenkins-driven CI pipelines for continuous test execution and faster defect feedback loops.</li>
-                    <li>Collaborated across QA, development, and business teams to coordinate testing milestones and release quality goals.</li>
+                    <li>Executed functional, regression, integration, mobile, and database testing for enterprise telecom systems.</li>
+                    <li>Supported Jenkins-based CI testing and collaborated with distributed teams for rapid defect resolution.</li>
                 </ul>
             </div>
         </section>
-        
-        <!-- Certifications -->
+
         <section class="section">
             <h2 class="section-title">Certifications</h2>
-            <ul class="cert-list">
+            <ul class="job-description">
                 <li>ISTQB Certified Tester - Advanced Level Test Manager (ALTM)</li>
                 <li>ISTQB Certified Tester - Foundation Level</li>
                 <li>Scrum Fundamentals Certified (SFC)</li>
                 <li>Business Analyst Certification</li>
             </ul>
         </section>
-        
-        <!-- Education -->
+
+        <section class="section">
+            <h2 class="section-title">Selected Automation-Led Impact</h2>
+            <ul class="job-description">
+                <li>Introduced Claude-assisted UAT test case generation to reduce manual test design effort and improve scenario coverage.</li>
+                <li>Automated QA and project reporting with eazyBI dashboards to improve release visibility and decision-making.</li>
+                <li>Improved CI/CD regression reliability by standardizing Playwright and Selenium framework practices.</li>
+            </ul>
+        </section>
+
         <section class="section">
             <h2 class="section-title">Education</h2>
             <div class="edu-item">
