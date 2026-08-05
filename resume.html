@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sheena Tandon — Technical Program Management Resume</title>
+    <title>Sheena Tandon — Resume</title>
     <style>
         @media print {
             @page { margin: 0.45in 0.5in; size: letter; }
@@ -47,6 +47,14 @@
             margin-bottom: 18px;
         }
 
+        .action-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+
         .print-btn {
             background: #1f4e78;
             color: #fff;
@@ -55,6 +63,25 @@
             font-size: 14px;
             border-radius: 6px;
             cursor: pointer;
+        }
+
+        .word-btn {
+            background: #fff;
+            color: #1f4e78;
+            border: 2px solid #1f4e78;
+            padding: 8px 22px;
+            font-size: 14px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .word-btn:hover {
+            background: #f0f5fa;
+        }
+
+        .word-btn:disabled {
+            opacity: 0.6;
+            cursor: wait;
         }
 
         .resume-container {
@@ -167,34 +194,42 @@
 </head>
 <body>
     <div class="print-controls no-print">
-        <button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
+        <div class="action-buttons">
+            <button class="print-btn" type="button" onclick="window.print()">Print / Save as PDF</button>
+            <button class="word-btn" type="button" onclick="downloadResumeAsWord()">Download as Word (.docx)</button>
+        </div>
+        <p style="margin-top:12px;font-size:10pt;color:#64748b;">Print: dialog → Save as PDF. Word: builds a real .docx (works in Word and Google Docs; first tap may take a few seconds while the export library loads). This note does not print.</p>
     </div>
 
     <div class="resume-container">
         <header class="header">
             <h1 class="name">SHEENA TANDON</h1>
-            <p class="tagline">Technical Program Management &mdash; Strategic Delivery, Cross-Functional Execution, and Operations-Ready Technology</p>
+            <p class="tagline">Senior Digital Delivery Manager &mdash; Healthcare Technology, Product &amp; Program Leadership, People Management</p>
             <div class="contact-info">
                 Cambridge, Ontario, Canada |
-                <a href="mailto:sheenachugh92@gmail.com">sheenachugh92@gmail.com</a>
+                <a href="mailto:sheenachugh92@gmail.com">sheenachugh92@gmail.com</a> |
+                647-236-0034 |
+                <a href="https://www.linkedin.com/in/sheena-chugh">linkedin.com/in/sheena-chugh</a> |
+                <a href="https://sheenachugh22.github.io/portfolio/">Portfolio</a>
             </div>
         </header>
 
         <section class="section">
             <h2 class="section-title">Professional Summary</h2>
             <p class="summary">
-                Technology delivery leader (currently Project Lead, LTIMindtree) with 9+ years progressing from enterprise software engineering through regulated consulting to multi-vendor program leadership and project management. Owns end-to-end technology program execution from initiation through stable operations handover: roadmap alignment with business priorities, scope and change control, schedule and milestone planning, budget and resourcing signals, RAID, and executive-ready status. Experienced in matrixed and international delivery (onshore/offshore, remote client programs), Agile and hybrid rhythms, and cross-functional orchestration across product, engineering, QA, vendors, and operations. Supply-chain&ndash;adjacent program context includes inventory, asset tracking, and POS-related integrations; tools include Azure DevOps, Jira, Confluence, Excel, Power BI, SharePoint, and Teams.
+                Digital and IT delivery leader with 10+ years progressing from software engineering and quality assurance through regulated healthcare consulting to project and program management. Experienced managing multidisciplinary teams of 5&ndash;10 people through strategy, roadmap planning, design, implementation, coaching, and ongoing support of digital technology solutions. Proven ability to manage complex technology portfolios and concurrent initiatives; engage clinicians, patients/caregivers (end-user healthcare applications), business, technical, government-facing, and vendor stakeholders; and translate executive and program priorities into accountable deliverables. Background includes regulated healthcare technology and patient-data integration programs (Becton Dickinson) with HL7 and FHIR standards for secure, privacy-aware clinical data transfer and interpretation; user-centered delivery for clinician and patient workflows; practical application of AI-driven tools for dashboards, test-case generation, and delivery productivity; digital product and workforce technology delivery; Agile and hybrid SDLC governance; change management; risk and issue management; and executive-ready reporting. Ontario resident; PMP (PMI) application approved with certification in progress.
             </p>
         </section>
 
         <section class="section">
             <h2 class="section-title">Core Competencies</h2>
-            <div class="skills-row"><span class="skills-label">Program &amp; project management:</span> charter-to-closure ownership, prioritization and scope trade-offs with leadership, scope and change control, schedule and milestone planning, budget and resource signals with leadership, RAID, stakeholder communication, executive status, vendor and dependency coordination</div>
-            <div class="skills-row"><span class="skills-label">Technical program leadership:</span> leading delivery squads, backlog prioritization with product and engineering, release and go-live readiness, quality gates, technology operations readiness, cross-team alignment, escalation with mitigation options</div>
-            <div class="skills-row"><span class="skills-label">Software Consulting:</span> client workshops, requirements and solution alignment, estimation and impact analysis, implementation support, integration and handoff planning, trusted advisor communication</div>
-            <div class="skills-row"><span class="skills-label">Software Engineering Foundations:</span> structured development lifecycle, design and coding contribution context, unit and integration testing mindset, defect triage, APIs and data exchange, regulated and enterprise delivery environments</div>
-            <div class="skills-row"><span class="skills-label">Delivery methods:</span> Agile, Scrum, iterative, and phased delivery; hybrid and matrixed teams (onshore/offshore); workshop-style alignment; documentation suitable for audit and operational handover</div>
-            <div class="skills-row"><span class="skills-label">Tools:</span> Azure DevOps, Jira, Confluence, Excel, Power BI, eazyBI, SharePoint, Microsoft Teams</div>
+            <div class="skills-row"><span class="skills-label">Leadership &amp; management:</span> people and project team management (teams of 5&ndash;10), digital/IT leadership, mentoring and coaching, performance guidance and hiring input, succession-minded capability building, employee engagement, conflict resolution, inclusive collaboration</div>
+            <div class="skills-row"><span class="skills-label">Product &amp; program strategy:</span> product strategy and roadmaps, end-to-end product lifecycle, operational planning, portfolio alignment, value realization, bridging strategy and execution, continuous improvement, user-centered design mindset</div>
+            <div class="skills-row"><span class="skills-label">Healthcare &amp; digital delivery:</span> regulated healthcare technology, patient data handling, end-user healthcare applications for clinicians/patients/caregivers, HL7 and FHIR standards, secure clinical data transfer and interoperability, privacy and security controls, healthcare integrations and APIs, primary-care-adjacent digital delivery mindset</div>
+            <div class="skills-row"><span class="skills-label">Quality assurance &amp; delivery practices:</span> software QA, test strategy, UAT and validation, AI-assisted test-case generation, defect lifecycle, entry/exit criteria, Agile, Scrum, hybrid and waterfall methods, SDLC governance, project and program management (PMI), change management, RAID, risk and issue escalation, vendor management</div>
+            <div class="skills-row"><span class="skills-label">Stakeholder &amp; communication:</span> senior stakeholder relationships, negotiation, facilitation, presentations for technical and non-technical audiences, governance reporting, cross-portfolio collaboration</div>
+            <div class="skills-row"><span class="skills-label">AI-driven technologies:</span> AI-assisted dashboards and analytics, AI-generated test cases, AI-enabled personal and delivery productivity projects, applying AI tools to improve reporting speed and QA coverage</div>
+            <div class="skills-row"><span class="skills-label">Project management tools &amp; platforms:</span> Atlassian suite (Jira, Confluence), eazyBI, Microsoft 365 / Google Workspace, SharePoint, Azure DevOps (cloud-based ALM), Microsoft Teams, Power BI, Excel, Word, PowerPoint, Outlook</div>
         </section>
 
         <section class="section">
@@ -202,82 +237,83 @@
 
             <div class="job">
                 <div class="company">LTIMindtree</div>
-                <div class="job-title">Project Lead</div>
-                <div class="job-meta">Canada | June 2026 - Present</div>
+                <div class="job-title">Project Manager &mdash; Digital Technology Delivery</div>
+                <div class="job-meta">Canada | June 2026 &ndash; Present</div>
                 <ul class="job-description">
-                    <li>Leads an assigned technology project end to end from program intake through launch, applying a structured SDLC: scope and prioritization, phased planning, design alignment, build execution, QA cycles, and controlled go-live readiness.</li>
-                    <li>Runs intake and upstream planning with stakeholders—clarifying goals and constraints, shaping backlog and milestone plans, maintaining RAID, dependencies, and documented decisions on scope, dates, and trade-offs.</li>
-                    <li>Coordinates the design phase with engineering and architecture partners: design reviews, traceability to requirements, change impact, and checkpoint sign-offs before development scales.</li>
-                    <li>Drives development execution: sprint/release alignment, work sequencing and dependency management, integration checkpoints, defect triage discipline, and transparent burn-down of risks to launch targets.</li>
-                    <li>Owns QA phase orchestration with quality partners: test strategy alignment, planning and coverage signals, entry/exit criteria, readiness forums, and evidence-backed release recommendations prior to launch.</li>
-                    <li>Facilitates cross-functional governance across the lifecycle—status to leadership, gate criteria, operational handover inputs, and continuous improvement on delivery hygiene for stable post-launch operations.</li>
+                    <li>Manage end-to-end digital technology delivery from intake through launch: product and project planning, phased roadmaps, RAID, dependencies, and documented decisions with significant delivery impact.</li>
+                    <li>Manage and coach a cross-functional project team of 5&ndash;10 (business, engineering, architecture, quality): set priorities, provide performance guidance and hiring input for project staffing, and keep stakeholders visible to value and progress.</li>
+                    <li>Bridge strategy and execution through gate criteria, change impact review, QA readiness checkpoints, metrics-backed status, and go-live readiness that meets quality and operational standards.</li>
+                    <li>Anticipate and escalate risks, constraints, and delivery challenges with mitigation options so leadership can make timely, enterprise-aligned decisions.</li>
                 </ul>
             </div>
 
             <div class="job">
                 <div class="company">Ideological Group</div>
                 <div class="job-title">Project Manager &mdash; Digital &amp; Workforce Technology</div>
-                <div class="job-meta">Markham, ON | May 2024 - May 2026</div>
+                <div class="job-meta">Markham, ON | May 2024 &ndash; May 2026</div>
                 <ul class="job-description">
-                    <li>Own workforce and digital technology programs end to end from initiation through closure: scope, schedule, milestones, dependencies, RAID, stakeholder alignment, and executive-ready status aligned to business goals.</li>
-                    <li>Plan and run delivery cadence with product, engineering, and operations—including sprint/release planning, backlog refinement, change impact, and documented decisions on priorities and commitments.</li>
-                    <li>Lead cross-functional program execution through design, readiness, and release forums; enforce gate criteria, action-item follow-through, and documented sign-offs across QA and operations for stable business operations.</li>
-                    <li>Own technical delivery threads—dependency mapping, integration checkpoints, defect triage discipline—and keep milestones and RAID current for leadership and portfolio reviews.</li>
-                    <li>Track budget and resource signals with leadership; coordinate vendors and internal teams so releases land with clear readiness criteria, financial visibility, and operational handover.</li>
-                    <li>Drive risk and issue resolution with owners, dates, and escalation paths; improve visibility through Power BI dashboards, consolidated reporting, and discipline in Azure DevOps, Jira, SharePoint, and Teams.</li>
-                    <li>Partner on prioritization and trade-offs with delivery health views and KPIs for portfolio and executive forums; mentor coordination practices across distributed sites for aligned scope, dates, and quality bars.</li>
+                    <li>Managed digital and workforce technology programs end to end&mdash;strategy alignment, charters, roadmaps, design, implementation, change management, and operational handover&mdash;across concurrent initiatives.</li>
+                    <li>Managed a multidisciplinary project team of 5&ndash;10 plus vendor partners: coaching on delivery hygiene, performance feedback, hiring input for project roles, and Agile practices that improved predictability.</li>
+                    <li>Partnered with sponsors and senior stakeholders to establish program objectives, translate expectations into product and project roadmaps, and communicate value delivery through Power BI and eazyBI dashboards (including AI-assisted dashboard creation) and executive status packs.</li>
+                    <li>Drove change management and adoption communications (project updates, change notices, engagement summaries, readiness materials) supporting organizational transformation.</li>
+                    <li>Owned governance rhythms: risk and issue management, action tracking, budget and resource signals, and portfolio reporting using the Atlassian suite (Jira, Confluence), eazyBI, SharePoint, Microsoft 365 / Google Workspace, Azure DevOps, and Teams.</li>
+                    <li>Built trusted relationships across business, operations, and technical groups; resolved conflicts with tact while balancing competing strategic and operational priorities.</li>
                 </ul>
             </div>
 
             <div class="job">
                 <div class="company">TestingXperts (Client: WaspBarcode Technologies)</div>
-                <div class="job-title">Project Lead &mdash; Inventory, Asset Tracking &amp; Integrations</div>
-                <div class="job-meta">Remote | August 2021 - January 2024</div>
+                <div class="job-title">Project Manager &mdash; Multi-System Digital Portfolio</div>
+                <div class="job-meta">Remote | August 2021 &ndash; January 2024</div>
                 <ul class="job-description">
-                    <li>Led parallel technology programs (inventory, asset tracking, POS-related integrations) across vendors and internal teams in a multi-system portfolio; maintained dependency maps, ownership clarity, and sequencing for end-to-end field and operations workflows.</li>
-                    <li>Partnered with client stakeholders on requirements clarity, solution alignment, estimation inputs, and impact analysis for planning, prioritization, and go/no-go decisions in a complex stakeholder environment.</li>
-                    <li>Drove release readiness: aligned test strategy with delivery goals, defect lifecycle discipline, readiness checkpoints, and consolidated evidence for release decisions.</li>
-                    <li>Facilitated prioritization and unblock forums; ensured issues, decisions, and follow-ups were tracked to closure with transparent client reporting.</li>
+                    <li>Managed a complex technology portfolio of parallel programs (inventory, asset tracking, integrations) and a delivery team of 5&ndash;10 across vendors and internal partners in a highly integrated environment.</li>
+                    <li>Led prioritization, unblock forums, and go/no-go readiness with client sponsors and SMEs; coached team members, provided hiring input for project capacity, and maintained transparent progress reporting for senior decision-makers.</li>
+                    <li>Applied Agile and hybrid delivery practices to manage multiple concurrent initiatives from planning through implementation, ensuring quality gates and release evidence were met.</li>
+                    <li>Influenced delivery outcomes through alignment, negotiation of trade-offs, and coaching teams through ambiguity and change.</li>
                 </ul>
             </div>
 
             <div class="job">
                 <div class="company">Seasia Infotech (Client: Becton Dickinson)</div>
-                <div class="job-title">Software Consultant &mdash; Healthcare &amp; Regulated Systems</div>
-                <div class="job-meta">India | May 2019 - August 2021</div>
+                <div class="job-title">Software Consultant &mdash; Healthcare Technology &amp; Regulated Systems</div>
+                <div class="job-meta">India | May 2019 &ndash; August 2021</div>
                 <ul class="job-description">
-                    <li>Consulted on regulated healthcare programs: workshops with business and technical stakeholders, requirements traceability, and controlled documentation for API and data-exchange initiatives.</li>
-                    <li>Bridged development, validation, and release activities; supported integration design reviews, handoffs, and evidence packs for compliance and audit.</li>
-                    <li>Tracked scope decisions, test outcomes, and release artifacts; aligned delivery rhythm with client quality and documentation standards.</li>
+                    <li>Coordinated regulated healthcare technology programs involving patient data and end-user healthcare applications used by clinicians and care teams; managed secure patient-data transfer and interpretation using HL7 and FHIR standards for interoperable clinical exchange.</li>
+                    <li>Partnered with business and clinical-adjacent SMEs on requirements for patient-facing and clinician-facing workflows; applied user-centered validation to align technical strategies with privacy, security, quality, and interoperability objectives.</li>
+                    <li>Owned QA and validation activities for healthcare releases: test strategy alignment, UAT planning, defect triage, entry/exit criteria, AI-assisted test-case generation to accelerate coverage, and consolidation of validation evidence into audit-ready release packs.</li>
+                    <li>Maintained controlled documentation&mdash;traceability, integration touchpoints, and release artifacts&mdash;supporting privacy, security, audit, and SDLC expectations for protected health information in transit and at rest.</li>
+                    <li>Managed hybrid release governance and issue escalation; coordinated distributed project contributors on communication cadence and operational handover.</li>
                 </ul>
             </div>
 
             <div class="job">
                 <div class="company">Tech Mahindra (Client: AT&amp;T)</div>
-                <div class="job-title">Software Engineer &mdash; Enterprise Telecom Delivery</div>
-                <div class="job-meta">India | August 2016 - April 2019</div>
+                <div class="job-title">Software Engineer &mdash; Enterprise Digital Delivery</div>
+                <div class="job-meta">India | August 2016 &ndash; April 2019</div>
                 <ul class="job-description">
-                    <li>Developed and maintained software in a large-scale enterprise program: unit and integration testing, defect analysis and fixes, and code quality within team standards.</li>
-                    <li>Participated in design discussions, peer reviews, and release-window activities; coordinated with cross-site teams on dependencies and readiness in a global delivery model.</li>
-                    <li>Supported production stability through structured triage, logging, and communication during high-volume implementation cycles.</li>
+                    <li>Contributed to large-scale enterprise technology delivery with structured SDLC, unit and integration testing, defect analysis and triage, and release-window readiness in a complex stakeholder environment.</li>
+                    <li>Performed hands-on QA alongside development: test execution, defect lifecycle management, peer reviews, and quality gates that supported stable production deployments.</li>
+                    <li>Built foundational software engineering and quality assurance discipline that now informs credible partnership with technical and QA teams on digital product and platform delivery.</li>
                 </ul>
             </div>
         </section>
 
         <section class="section">
-            <h2 class="section-title">Certifications</h2>
+            <h2 class="section-title">Selected Leadership Outcomes</h2>
             <ul class="job-description">
-                <li>Scrum Fundamentals Certified (SFC) &mdash; agile delivery foundation</li>
-                <li>ISTQB Advanced &amp; Foundation &mdash; quality planning, test governance, and release readiness in software and technology programs</li>
+                <li>Built high-performing delivery rhythms by managing and coaching teams of 5&ndash;10 on RAID hygiene, milestone ownership, and escalation discipline&mdash;improving predictability and stakeholder trust.</li>
+                <li>Accelerated senior decision-making with concise executive status, Power BI / eazyBI visibility (including AI-assisted dashboards), and clear options on risk, dependencies, and trade-offs.</li>
+                <li>Strengthened healthcare program confidence through secure HL7/FHIR patient-data transfer practices, privacy and security controls, QA/validation evidence (including AI-assisted test-case generation), and quality-led release documentation for clinician and end-user applications.</li>
+                <li>Applied AI-driven tools to personal and delivery productivity projects&mdash;faster reporting, broader test coverage, and streamlined documentation&mdash;while keeping human review and governance controls in place.</li>
             </ul>
         </section>
 
         <section class="section">
-            <h2 class="section-title">Selected Outcomes</h2>
+            <h2 class="section-title">Certifications</h2>
             <ul class="job-description">
-                <li>Improved program predictability from engineering through program management by tightening scope documentation, milestone ownership, RAID hygiene, and cross-team alignment on dates and quality gates.</li>
-                <li>Accelerated stakeholder decisions with concise executive status packs, dashboard visibility (including Power BI), and clear escalation paths on risk and dependencies.</li>
-                <li>Strengthened client and audit confidence in regulated and enterprise contexts through traceable requirements, test evidence, and structured release documentation.</li>
+                <li>PMP (PMI) &mdash; application approved; completing certification within the next 1&ndash;2 months</li>
+                <li>Scrum Fundamentals Certified (SFC) &mdash; Agile delivery foundation</li>
+                <li>ISTQB Advanced &amp; Foundation &mdash; quality governance and release readiness</li>
             </ul>
         </section>
 
@@ -285,13 +321,226 @@
             <h2 class="section-title">Education</h2>
             <div class="edu-item">
                 <div class="edu-title">Master of Computer Applications (MCA)</div>
-                <div class="edu-details">Indira Gandhi National Open University | 2017 - 2021</div>
+                <div class="edu-details">Indira Gandhi National Open University | 2017 &ndash; 2021</div>
             </div>
             <div class="edu-item">
                 <div class="edu-title">Bachelor of Science in Computer Science</div>
-                <div class="edu-details">Kurukshetra University | 2013 - 2016</div>
+                <div class="edu-details">Kurukshetra University | 2013 &ndash; 2016</div>
             </div>
         </section>
     </div>
+
+    <script>
+        function textRunsFromElement(root, TextRun) {
+            var runs = [];
+            function walk(node, bold) {
+                if (!node) return;
+                if (node.nodeType === Node.TEXT_NODE) {
+                    var t = node.textContent.replace(/\s+/g, ' ');
+                    if (t.length) runs.push(new TextRun({ text: t, bold: bold }));
+                } else if (node.nodeType === Node.ELEMENT_NODE) {
+                    var tag = node.tagName;
+                    if (tag === 'SCRIPT' || tag === 'STYLE') return;
+                    var b = bold || tag === 'STRONG' || tag === 'B';
+                    for (var i = 0; i < node.childNodes.length; i++) walk(node.childNodes[i], b);
+                }
+            }
+            walk(root, false);
+            return runs.length ? runs : [new TextRun({ text: ' ' })];
+        }
+
+        function paragraphFromSkillsRow(el, TextRun, Paragraph) {
+            var label = el.querySelector('.skills-label');
+            var runs = [];
+            if (label) {
+                runs.push(new TextRun({ text: label.textContent.trim(), bold: true }));
+                var rest = el.textContent.replace(label.textContent, '').replace(/^\s+/, '');
+                if (rest) runs.push(new TextRun({ text: ' ' + rest }));
+            } else {
+                runs = textRunsFromElement(el, TextRun);
+            }
+            return new Paragraph({ spacing: { after: 80 }, children: runs });
+        }
+
+        function buildResumeDocument(docx) {
+            var Document = docx.Document;
+            var Paragraph = docx.Paragraph;
+            var TextRun = docx.TextRun;
+            var HeadingLevel = docx.HeadingLevel;
+            var AlignmentType = docx.AlignmentType;
+            var LevelFormat = docx.LevelFormat;
+            var numberingRef = 'resume-bullets';
+            var out = [];
+            var container = document.querySelector('.resume-container');
+            if (!container) return new Document({ sections: [{ children: out }] });
+
+            var header = container.querySelector('header.header');
+            if (header) {
+                var h1 = header.querySelector('h1.name');
+                if (h1) {
+                    out.push(new Paragraph({
+                        alignment: AlignmentType.CENTER,
+                        spacing: { after: 120 },
+                        children: [new TextRun({ text: h1.textContent.trim(), bold: true, size: 36 })]
+                    }));
+                }
+                var tag = header.querySelector('.tagline');
+                if (tag) {
+                    out.push(new Paragraph({
+                        alignment: AlignmentType.CENTER,
+                        spacing: { after: 80 },
+                        children: textRunsFromElement(tag, TextRun)
+                    }));
+                }
+                var contact = header.querySelector('.contact-info');
+                if (contact) {
+                    out.push(new Paragraph({
+                        alignment: AlignmentType.CENTER,
+                        spacing: { after: 240 },
+                        children: textRunsFromElement(contact, TextRun)
+                    }));
+                }
+            }
+
+            var sections = container.querySelectorAll('section.section');
+            for (var s = 0; s < sections.length; s++) {
+                var section = sections[s];
+                var h2 = section.querySelector(':scope > h2.section-title');
+                if (h2) {
+                    out.push(new Paragraph({
+                        heading: HeadingLevel.HEADING_2,
+                        spacing: { before: 200, after: 120 },
+                        children: [new TextRun({ text: h2.textContent.trim(), bold: true })]
+                    }));
+                }
+                var ch = section.children;
+                for (var i = 0; i < ch.length; i++) {
+                    var el = ch[i];
+                    if (el.tagName === 'H2') continue;
+                    if (el.matches && el.matches('p.summary')) {
+                        out.push(new Paragraph({ spacing: { after: 120 }, children: textRunsFromElement(el, TextRun) }));
+                        continue;
+                    }
+                    if (el.tagName === 'UL') {
+                        var lis = el.querySelectorAll(':scope > li');
+                        for (var j = 0; j < lis.length; j++) {
+                            out.push(new Paragraph({
+                                numbering: { reference: numberingRef, level: 0 },
+                                spacing: { after: 80 },
+                                children: textRunsFromElement(lis[j], TextRun)
+                            }));
+                        }
+                        continue;
+                    }
+                    if (el.matches && el.matches('div.skills-row')) {
+                        out.push(paragraphFromSkillsRow(el, TextRun, Paragraph));
+                        continue;
+                    }
+                    if (el.matches && el.matches('div.job')) {
+                        var company = el.querySelector('.company');
+                        var title = el.querySelector('h3.job-title') || el.querySelector('.job-title');
+                        var meta = el.querySelector('.job-meta');
+                        var ul = el.querySelector('ul.job-description');
+                        if (company) {
+                            out.push(new Paragraph({
+                                spacing: { before: 160, after: 60 },
+                                children: [new TextRun({ text: company.textContent.trim(), bold: true })]
+                            }));
+                        }
+                        if (title) {
+                            out.push(new Paragraph({
+                                spacing: { after: 40 },
+                                children: [new TextRun({ text: title.textContent.trim(), italics: true })]
+                            }));
+                        }
+                        if (meta) {
+                            out.push(new Paragraph({
+                                spacing: { after: 100 },
+                                children: [new TextRun({ text: meta.textContent.trim(), size: 20, color: '666666' })]
+                            }));
+                        }
+                        if (ul) {
+                            var jl = ul.querySelectorAll(':scope > li');
+                            for (var k = 0; k < jl.length; k++) {
+                                out.push(new Paragraph({
+                                    numbering: { reference: numberingRef, level: 0 },
+                                    spacing: { after: 80 },
+                                    children: textRunsFromElement(jl[k], TextRun)
+                                }));
+                            }
+                        }
+                        continue;
+                    }
+                    if (el.matches && el.matches('div.edu-item')) {
+                        var et = el.querySelector('.edu-title');
+                        var ed = el.querySelector('.edu-details');
+                        if (et) {
+                            out.push(new Paragraph({
+                                spacing: { after: 40 },
+                                children: [new TextRun({ text: et.textContent.trim(), bold: true })]
+                            }));
+                        }
+                        if (ed) {
+                            out.push(new Paragraph({
+                                spacing: { after: 120 },
+                                children: [new TextRun({ text: ed.textContent.trim(), size: 20, color: '666666' })]
+                            }));
+                        }
+                    }
+                }
+            }
+
+            return new Document({
+                creator: 'Resume export',
+                numbering: {
+                    config: [{
+                        reference: numberingRef,
+                        levels: [{
+                            level: 0,
+                            format: LevelFormat.BULLET,
+                            text: '\u2022',
+                            alignment: AlignmentType.LEFT
+                        }]
+                    }]
+                },
+                sections: [{ children: out }]
+            });
+        }
+
+        async function downloadResumeAsWord() {
+            var btn = document.querySelector('.word-btn');
+            if (btn && btn.disabled) return;
+            var oldLabel = btn ? btn.textContent : '';
+            if (btn) {
+                btn.disabled = true;
+                btn.textContent = 'Building…';
+            }
+            try {
+                var raw = await import('https://esm.sh/docx@8.5.0');
+                var docx = raw.Document ? raw : raw.default;
+                if (!docx || typeof docx.Document !== 'function' || typeof docx.Packer === 'undefined' || typeof docx.Packer.toBlob !== 'function') {
+                    throw new Error('docx export unavailable');
+                }
+                var doc = buildResumeDocument(docx);
+                var blob = await docx.Packer.toBlob(doc);
+                var url = URL.createObjectURL(blob);
+                var a = document.createElement('a');
+                a.href = url;
+                a.download = 'Sheena-Tandon-Resume.docx';
+                a.rel = 'noopener';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            } catch (err) {
+                window.alert('Could not build the Word file on this device or network. Use Print / Save as PDF, or try again on Wi-Fi.');
+            } finally {
+                if (btn) {
+                    btn.disabled = false;
+                    btn.textContent = oldLabel;
+                }
+            }
+        }
+    </script>
 </body>
 </html>
