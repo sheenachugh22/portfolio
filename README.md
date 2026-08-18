@@ -4,6 +4,7 @@ Transformation delivery and digital solution leadership portfolio, tailored for 
 
 - **Site:** [index.html](index.html)
 - **Resume:** [resume.html](resume.html) — Print / Save as PDF or Download as Word
+- **Cover letter:** [cover-letter.html](cover-letter.html) — Manulife, Manager, Transformation Delivery
 
 Cambridge, Ontario (Waterloo Region) · [LinkedIn](https://www.linkedin.com/in/sheena-chugh)
 
